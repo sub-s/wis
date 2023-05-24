@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/bootstrap.esm.js"></script>
@@ -16,11 +17,12 @@
     <link media="all" rel="stylesheet" href="css/common.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="wrap">
         <div class="row">
             <div class="col top-area">
-            탑 GNB 영역
+                탑 GNB 영역
             </div>
         </div>
         <div class="row">
@@ -38,13 +40,19 @@
                         </button>
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                                    aria-selected="true">
                                     첫번째 화면 탭
                                 </button>
-                                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+                                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                                    aria-selected="false">
                                     두번째 화면 탭
                                 </button>
-                                <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
+                                <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
+                                    aria-selected="false">
                                     세번째 화면 탭
                                 </button>
                             </div>
@@ -62,7 +70,8 @@
                         </div>
                     </div>
                     <div class="tab-content p20" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                            aria-labelledby="nav-home-tab">
                             <!-- 타이틀 영역 -->
                             <div class="title-area d-flex justify-content-between align-items-center mb20">
                                 <div class="title">
@@ -82,242 +91,193 @@
                             <!-- // 타이틀 영역 -->
 
                             <!-- 콘텐츠 탭 -->
-                            <div class="content-tab"> 
+                            <div class="content-tab">
                                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-home" type="button" role="tab"
+                                            aria-controls="pills-home" aria-selected="true">
                                             사용대기
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-profile" type="button" role="tab"
+                                            aria-controls="pills-profile" aria-selected="false">
                                             사용중
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
+                                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-contact" type="button" role="tab"
+                                            aria-controls="pills-contact" aria-selected="false">
                                             사용완료
                                         </button>
                                     </li>
                                 </ul>
+                                <!-- 콘텐츠 탭 내용 -->
                                 <div class="tab-content" id="pills-tabContent">
-                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">사용중대기 
-    
+                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                        aria-labelledby="pills-home-tab">
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label class="form-label required" for="a1">조건불러오기</label>
+                                                    <div class="custom-select" style="width:200px;">
+                                                        <select id="a1" >
+                                                            <option value="0">항목 선택중</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="combox1" class="form-label">조건불러오기</label>
+                                                    <select class="form-select" aria-label="select" id="combox1">
+                                                        <option selected>Open this select menu</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="combox1" class="form-label">조건불러오기</label>
+                                                    <select class="form-select" aria-label="select" id="combox1">
+                                                        <option selected>Open this select menu</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="combox1" class="form-label">조건불러오기</label>
+                                                    <select class="form-select" aria-label="select" id="combox1">
+                                                        <option selected>Open this select menu</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+
                                     </div>
-                                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">사용중 </div>
-                                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">사용완료 </div>
+                                    <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                        aria-labelledby="pills-profile-tab">사용중 </div>
+                                    <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                        aria-labelledby="pills-contact-tab">사용완료 </div>
                                 </div>
+                                <!-- // 콘텐츠 탭 내용 -->
                             </div>
-                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">2..12312312312312312313.</div>
-                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">3.123123123.123123.</div>
                         </div>
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            두번째 화면 탭 </div>
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            세번째 화면 탭</div>
                         <!-- // 콘텐츠 탭 -->
                     </div>
                 </div>
-        
+
             </div>
             <!-- // 우측 콘텐츠 영역 -->
         </div>
-        
-
-       
-
-
-        <!-- <main class="wis-container"> -->
-            <!-- 좌측 메뉴 -->
-            <!-- <div class="left-section">
-                좌측 메뉴
-            </div> -->
-            <!-- // 좌측 메뉴 -->
-            <!-- 우측 컨텐츠 -->
-            <!-- <div class="right-section"> -->
-                <!-- 상단 리무브 탭 -->
-                
-                <!-- // 상단 리무브 탭 -->
-                <!-- 컨텐츠 영역 -->
-                <!-- <div class="content"> -->
-                    
-
-                    <!-- tab menu -->
-                    <!-- <div class="tab-area"> -->
-                        <!-- 메뉴 -->
-                        <!-- <div class="tab-menu">
-                            <div class="menu active"><button type="button">사용대기</button></div>
-                            <div class="menu"><button type="button">사용중</button></div>
-                            <div class="menu"><button type="button">사용완료</button></div>
-                        </div> -->
-                        <!-- 탭 컨텐츠 -->
-                        <!-- <div class="tab-content">
-                          
-
-                        </div>
-                        <div class="tab-content">
-                            두번째 탭
-                        </div>
-                    </div> -->
 
 
 
+        <script>
+            var x, i, j, l, ll, selElmnt, a, b, c;
+            /*look for any elements with the class "custom-select":*/
+            x = document.getElementsByClassName("custom-select");
+            l = x.length;
+            for (i = 0; i < l; i++) {
+                selElmnt = x[i].getElementsByTagName("select")[0];
+                ll = selElmnt.length;
+                /*for each element, create a new DIV that will act as the selected item:*/
+                a = document.createElement("DIV");
+                a.setAttribute("class", "select-selected");
+                a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+                x[i].appendChild(a);
+                /*for each element, create a new DIV that will contain the option list:*/
+                b = document.createElement("DIV");
+                b.setAttribute("class", "select-items select-hide");
+                for (j = 1; j < ll; j++) {
+                    /*for each option in the original select element,
+                    create a new DIV that will act as an option item:*/
+                    c = document.createElement("DIV");
+                    c.innerHTML = selElmnt.options[j].innerHTML;
+                    c.addEventListener("click", function (e) {
+                        /*when an item is clicked, update the original select box,
+                        and the selected item:*/
+                        var y, i, k, s, h, sl, yl;
+                        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                        sl = s.length;
+                        h = this.parentNode.previousSibling;
+                        for (i = 0; i < sl; i++) {
+                            if (s.options[i].innerHTML == this.innerHTML) {
+                                s.selectedIndex = i;
+                                h.innerHTML = this.innerHTML;
+                                y = this.parentNode.getElementsByClassName("same-as-selected");
+                                yl = y.length;
+                                for (k = 0; k < yl; k++) {
+                                    y[k].removeAttribute("class");
+                                }
+                                this.setAttribute("class", "same-as-selected");
+                                break;
+                            }
+                        }
+                        h.click();
+                    });
+                    b.appendChild(c);
+                }
+                x[i].appendChild(b);
+                a.addEventListener("click", function (e) {
+                    /*when the select box is clicked, close any other select boxes,
+                    and open/close the current select box:*/
+                    e.stopPropagation();
+                    closeAllSelect(this);
+                    this.nextSibling.classList.toggle("select-hide");
+                    this.classList.toggle("select-arrow-active");
+                });
+            }
 
+            function closeAllSelect(elmnt) {
+                /*a function that will close all select boxes in the document,
+                except the current select box:*/
+                var x, y, i, xl, yl, arrNo = [];
+                x = document.getElementsByClassName("select-items");
+                y = document.getElementsByClassName("select-selected");
+                xl = x.length;
+                yl = y.length;
+                for (i = 0; i < yl; i++) {
+                    if (elmnt == y[i]) {
+                        arrNo.push(i)
+                    } else {
+                        y[i].classList.remove("select-arrow-active");
+                    }
+                }
+                for (i = 0; i < xl; i++) {
+                    if (arrNo.indexOf(i)) {
+                        x[i].classList.add("select-hide");
+                    }
+                }
+            }
+            /*if the user clicks anywhere outside the select box,
+            then close all select boxes:*/
+            document.addEventListener("click", closeAllSelect);
+        </script>
 
-
-
-<!-- 
-
-
-                    <button type="button" class="btn btn-primary">Primary</button>
-                    <button type="button" class="btn btn-secondary">Secondary</button>
-                    <button type="button" class="btn btn-success">Success</button>
-                    <button type="button" class="btn btn-danger">Danger</button>
-                    <button type="button" class="btn btn-warning">Warning</button>
-                    <button type="button" class="btn btn-info">Info</button>
-                    <button type="button" class="btn btn-light">Light</button>
-                    <button type="button" class="btn btn-dark">Dark</button>
-
-                    <button type="button" class="btn btn-link">Link</button>
-
-
-                    <button type="button" class="btn btn-outline-primary">Primary</button>
-                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
-                    <button type="button" class="btn btn-outline-success">Success</button>
-                    <button type="button" class="btn btn-outline-danger">Danger</button>
-                    <button type="button" class="btn btn-outline-warning">Warning</button>
-                    <button type="button" class="btn btn-outline-info">Info</button>
-                    <button type="button" class="btn btn-outline-light">Light</button>
-                    <button type="button" class="btn btn-outline-dark">Dark</button> -->
-
-
-                    <!-- Button Set -->
-                    <!-- <div class="btn-set">
-                        <button type="button" class="btn">
-                            <span>Default Btn</span>
-                        </button>
-
-                        <button type="button" class="btn aw">
-                            <span>Width Btn</span>
-                        </button>
-                        <button type="button" class="btn ah">
-                            <span>Height Btn</span>
-                        </button>
-
-                        <button type="button" class="btn" disabled="disabled">
-                            <span>Default Btn Attr Disabled</span>
-                        </button>
-
-                        <button type="button" class="btn disabled">
-                            <span>Default Btn Css Disabled</span>
-                        </button>
-                    </div>
-
-                    <div class="btn-set">
-                        <button type="button" class="btn down">
-                            <span>Down Btn</span>
-                        </button>
-                        <button type="button" class="btn down aw">
-                            <span>Width Btn</span>
-                        </button>
-                        <button type="button" class="btn down ah">
-                            <span>Height Btn</span>
-                        </button>
-                        <button type="button" class="btn down" disabled="disabled">
-                            <span>Down Btn Attr Disabled</span>
-                        </button>
-                        <button type="button" class="btn down disabled">
-                            <span>Down Btn Css Disabled</span>
-                        </button>
-                    </div>
-
-                    <div class="btn-set">    
-                        <button type="button" class="btn info">
-                            <span>Info Btn</span>
-                        </button>
-                        <button type="button" class="btn info aw">
-                            <span>Width Btn</span>
-                        </button>
-                        <button type="button" class="btn info ah">
-                            <span>Height Btn</span>
-                        </button>
-                        <button type="button" class="btn info" disabled="disabled">
-                            <span>Info Btn Attr Disabled</span>
-                        </button>
-                        <button type="button" class="btn info disabled">
-                            <span>Info Btn Css Disabled</span>
-                        </button>
-                    </div>
-
-                    <div class="btn-set">
-                        <button type="button" class="btn primary">
-                            <span>Primary Btn</span>
-                        </button>
-                        <button type="button" class="btn primary">
-                            <i class="icon-search"></i>
-                            <span>Primary Btn</span>
-                        </button>
-                        <button type="button" class="btn primary aw">
-                            <span>Width Btn</span>
-                        </button>
-                        <button type="button" class="btn primary ah">
-                            <span>Height Btn</span>
-                        </button>
-                        <button type="button" class="btn primary" disabled="disabled">
-                            <span>Primary Btn Attr Disabled</span>
-                        </button>
-                        <button type="button" class="btn primary disabled">
-                            <span>Primary Btn Css Disabled</span>
-                        </button>
-                    </div>
-
-                    <div class="btn-set">
-                        <button type="button" class="btn point">
-                            <span>Point Btn</span>
-                        </button>
-                        <button type="button" class="btn point aw">
-                            <span>Width Btn</span>
-                        </button>
-                        <button type="button" class="btn point ah">
-                            <span>Height Btn</span>
-                        </button>
-                        <button type="button" class="btn point" disabled="disabled">
-                            <span>Point Btn Attr Disabled</span>
-                        </button>
-                        <button type="button" class="btn point disabled">
-                            <span>Point Btn Css Disabled</span>
-                        </button>
-                    </div>
-
-                    <div class="btn-set">
-                        <button type="button" class="btn line">
-                            <span>Line Btn</span>
-                        </button>
-                        <button type="button" class="btn line aw">
-                            <span>Width Btn</span>
-                        </button>
-                        <button type="button" class="btn line ah">
-                            <span>Height Btn</span>
-                        </button>
-                        <button type="button" class="btn line" disabled="disabled">
-                            <span>Line Btn Attr Disabled</span>
-                        </button>
-                        <button type="button" class="btn line disabled">
-                            <span>Line Btn Css Disabled</span>
-                        </button>
-                    </div> -->
-
-
-                    
-
-                    
-<!--                    
-                </div>
-
-            </div> -->
-            <!-- //우측 컨텐츠 -->
-        <!-- </main> -->
-
-    <!-- </div> -->
-
-
-
-    
 </body>
+
 </html>
