@@ -208,9 +208,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, 
 form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, 
 footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video {
+
     font-family: "SamsungOne", "SamsungSharpSans", "Helvetica Neue",Helvetica,Arial,sans-serif;
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 
@@ -270,7 +272,9 @@ footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, 
 .dropdown-menu.show {width: 140px; margin-top: 6px !important;}
 .dropdown-menu.show .dropdown-item {font-size: var(--fs-t7)}
 
-.tab-content .btn-select {border: 1px solid red;}
+/* .tab-content .btn-select {border: 1px solid red;} */
+.tab-content .tab-pane > .row {--bs-gutter-x: 0;}
+.tab-content .tab-pane > .row [class*="col"] {padding: 0; margin: 0; margin-right: 5px;}
 
 
 
@@ -284,8 +288,7 @@ footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, 
 
 
 /* custom-select */
-.custom-select {position: relative;}
-
+.custom-select {position: relative; margin: 0; padding: 0;}
 .custom-select select {display: none; /*hide original SELECT element: */}
 .custom-select .select-selected {background-color: var(--c-white); border: 1px solid var(--c-gray3); border-radius: 4px; height: 30px; }
 .custom-select .select-selected:after {position: absolute; content: ""; top: 7px; right: 10px; width: 16px; height: 16px; background: url(../img/icon/select_arrow.svg) no-repeat;}
@@ -293,8 +296,20 @@ footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, 
 
 .custom-select .select-items div,
 .custom-select .select-selected {color: var(--c-gray10); font-size: var(--fs-t6);  padding:3px 7px; border-color: rgba(0, 0, 0, 0.1); cursor: pointer;}
-.custom-select .select-items {position: absolute;  border: 1px solid var(--c-gray5);  top: 34px; left: 0; right: 0; z-index: 99; border-radius: 4px; padding: 10px 0 10px;}
+.custom-select .select-items {position: absolute;  border: 1px solid var(--c-gray5);  top: 34px; left: 0; right: 0; z-index: 99; border-radius: 4px; padding: 10px 0 10px; background-color: var(--c-white);}
 .custom-select .select-hide {display: none;}
 .custom-select .select-items div:hover, .same-as-selected {background-color: rgba(0, 0, 0, 0.05);}
 
 .custom-select .select-selected.select-arrow-active {border-color: var(--c-gray10)}
+
+
+.form-control {width: 140px; height: 30px; border: 1px solid var(--c-gray5)}
+.form-control:focus {border: 1px solid var(--c-gray10); box-shadow: none;}
+
+
+
+.field {position: relative;}
+.field .btn-right { position: absolute; top: calc(50% - 8px); right:8px; display: flex; justify-content: space-between; align-items: center;}
+.field .btn-right button {border: 0; padding: 0; margin: 0;}
+.field .btn-right .clear-btn {width: 16px; height: 16px; display: none; background: url(../img/icon/input_clear.svg) no-repeat; }
+.field .btn-right .search{ width: 16px; height: 16px; background: url(../img/icon/input_search.svg) no-repeat;}
