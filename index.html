@@ -84,7 +84,7 @@
                             <!-- 타이틀 영역 -->
                             <div class="title-area d-flex justify-content-between align-items-center mb20">
                                 <div class="title">
-                                    <p class="bookmark active">
+                                    <p class="bookmark" onclick="bookmark()">
                                         <span class="blind">즐겨찾기</span>
                                     </p>
                                     <h2>화면 타이틀</h2>
@@ -131,7 +131,7 @@
                                         <!-- 조건 검색 -->
                                         <div class="condition-search">
                                             <div class="row">
-                                                <div class="col-1">
+                                                <div class="col-auto">
                                                     <label class="form-label required" for="a1">조건불러오기</label>
                                                     <div class="custom-select " style="width:140px;">
                                                         <select id="a1" >
@@ -141,7 +141,7 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="col-1">
+                                                <div class="col-auto">
                                                     <label class="form-label required" for="a2">Recycle 상태</label>
                                                     <div class="custom-select" style="width:140px;">
                                                         <select id="a2" >
@@ -151,7 +151,7 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="col-1">
+                                                <div class="col-auto">
                                                     <label class="form-label required" for="a3">Line</label>
                                                     <div class="custom-select" style="width:140px;">
                                                         <select id="a3" >
@@ -161,7 +161,7 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="col-1">
+                                                <div class="col-auto">
                                                     <label class="form-label required" for="a4">Process ID</label>
                                                     <div class="custom-select" style="width:140px;">
                                                         <select id="a4" >
@@ -171,7 +171,7 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="col-4">
+                                                <div class="col-auto">
                                                     <label class="form-label required" for="a3">Layer/Step (계측 제외)</label>
                                                     <div class="d-flex justify-content-start align-items-center">
                                                         <div class="col-auto field">
@@ -222,7 +222,7 @@
                                                 </button>
                                                 <div class="inner">
                                                     <div class="row mt10">
-                                                        <div class="col-1">
+                                                        <div class="col-auto">
                                                             <label class="form-label required" for="b1">등록 Part</label>
                                                             <div class="custom-select " style="width:140px;">
                                                                 <select id="b1" >
@@ -232,7 +232,7 @@
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                        <div class="col-1">
+                                                        <div class="col-auto">
                                                             <label class="form-label required" for="b2">Lot ID</label>
                                                             <div class="custom-select" style="width:140px;">
                                                                 <select id="b2" >
@@ -243,7 +243,7 @@
                                                             </div>
                                                         </div>
     
-                                                        <div class="col-1">
+                                                        <div class="col-auto">
                                                             <label class="form-label required" for="b3">필요매수</label>
                                                             <div class="d-flex justify-content-start align-items-center">
                                                                 <div class="col-auto field min">
@@ -271,9 +271,6 @@
                                             </div>
                                         </div>
                                         <!-- // 조건 검색 -->
-
-
-
 
 
                                         <div class="d-flex justify-content-start mt20" style="margin-top: 50px !important">
@@ -339,6 +336,13 @@
                                             <button type="button" class="btn btn-sm btn-outline-secondary ah" disabled>GMP변경필요</button>
                                             <button type="button" class="btn btn-sm btn-outline-secondary ah disabled" >GMP변경필요</button>
                                         </div>
+
+
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        </div>
+
 
 
                                         <!-- 페이지 네비게이션 -->
@@ -435,9 +439,10 @@
         <script src="js/common.js"></script>
 
         <script>
-
-            
-
+            const bookmark = () => {
+                let _this = event.currentTarget;
+                _this.classList.toggle('active')
+            }
         </script>
 
 
