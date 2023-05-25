@@ -287,7 +287,7 @@ button {border:0;}
 .tab-content .tab-pane .condition-search .hidden-search.active .inner {background: transparent; height: 100%; overflow: initial;   }
 .tab-content .tab-pane .condition-search .hidden-search [class*="col"] {z-index: -1;}
 .tab-content .tab-pane .condition-search .hidden-search.active [class*="col"] {z-index: 1;}
-.tab-content .tab-pane .condition-search .hidden-search .search-btn {width: 24px; height: 24px; position: absolute; top: calc(50% - 12px); left: calc(50% - 12px); left:0; top:0; background: url(../img/icon/circle-plus.svg) no-repeat; z-index:100}
+.tab-content .tab-pane .condition-search .hidden-search .search-btn {width: 30px; height: 30px; position: absolute; top: calc(50% - 12px); left: calc(50% - 12px); left:0; top:0; background: url(../img/icon/circle-plus.svg) no-repeat; z-index:100}
 .tab-content .tab-pane .condition-search .hidden-search.active .search-btn {background: url(../img/icon/circle-minus.svg) no-repeat; }
 
 
