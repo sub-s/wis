@@ -223,7 +223,7 @@ button {border:0;}
 .left-area { background-color: var(--c-blue2); height: 100%;} 
 
 
-.right-area {margin-left: 0; padding-left: 0;}
+.right-area {margin-left: 0; padding-left: 0; min-width: 1260px;}
 
 .right-area .tab-menu { padding-left: 10px;}
 
@@ -275,20 +275,22 @@ button {border:0;}
 .dropdown-menu.show {width: 140px; margin-top: 6px !important;}
 .dropdown-menu.show .dropdown-item {font-size: var(--fs-t7)}
 
-/* .tab-content .btn-select {border: 1px solid red;} */
+.tab-content { width: 100%;}
 .tab-content .tab-pane .condition-search .row {--bs-gutter-x: 0;}
 .tab-content .tab-pane .condition-search .row [class*="col"] {padding: 0; margin: 0; margin-right: 5px;}
 
 
+
+
 /* 조건 검색 */
 .tab-content .tab-pane .condition-search {position: relative;}
-.tab-content .tab-pane .condition-search .hidden-search {position: relative; }
-.tab-content .tab-pane .condition-search .hidden-search .inner { bottom:0; height: 0; overflow: hidden; }
-.tab-content .tab-pane .condition-search .hidden-search.active .inner {background: transparent; height: 100%; overflow: initial;   }
+.tab-content .tab-pane .condition-search .hidden-search {position: relative; border-bottom: 1px solid var(--c-gray5); padding-bottom: 16px; }
+.tab-content .tab-pane .condition-search .hidden-search .inner { bottom:0; height: 1px; overflow: hidden;}
+.tab-content .tab-pane .condition-search .hidden-search.active .inner {background: transparent; height: 100%; overflow: initial; }
 .tab-content .tab-pane .condition-search .hidden-search [class*="col"] {z-index: -1;}
 .tab-content .tab-pane .condition-search .hidden-search.active [class*="col"] {z-index: 1;}
-.tab-content .tab-pane .condition-search .hidden-search .search-btn {width: 30px; height: 30px; position: absolute; top: calc(50% - 12px); left: calc(50% - 12px); left:0; top:0; background: url(../img/icon/circle-plus.svg) no-repeat; z-index:100}
-.tab-content .tab-pane .condition-search .hidden-search.active .search-btn {background: url(../img/icon/circle-minus.svg) no-repeat; }
+.tab-content .tab-pane .condition-search .hidden-search .search-btn {width: 30px; height: 30px; position: absolute; bottom: calc(-18px); left: calc(50% - 15px); background: url(../img/icon/circle-plus.svg) no-repeat; z-index:100}
+.tab-content .tab-pane .condition-search .hidden-search.active .search-btn {background: url(../img/icon/circle-minus.svg) no-repeat; bottom: -18px}
 
 
 
@@ -317,7 +319,7 @@ button {border:0;}
 .custom-select .select-selected.select-arrow-active {border-color: var(--c-gray10)}
 
 
-.form-control { width: 100%; height: 30px; border: 1px solid var(--c-gray5)}
+.form-control {width: 100%; height: 30px; border: 1px solid var(--c-gray5)}
 .form-control:focus {border: 1px solid var(--c-gray10); box-shadow: none;}
 
 

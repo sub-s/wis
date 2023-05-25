@@ -61,7 +61,7 @@
                             <button class="btn btn-prev">
                                 <span class="blind">뒤로이동</span>
                             </button>
-                            <button class="btn btn-next">
+                            <button class="btn btn-nopenSearcht">
                                 <span class="blind">다음이동</span>
                             </button>
                             <button class="btn btn-close">
@@ -164,7 +164,7 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="col-7">
+                                                <div class="col-4">
                                                     <label class="form-label required" for="a3">Layer/Step (계측 제외)</label>
                                                     <div class="d-flex justify-content-start align-items-center">
                                                         <div class="col-auto field">
@@ -210,7 +210,7 @@
                                             </div>
 
                                             <div class="hidden-search">
-                                                <button class="search-btn" onclick="ex()"> 
+                                                <button class="search-btn" onclick="openSearch()"> 
                                                     <span class="blind">열림</span>
                                                 </button>
                                                 <div class="inner">
@@ -367,21 +367,20 @@
             </div>
             <!-- // 우측 콘텐츠 영역 -->
         </div>
+    </div>
 
 
         <script src="js/common.js"></script>
 
-
-
         <script>
 
-            const ex = () => {
+            const openSearch = () => {
                 let _this = event.currentTarget;
-
-                console.log(_this , "this")
-                console.log(_this.closest('.hidden-search') , "this")
+                let _text = _this.querySelector('.blind');
+                let _check = _this.closest('.hidden-search').classList.contains('active');
                 
                 _this.closest('.hidden-search').classList.toggle('active')
+                _check ? _text.innerText = '닫힘' : _text.innerText = '열림'
 
             }
 
