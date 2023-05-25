@@ -44,16 +44,25 @@
                                     data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
                                     aria-selected="true">
                                     첫번째 화면 탭
+                                    <span class="closed"></span>
                                 </button>
                                 <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
                                     aria-selected="false">
                                     두번째 화면 탭
+                                    <span class="closed"></span>
                                 </button>
                                 <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
                                     aria-selected="false">
                                     세번째 화면 탭
+                                    <span class="closed"></span>
+                                </button>
+                                <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
+                                    aria-selected="false">
+                                    네번째 화면 탭
+                                    <span class="closed"></span>
                                 </button>
                             </div>
                         </nav>
@@ -119,8 +128,6 @@
                                 <div class="tab-content" id="pills-tabContent">
                                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                                         aria-labelledby="pills-home-tab">
-
-
                                         <!-- 조건 검색 -->
                                         <div class="condition-search">
                                             <div class="row">
@@ -338,27 +345,47 @@
                                         <nav aria-label="Page navigation" style="margin-top: 30px">
                                             <ul class="pagination">
                                                 <li class="page-item">
-                                                    <a class="page-link" href="#" aria-label="Previous">
-                                                        <span aria-hidden="true">&laquo;</span>
+                                                    <a class="page-link" href="javascript: void(0)" aria-label="Previous">
+                                                        <span aria-hidden="true">
+                                                            <i class="icon_first"></i>
+                                                        </span>
                                                     </a>
                                                 </li>
                                                 <li class="page-item">
-                                                    <a class="page-link" href="#" aria-label="Previous">
-                                                        <span aria-hidden="true">&laquo;</span>
+                                                    <a class="page-link" href="javascript: void(0)" aria-label="Previous">
+                                                        <span aria-hidden="true">
+                                                            <i class="icon_prev"></i>
+                                                        </span>
                                                     </a>
                                                 </li>
-                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item active">
+                                                    <a class="page-link" href="javascript: void(0)"><span>1</span></a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="javascript: void(0)"><span>2</span></a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="javascript: void(0)"><span>3</span></a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="javascript: void(0)"><span>4</span></a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="javascript: void(0)"><span>5</span></a>
+                                                </li>
                                                 
                                                 <li class="page-item">
-                                                    <a class="page-link" href="#" aria-label="Next">
-                                                        <span aria-hidden="true">&raquo;</span>
+                                                    <a class="page-link" href="javascript: void(0)" aria-label="Next">
+                                                        <span aria-hidden="true">
+                                                            <i class="icon_next"></i>
+                                                        </span>
                                                     </a>
                                                 </li>
                                                 <li class="page-item">
-                                                    <a class="page-link" href="#" aria-label="Next">
-                                                        <span aria-hidden="true">&raquo;</span>
+                                                    <a class="page-link" href="javascript: void(0)" aria-label="Next">
+                                                        <span aria-hidden="true">
+                                                            <i class="icon_last"></i>
+                                                        </span>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -369,9 +396,13 @@
 
                                     </div>
                                     <div class="tab-pane fade" id="pills-profile" role="tabpanel"
-                                        aria-labelledby="pills-profile-tab">사용중 </div>
+                                        aria-labelledby="pills-profile-tab">
+                                        사용중 
+                                    </div>
                                     <div class="tab-pane fade" id="pills-contact" role="tabpanel"
-                                        aria-labelledby="pills-contact-tab">사용완료 </div>
+                                        aria-labelledby="pills-contact-tab">
+                                        사용완료 
+                                    </div>
 
 
 
