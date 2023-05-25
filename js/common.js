@@ -103,3 +103,33 @@ const openSearch = () => {
     _check ? _text.innerText = '닫힘' : _text.innerText = '열림'
 
 }
+
+
+const lnbDrag = ()=>{
+    event.preventDefault();
+    const _thumb = event.currentTarget;
+    const _lnb = document.querySelector("#lnb");
+    const _con = document.querySelector("#content > .content_wrap");
+    _thumb.sx = event.pageX;
+    _thumb.left = _lnb.clientWidth;
+    console.log("_thumb.left : ",_thumb.left)
+    const winMove = ()=>{
+        _thumb.diffX = event.pageX - _thumb.sx;
+        _thumb.calcX = _thumb.left + _thumb.diffX;
+        const applyX = (_thumb.calcX <= 0)?0:_thumb.calcX;
+        _lnb.style.width = applyX + "px";
+        _con.style.width = "calc(100% - " + applyX + "px)";
+    }
+    const winUp = ()=>{
+        console.log("mpuse up ev/11")
+        window.removeEventListener("mousemove",winMove);
+        window.removeEventListener("mouseup",winUp);
+    }
+    window.addEventListener("mousemove",winMove);
+    window.addEventListener("mouseup",winUp);
+}
+
+const lnbClick = ()=>{
+    const _this = event.currentTarget;
+    _this.classList.toggle("active");)
+}

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.esm.js"></script>
+
+    <link media="all" rel="stylesheet" href="css/bootstrap.css">
+    <link media="all" rel="stylesheet" href="css/bootstrap-grid.css">
+    <link media="all" rel="stylesheet" href="css/bootstrap-utilities.css">
+    <link media="all" rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link media="all" rel="stylesheet" href="css/common.css">
+    <link media="all" rel="stylesheet" href="css/layout.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="outer_box">
+        <!-- gnb -->
+        <div id="gnb">
+
+        </div>
+        <div id="content">
+            <div id="lnb">
+                <div class="lnb_wrap">
+                    <div class="lnb_tab">
+                        <div class="lnb_tab_tit">
+                            <ul>
+                                <li>즐겨찾기</li>
+                                <li>최근 본 메뉴</li>
+                            </ul>
+                        </div>
+                        <div class="lnb_tab_con">
+                            <ul>
+                                <li class="open">
+                                    <!-- menu -->
+                                    <div class="lnb_menu">
+                                        <ul>
+                                            <li onclick="lnbClick()">
+                                                <div class="tit">Wafer recycle</div>
+                                                <div class="menu_wrap">
+                                                    <ul>
+                                                        <li onclick="lnbClick()">
+                                                            <div class="tit">Wafer recycle</div>
+                                                            <div class="menu_wrap">
+                                                                <ul>
+                                                                    <li onclick="lnbClick()">
+                                                                        <div class="tit">Wafer recycle</div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <!-- // menu -->
+                                    </div>
+
+                                    
+                                </li>
+                                <li>2</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <span class="lnb_thumb" onmousedown="lnbDrag()"></span>
+            </div>
+            <div class="content_wrap">
+                <div class="row">
+                    <!-- // 좌측 LNB 영역 -->
+                    <!-- 우측 콘텐츠 영역 -->
+                    <div class="col right-area col-auto">
+                        <div class="top-menu">
+                            <div class="tab-menu w-100">
+                                <button class="btn small-zoom" type="button">
+                                    <span class="blind">축소하기</span>
+                                </button>
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                                            data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                                            aria-selected="true">
+                                            첫번째 화면 탭
+                                        </button>
+                                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                                            data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                                            aria-selected="false">
+                                            두번째 화면 탭
+                                        </button>
+                                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+                                            data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
+                                            aria-selected="false">
+                                            세번째 화면 탭
+                                        </button>
+                                    </div>
+                                </nav>
+                                <div class="btn-set">
+                                    <button class="btn btn-prev">
+                                        <span class="blind">뒤로이동</span>
+                                    </button>
+                                    <button class="btn btn-next">
+                                        <span class="blind">다음이동</span>
+                                    </button>
+                                    <button class="btn btn-close">
+                                        <span class="blind">닫기</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="tab-content p20" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                                    aria-labelledby="nav-home-tab">
+                                    <!-- 타이틀 영역 -->
+                                    <div class="title-area d-flex justify-content-between align-items-center mb20">
+                                        <div class="title">
+                                            <p class="bookmark active">
+                                                <span class="blind">즐겨찾기</span>
+                                            </p>
+                                            <h2>화면 타이틀</h2>
+                                        </div>
+                                        <div class="path">
+                                            <ul class="d-flex justify-content-between ">
+                                                <li>홈</li>
+                                                <li>Wafer Recycling</li>
+                                                <li>Recycling WF현황</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // 타이틀 영역 -->
+        
+                                    <!-- 콘텐츠 탭 -->
+                                    <div class="content-tab">
+                                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-home" type="button" role="tab"
+                                                    aria-controls="pills-home" aria-selected="true">
+                                                    사용대기
+                                                </button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-profile" type="button" role="tab"
+                                                    aria-controls="pills-profile" aria-selected="false">
+                                                    사용중
+                                                </button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-contact" type="button" role="tab"
+                                                    aria-controls="pills-contact" aria-selected="false">
+                                                    사용완료
+                                                </button>
+                                            </li>
+                                        </ul>
+                                        <!-- 콘텐츠 탭 내용 -->
+                                        <div class="tab-content" id="pills-tabContent">
+                                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                                aria-labelledby="pills-home-tab">
+        
+        
+                                                <!-- 조건 검색 -->
+                                                <div class="condition-search">
+                                                    <div class="row">
+                                                        <div class="col-1">
+                                                            <label class="form-label required" for="a1">조건불러오기</label>
+                                                            <div class="custom-select " style="width:140px;">
+                                                                <select id="a1" >
+                                                                    <option value="0">조건전체</option>
+                                                                    <option value="1">텍스트</option>
+                                                                    <option value="2">텍스트</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-1">
+                                                            <label class="form-label required" for="a2">Recycle 상태</label>
+                                                            <div class="custom-select" style="width:140px;">
+                                                                <select id="a2" >
+                                                                    <option value="0">신청가능</option>
+                                                                    <option value="1">텍스트</option>
+                                                                    <option value="2">텍스트</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-1">
+                                                            <label class="form-label required" for="a3">Line</label>
+                                                            <div class="custom-select" style="width:140px;">
+                                                                <select id="a3" >
+                                                                    <option value="0">조건전체</option>
+                                                                    <option value="1">텍스트</option>
+                                                                    <option value="2">텍스트</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-1">
+                                                            <label class="form-label required" for="a4">Process ID</label>
+                                                            <div class="custom-select" style="width:140px;">
+                                                                <select id="a4" >
+                                                                    <option value="0">yesmjm</option>
+                                                                    <option value="1">텍스트</option>
+                                                                    <option value="2">텍스트</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <label class="form-label required" for="a3">Layer/Step (계측 제외)</label>
+                                                            <div class="d-flex justify-content-start align-items-center">
+                                                                <div class="col-auto field">
+                                                                    <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                                    <div class="btn-right">
+                                                                        <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                            <span class="blind">삭제</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="custom-select" style="width:140px;">
+                                                                        <select id="a3" >
+                                                                            <option value="0">moon</option>
+                                                                            <option value="1">텍스트</option>
+                                                                            <option value="2">텍스트</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-auto">~</div>
+                                                                <div class="col-auto field">
+                                                                    <input type="text" class="form-control form-control-sm" id="inputPassword2" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                                    <div class="btn-right">
+                                                                        <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                            <span class="blind">삭제</span>
+                                                                        </button>
+                                                                        <button class="search" type="button">
+                                                                            <span class="blind">검색</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="custom-select" style="width:140px;">
+                                                                        <select id="a3" >
+                                                                            <option value="0">moon</option>
+                                                                            <option value="1">텍스트</option>
+                                                                            <option value="2">텍스트</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+        
+                                                    <div class="hidden-search">
+                                                        <button class="search-btn" onclick="openSearch()"> 
+                                                            <span class="blind">열림</span>
+                                                        </button>
+                                                        <div class="inner">
+                                                            <div class="row mt10">
+                                                                <div class="col-1">
+                                                                    <label class="form-label required" for="b1">등록 Part</label>
+                                                                    <div class="custom-select " style="width:140px;">
+                                                                        <select id="b1" >
+                                                                            <option value="0">조건전체</option>
+                                                                            <option value="1">텍스트</option>
+                                                                            <option value="2">텍스트</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-1">
+                                                                    <label class="form-label required" for="b2">Lot ID</label>
+                                                                    <div class="custom-select" style="width:140px;">
+                                                                        <select id="b2" >
+                                                                            <option value="0">신청가능</option>
+                                                                            <option value="1">텍스트</option>
+                                                                            <option value="2">텍스트</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+            
+                                                                <div class="col-1">
+                                                                    <label class="form-label required" for="b3">필요매수</label>
+                                                                    <div class="d-flex justify-content-start align-items-center">
+                                                                        <div class="col-auto field min">
+                                                                            <input type="text" class="form-control form-control-sm" id="b3" placeholder="" onkeyup="inputClearBtn()" />
+                                                                            <div class="btn-right">
+                                                                                <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                                    <span class="blind">삭제</span>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-auto">~</div>
+                                                                        <div class="col-auto field min">
+                                                                            <input type="text" class="form-control form-control-sm" id="" placeholder="" onkeyup="inputClearBtn()" />
+                                                                            <div class="btn-right">
+                                                                                <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                                    <span class="blind">삭제</span>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-auto">매</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- // 조건 검색 -->
+        
+        
+        
+        
+        
+                                                <div class="d-flex justify-content-start mt20" style="margin-top: 50px !important">
+                                                    <button type="button" class="btn btn-sm btn-primary">Primary</button>
+                                                    <button type="button" class="btn btn-sm btn-primary" disabled>Primary Attr Disabled</button>
+                                                    <button type="button" class="btn btn-sm btn-primary disabled" >Primary Css Disabled</button>
+                                                </div>
+        
+                                                <div class="d-flex justify-content-start mt20">
+                                                    <button type="button" class="btn btn-sm btn-success" >Success</button>
+                                                    <button type="button" class="btn btn-sm btn-success" disabled>Success Attr Disabled</button>
+                                                    <button type="button" class="btn btn-sm btn-success disabled" >Success Css Disabled</button>
+                                                </div>
+        
+        
+                                                <div class="d-flex justify-content-start mt20">
+                                                    <button type="button" class="btn btn-sm btn-secondary">Secondary</button>
+                                                    <button type="button" class="btn btn-sm btn-secondary" disabled>Secondary Attr Disabled</button>
+                                                    <button type="button" class="btn btn-sm btn-secondary disabled" >Secondary Css Disabled</button>
+                                                </div>
+        
+                                                <div class="d-flex justify-content-start mt20">
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary" >Secondary</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary" disabled>Secondary Attr Disabled</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary disabled" >Secondary Css Disabled</button>
+                                                </div>
+        
+                                                <div class="d-flex justify-content-start mt20">
+                                                    <button type="button" class="btn btn-sm btn-outline-success" ><i class="icon-excel"></i> Secondary</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-success" disabled><i class="icon-excel"></i> Secondary Attr Disabled</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-success disabled" ><i class="icon-excel"></i>Secondary Css Disabled</button>
+                                                </div>
+        
+        
+                                                <div class="d-flex justify-content-start mt20">
+                                                    <button type="button" class="btn btn-sm btn-outline-primary" ><i class="icon-refresh"></i> Secondary</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-primary" disabled><i class="icon-refresh"></i> Secondary Attr Disabled</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-primary disabled" ><i class="icon-refresh"></i>Secondary Css Disabled</button>
+                                                </div>
+        
+        
+                                                <div class="d-flex justify-content-start mt20">
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary aw" >로그아웃</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary aw" disabled>로그아웃</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary aw disabled" >로그아웃</button>
+                                                </div>
+        
+                                                <div class="d-flex justify-content-start mt20">
+                                                    <button type="button" class="btn btn-sm btn-outline-primary as" >검색</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-primary as" disabled>검색</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-primary as disabled" >검색</button>
+                                                </div>
+        
+                                                <div class="d-flex justify-content-start mt20">
+                                                    <button type="button" class="btn btn-sm btn-success ah" >신청</button>
+                                                    <button type="button" class="btn btn-sm btn-success ah" disabled>신청</button>
+                                                    <button type="button" class="btn btn-sm btn-success ah disabled" >신청</button>
+                                                </div>
+        
+        
+                                                <div class="d-flex justify-content-start mt20">
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary ah" >GMP변경필요</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary ah" disabled>GMP변경필요</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary ah disabled" >GMP변경필요</button>
+                                                </div>
+        
+        
+                                                <!-- 페이지 네비게이션 -->
+                                                <nav aria-label="Page navigation" style="margin-top: 30px">
+                                                    <ul class="pagination">
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#" aria-label="Previous">
+                                                                <span aria-hidden="true">&laquo;</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#" aria-label="Previous">
+                                                                <span aria-hidden="true">&laquo;</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                        
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#" aria-label="Next">
+                                                                <span aria-hidden="true">&raquo;</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#" aria-label="Next">
+                                                                <span aria-hidden="true">&raquo;</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                                <!-- // 페이지 네비게이션 -->
+        
+        
+        
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                                aria-labelledby="pills-profile-tab">사용중 </div>
+                                            <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                                aria-labelledby="pills-contact-tab">사용완료 </div>
+        
+        
+        
+        
+        
+        
+                                            
+                                        </div>
+                                        <!-- // 콘텐츠 탭 내용 -->
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                    두번째 화면 탭 </div>
+                                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                    세번째 화면 탭</div>
+                                <!-- // 콘텐츠 탭 -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 우측 콘텐츠 영역 -->
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <span>© 2023 Samsung. All Rights Reserved.</span>
+            <span class="f_icon_moniter">접속정보</span>
+        </div>
+    </div>
+
+
+    <script src="js/common.js"></script>
+    <script></script>
+
+
+</body>
+
+</html>
