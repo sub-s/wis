@@ -69,7 +69,9 @@ const comboBox = () => {
 
 }
 
-comboBox()
+comboBox();
+
+
 // 인풋 클리어 
 const inputClearBtn = () => {
     let _this = event.currentTarget;
@@ -88,4 +90,16 @@ const clearBtn = () => {
     _input.value = '';
     _input.focus()
     _this.style.display = 'none';
+}
+
+
+// 검색 영역 오픈 토굴 
+const openSearch = () => {
+    let _this = event.currentTarget;
+    let _text = _this.querySelector('.blind');
+    let _check = _this.closest('.hidden-search').classList.contains('active');
+    
+    _this.closest('.hidden-search').classList.toggle('active')
+    _check ? _text.innerText = '닫힘' : _text.innerText = '열림'
+
 }
