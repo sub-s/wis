@@ -119,114 +119,204 @@
                                 <div class="tab-content" id="pills-tabContent">
                                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                                         aria-labelledby="pills-home-tab">
-                                        <div class="row">
-                                            <div class="col-1">
-                                                <label class="form-label required" for="a1">조건불러오기</label>
-                                                <div class="custom-select " style="width:140px;">
-                                                    <select id="a1" >
-                                                        <option value="0">조건전체</option>
-                                                        <option value="1">텍스트</option>
-                                                        <option value="2">텍스트</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-1">
-                                                <label class="form-label required" for="a2">Recycle 상태</label>
-                                                <div class="custom-select" style="width:140px;">
-                                                    <select id="a2" >
-                                                        <option value="0">신청가능</option>
-                                                        <option value="1">텍스트</option>
-                                                        <option value="2">텍스트</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-1">
-                                                <label class="form-label required" for="a3">Line</label>
-                                                <div class="custom-select" style="width:140px;">
-                                                    <select id="a3" >
-                                                        <option value="0">조건전체</option>
-                                                        <option value="1">텍스트</option>
-                                                        <option value="2">텍스트</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-1">
-                                                <label class="form-label required" for="a4">Process ID</label>
-                                                <div class="custom-select" style="width:140px;">
-                                                    <select id="a4" >
-                                                        <option value="0">yesmjm</option>
-                                                        <option value="1">텍스트</option>
-                                                        <option value="2">텍스트</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-7">
-                                                <label class="form-label required" for="a3">Process ID</label>
-                                                <div class="d-flex justify-content-start align-items-center">
-                                                    <div class="col-auto field">
-                                                        <input type="text" class="form-control form-control-sm" id="inputPassword2" placeholder="text" onkeyup="inputClearBtn()" />
-                                                        <div class="btn-right">
-                                                            <button class="clear-btn" type="button" onclick="clearBtn()">
-                                                                <span class="blind">삭제</span>
-                                                            </button>
-                                                        </div>
+
+
+                                        <!-- 조건 검색 -->
+                                        <div class="condition-search">
+                                            <div class="row">
+                                                <div class="col-1">
+                                                    <label class="form-label required" for="a1">조건불러오기</label>
+                                                    <div class="custom-select " style="width:140px;">
+                                                        <select id="a1" >
+                                                            <option value="0">조건전체</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
                                                     </div>
-                                                    <div class="col-auto">
-                                                        <div class="custom-select" style="width:140px;">
-                                                            <select id="a3" >
-                                                                <option value="0">yesmjm</option>
-                                                                <option value="1">텍스트</option>
-                                                                <option value="2">텍스트</option>
-                                                            </select>
-                                                        </div>
+                                                </div>
+                                                <div class="col-1">
+                                                    <label class="form-label required" for="a2">Recycle 상태</label>
+                                                    <div class="custom-select" style="width:140px;">
+                                                        <select id="a2" >
+                                                            <option value="0">신청가능</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
                                                     </div>
-                                                    <div class="col-auto">~</div>
-                                                    <div class="col-auto field">
-                                                        <input type="text" class="form-control form-control-sm" id="inputPassword2" placeholder="text" onkeyup="inputClearBtn()" />
-                                                        <div class="btn-right">
-                                                            <button class="clear-btn" type="button" onclick="clearBtn()">
-                                                                <span class="blind">삭제</span>
-                                                            </button>
-                                                            <button class="search" type="button">
-                                                                <span class="blind">검색</span>
-                                                            </button>
-                                                        </div>
+                                                </div>
+                                                <div class="col-1">
+                                                    <label class="form-label required" for="a3">Line</label>
+                                                    <div class="custom-select" style="width:140px;">
+                                                        <select id="a3" >
+                                                            <option value="0">조건전체</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
                                                     </div>
-                                                    <div class="col-auto">
-                                                        <div class="custom-select" style="width:140px;">
-                                                            <select id="a3" >
-                                                                <option value="0">yesmjm</option>
-                                                                <option value="1">텍스트</option>
-                                                                <option value="2">텍스트</option>
-                                                            </select>
+                                                </div>
+                                                <div class="col-1">
+                                                    <label class="form-label required" for="a4">Process ID</label>
+                                                    <div class="custom-select" style="width:140px;">
+                                                        <select id="a4" >
+                                                            <option value="0">yesmjm</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7">
+                                                    <label class="form-label required" for="a3">Layer/Step (계측 제외)</label>
+                                                    <div class="d-flex justify-content-start align-items-center">
+                                                        <div class="col-auto field">
+                                                            <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                            <div class="btn-right">
+                                                                <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                    <span class="blind">삭제</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <div class="custom-select" style="width:140px;">
+                                                                <select id="a3" >
+                                                                    <option value="0">moon</option>
+                                                                    <option value="1">텍스트</option>
+                                                                    <option value="2">텍스트</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-auto">~</div>
+                                                        <div class="col-auto field">
+                                                            <input type="text" class="form-control form-control-sm" id="inputPassword2" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                            <div class="btn-right">
+                                                                <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                    <span class="blind">삭제</span>
+                                                                </button>
+                                                                <button class="search" type="button">
+                                                                    <span class="blind">검색</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <div class="custom-select" style="width:140px;">
+                                                                <select id="a3" >
+                                                                    <option value="0">moon</option>
+                                                                    <option value="1">텍스트</option>
+                                                                    <option value="2">텍스트</option>
+                                                                </select>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            
+                                            <div class="hidden-search">
+                                                <button class="search-btn" onclick="ex()"> 
+                                                    <span class="blind">열림</span>
+                                                </button>
+                                                <div class="inner">
+                                                    <div class="row mt10">
+                                                        <div class="col-1">
+                                                            <label class="form-label required" for="b1">등록 Part</label>
+                                                            <div class="custom-select " style="width:140px;">
+                                                                <select id="b1" >
+                                                                    <option value="0">조건전체</option>
+                                                                    <option value="1">텍스트</option>
+                                                                    <option value="2">텍스트</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-1">
+                                                            <label class="form-label required" for="b2">Lot ID</label>
+                                                            <div class="custom-select" style="width:140px;">
+                                                                <select id="b2" >
+                                                                    <option value="0">신청가능</option>
+                                                                    <option value="1">텍스트</option>
+                                                                    <option value="2">텍스트</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="col-1">
+                                                            <label class="form-label required" for="b3">필요매수</label>
+                                                            <div class="d-flex justify-content-start align-items-center">
+                                                                <div class="col-auto field min">
+                                                                    <input type="text" class="form-control form-control-sm" id="b3" placeholder="" onkeyup="inputClearBtn()" />
+                                                                    <div class="btn-right">
+                                                                        <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                            <span class="blind">삭제</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-auto">~</div>
+                                                                <div class="col-auto field min">
+                                                                    <input type="text" class="form-control form-control-sm" id="" placeholder="" onkeyup="inputClearBtn()" />
+                                                                    <div class="btn-right">
+                                                                        <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                            <span class="blind">삭제</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-auto">매</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- // 조건 검색 -->
+
+
+
+
+
+
+
+
+                                        <div class="d-flex justify-content-start mt20" style="margin-top: 200px !important">
+                                            <button type="button" class="btn btn-sm btn-primary" >Primary</button>
+                                            <button type="button" class="btn btn-sm btn-primary" disabled>Primary Attr Disabled</button>
+                                            <button type="button" class="btn btn-sm btn-primary disabled" >Primary Css Disabled</button>
+                                        </div>
+
+                                        <div class="d-flex justify-content-start mt20">
+                                            <button type="button" class="btn btn-sm btn-success" >Success</button>
+                                            <button type="button" class="btn btn-sm btn-success" disabled>Success Attr Disabled</button>
+                                            <button type="button" class="btn btn-sm btn-success disabled" >Success Css Disabled</button>
                                         </div>
 
 
-                                        <button type="button" class="btn btn-sm btn-primary">Primary</button>
-                                        <button type="button" class="btn btn-sm btn-secondary">Secondary</button>
-                                        <button type="button" class="btn btn-sm btn-success">Success</button>
-                                        <button type="button" class="btn btn-sm btn-danger">Danger</button>
-                                        <button type="button" class="btn btn-sm btn-warning">Warning</button>
-                                        <button type="button" class="btn btn-sm btn-info">Info</button>
-                                        <button type="button" class="btn btn-sm btn-light">Light</button>
-                                        <button type="button" class="btn btn-sm btn-dark">Dark</button>
-                                        <button type="button" class="btn btn-sm btn-link">Link</button>
+                                        <div class="d-flex justify-content-start mt20">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary" >Secondary</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary" disabled>Secondary Attr Disabled</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary disabled" >Secondary Css Disabled</button>
+                                        </div>
 
 
-                                        <button type="button" class="btn btn-sm btn-outline-primary">Primary</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Secondary</button>
-                                        <button type="button" class="btn btn-sm btn-outline-success">Success</button>
-                                        <button type="button" class="btn btn-sm btn-outline-danger">Danger</button>
-                                        <button type="button" class="btn btn-sm btn-outline-warning">Warning</button>
-                                        <button type="button" class="btn btn-sm btn-outline-info">Info</button>
-                                        <button type="button" class="btn btn-sm btn-outline-light">Light</button>
-                                        <button type="button" class="btn btn-sm btn-outline-dark">Dark</button>
+
+
+
+                                        <div class="d-flex justify-content-start mt20">
+                                            <button type="button" class="btn btn-sm btn-primary">Primary</button>
+                                            <button type="button" class="btn btn-sm btn-success">Success</button>
+                                            <button type="button" class="btn btn-sm btn-secondary">Secondary</button>
+                                            <button type="button" class="btn btn-sm btn-danger">Danger</button>
+                                            <button type="button" class="btn btn-sm btn-warning">Warning</button>
+                                            <button type="button" class="btn btn-sm btn-info">Info</button>
+                                            <button type="button" class="btn btn-sm btn-light">Light</button>
+                                            <button type="button" class="btn btn-sm btn-dark">Dark</button>
+                                            <button type="button" class="btn btn-sm btn-link">Link</button>
+                                        </div>
+
+                                        <div class="d-flex justify-content-start mt20">
+                                            <button type="button" class="btn btn-sm btn-outline-primary">Primary</button>
+                                            <button type="button" class="btn btn-sm btn-outline-success">Success</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Secondary</button>
+                                            <button type="button" class="btn btn-sm btn-outline-danger">Danger</button>
+                                            <button type="button" class="btn btn-sm btn-outline-warning">Warning</button>
+                                            <button type="button" class="btn btn-sm btn-outline-info">Info</button>
+                                            <button type="button" class="btn btn-sm btn-outline-light">Light</button>
+                                            <button type="button" class="btn btn-sm btn-outline-dark">Dark</button>
+                                        </div>
 
                                     </div>
                                     <div class="tab-pane fade" id="pills-profile" role="tabpanel"
@@ -279,113 +369,24 @@
         </div>
 
 
+        <script src="js/common.js"></script>
+
+
 
         <script>
-            var x, i, j, l, ll, selElmnt, a, b, c;
-            /*look for any elements with the class "custom-select":*/
-            x = document.getElementsByClassName("custom-select");
-            l = x.length;
-            for (i = 0; i < l; i++) {
-                selElmnt = x[i].getElementsByTagName("select")[0];
-                ll = selElmnt.length;
-                /*for each element, create a new DIV that will act as the selected item:*/
-                a = document.createElement("DIV");
-                a.setAttribute("class", "select-selected");
-                a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-                x[i].appendChild(a);
-                /*for each element, create a new DIV that will contain the option list:*/
-                b = document.createElement("DIV");
-                b.setAttribute("class", "select-items select-hide");
-                for (j = 1; j < ll; j++) {
-                    /*for each option in the original select element,
-                    create a new DIV that will act as an option item:*/
-                    c = document.createElement("DIV");
-                    c.innerHTML = selElmnt.options[j].innerHTML;
-                    c.addEventListener("click", function (e) {
-                        /*when an item is clicked, update the original select box,
-                        and the selected item:*/
-                        var y, i, k, s, h, sl, yl;
-                        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-                        sl = s.length;
-                        h = this.parentNode.previousSibling;
-                        for (i = 0; i < sl; i++) {
-                            if (s.options[i].innerHTML == this.innerHTML) {
-                                s.selectedIndex = i;
-                                h.innerHTML = this.innerHTML;
-                                y = this.parentNode.getElementsByClassName("same-as-selected");
-                                yl = y.length;
-                                for (k = 0; k < yl; k++) {
-                                    y[k].removeAttribute("class");
-                                }
-                                this.setAttribute("class", "same-as-selected");
-                                break;
-                            }
-                        }
-                        h.click();
-                    });
-                    b.appendChild(c);
-                }
-                x[i].appendChild(b);
-                a.addEventListener("click", function (e) {
-                    /*when the select box is clicked, close any other select boxes,
-                    and open/close the current select box:*/
-                    e.stopPropagation();
-                    closeAllSelect(this);
-                    this.nextSibling.classList.toggle("select-hide");
-                    this.classList.toggle("select-arrow-active");
-                });
-            }
 
-            function closeAllSelect(elmnt) {
-                /*a function that will close all select boxes in the document,
-                except the current select box:*/
-                var x, y, i, xl, yl, arrNo = [];
-                x = document.getElementsByClassName("select-items");
-                y = document.getElementsByClassName("select-selected");
-                xl = x.length;
-                yl = y.length;
-                for (i = 0; i < yl; i++) {
-                    if (elmnt == y[i]) {
-                        arrNo.push(i)
-                    } else {
-                        y[i].classList.remove("select-arrow-active");
-                    }
-                }
-                for (i = 0; i < xl; i++) {
-                    if (arrNo.indexOf(i)) {
-                        x[i].classList.add("select-hide");
-                    }
-                }
-            }
-            /*if the user clicks anywhere outside the select box,
-            then close all select boxes:*/
-            document.addEventListener("click", closeAllSelect);
-
-
-
-            // 인풋 클리어 
-            const inputClearBtn = () => {
+            const ex = () => {
                 let _this = event.currentTarget;
-                let val = event.target.value;
-                let clear = _this.closest('.field').querySelector('.clear-btn');
+
+                console.log(_this , "this")
+                console.log(_this.closest('.hidden-search') , "this")
                 
-                let _display = val ? 'block' : 'none'
-                clear.style.display = _display;
-                
+                _this.closest('.hidden-search').classList.toggle('active')
+
             }
-            // 인풋 클리어 버튼
-            const clearBtn = () => {
-                let _this = event.currentTarget;
-                let _input = _this.closest('.field').querySelector('input');
-
-                _input.value = '';
-                _input.focus()
-                _this.style.display = 'none';
-            }
-
-
 
         </script>
+
 
 </body>
 
