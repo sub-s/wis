@@ -130,6 +130,59 @@ const lnbDrag = ()=>{
 }
 
 const lnbClick = ()=>{
+    if(event.stopPropagation){
+        event.stopPropagation();
+    }else{
+        event.cancleBubble = true;
+    }
+    let count = 0;
     const _this = event.currentTarget;
-    _this.classList.toggle("active");)
+    const _ul = _this.querySelector("ul");
+    const checked = _this.classList.contains("active");
+    const innerFn = (el,h)=>{
+        const tagCheck = (el.tagName.toLowerCase() === "ul")?true:false;
+        const topChecked = el.classList.contains("lnb_menu");
+        if(!topChecked && tagCheck){
+            const height = el.clientHeight;
+            el.style.height = (height + h) + "px";
+        }
+        if(!topChecked) innerFn(el.parentNode,h);
+    }
+    
+    const h = (_ul)?_ul.scrollHeight:-1;
+    if(checked){
+        _this.classList.remove("active");
+        if(_ul) _ul.style.height = 0;
+        if(_ul) innerFn(_ul.parentNode,(h * -1));
+    }else{
+        _this.classList.add("active");
+        if(_ul) _ul.style.height = h + "px";
+        if(_ul) innerFn(_ul.parentNode,h);
+    }
+}
+
+const lnbSetting = ()=>{
+    const _lnbMenu = document.querySelector(".lnb_menu"); 
+    const _wrap = _lnbMenu.querySelectorAll("ul");
+    const _active = _lnbMenu.querySelectorAll(".active");
+    _lnbMenu.classList.add("noTransition")
+    _wrap.forEach((u,i)=>{
+        const _li = u.querySelector("li");
+        u.style.height = 0;
+    })
+    _active.forEach((a,i)=>{
+        a.classList.remove("active");
+    })
+    for(let i=0; i<_active.length; i++){
+        const time = i * 0;
+        const _li = _active[i];
+        setTimeout(()=>{
+            console.log(i,":",_li); 
+            _li.click();
+            if(i === (_active.length - 1)){
+                _lnbMenu.classList.remove("noTransition")
+            }
+        },time)
+    }
+
 }
