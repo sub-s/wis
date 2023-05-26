@@ -355,7 +355,7 @@ button {border:0;}
 .btn-set {display: flex; align-items: center;}
 .btn-set + .btn-set {margin-top: 20px;}
 
-.btn.btn-sm {min-width: 88px;}
+.btn.btn-sm {min-width: 66px;}
 .btn + .btn {margin-left: 4px;}
 
 .btn.aw {min-width: 100px;}
@@ -408,7 +408,7 @@ button.btn.btn-outline-primary:disabled {background-color: var(--c-white); color
 
 /* 아이콘 */
 .btn [class*="icon"] {display: inline-flex; vertical-align: middle; margin-right: 4px; width: 16px; height: 16px;}
-.btn .icon-seach { background: url(../img/icon/search.svg) no-repeat; }
+.btn .icon-search { background: url(../img/icon/search.svg) no-repeat; }
 .btn .icon-excel { background: url(../img/icon/excel.svg) no-repeat; }
 .btn .icon-refresh {background: url(../img/icon/refresh.svg) no-repeat; }
 
@@ -417,9 +417,9 @@ button.btn[disabled=disabled] .icon-excel,
 button.btn:disabled .icon-excel {background: url(../img/icon/excel02.svg) no-repeat;}
 
 
-.btn.btn-sm.disabled .icon-seach,
-button.btn[disabled=disabled] .icon-seach, 
-button.btn:disabled .icon-seach {background: url(../img/icon/search02.svg) no-repeat;}
+.btn.btn-sm.disabled .icon-search,
+button.btn[disabled=disabled] .icon-search, 
+button.btn:disabled .icon-search {background: url(../img/icon/search02.svg) no-repeat;}
 
 .btn.btn-sm.disabled .icon-refresh,
 button.btn[disabled=disabled] .icon-refresh, 

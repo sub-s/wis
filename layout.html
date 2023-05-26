@@ -23,7 +23,87 @@
     <div class="outer_box">
         <!-- gnb -->
         <div id="gnb">
+            <div class="left-item">
+                <div class="menu-wrap">
+                    <input type="checkbox" id="icon">
+                    <label for="icon">  <!--label은 인라인 스타일-->
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <div class="side-menu">
+                        <ul>
+                            <li><a href="#">menu1</a></li>
+                            <li><a href="#">menu1</a></li>
+                            <li><a href="#">menu1</a></li>
+                            <li><a href="#">menu1</a></li>
+                            <li><a href="#">menu1</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <img src="img/icon/wis_logo.svg" alt="">
+                <div class="gnb-menu">
+                    <ul>
+                        <li class="active"><a href="javascript: void(0)">Wafer recycle</a></li>
+                        <li><a href="javascript: void(0)">Dashboard</a></li>
+                        <li><a href="javascript: void(0)">Monitoring</a></li>
+                        <li><a href="javascript: void(0)">Parameter</a></li>
+                        <li><a href="javascript: void(0)">Report</a></li>
+                    </ul>
+                </div>
+            </div>
 
+            <div class="right-item">
+                <div class="field">
+                    <input type="text" class="form-control form-control-sm" id="inputPassword2" placeholder="데이터" onkeyup="inputClearBtn()">
+                    <div class="btn-right">
+                        <button class="clear-btn" type="button" onclick="clearBtn()">
+                            <span class="blind">삭제</span>
+                        </button>
+                        <button class="search" type="button">
+                            <span class="blind">검색</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="txt-menu">
+                    <ul>
+                        <li><a href="javascript: void(0)">SR의뢰</a></li>
+                        <li><a href="javascript: void(0)">S-VOC</a></li>
+                    </ul>
+                </div>
+                <div class="login-area">
+                    <button type="button" class="user" onclick="loginInfo()">
+                        <span class="blind">
+                            로그인 정보
+                        </span>
+                    </button>
+                    <div class="user-info">
+                        <p class="time">00:00:00</p>
+                        <div class="info">
+                            <div class="t1">
+                                <span>홍길동</span>
+                                <span>momo123.id</span>
+                            </div>
+                            <div class="t2">정보전략그룹(기흥/화성단지)</div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button type="button" class="btn btn-sm btn-outline-secondary aw">개인정보 변경</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary aw">로그아웃</button>
+                        </div>
+                    </div>
+             
+                </div>
+                <div class="custom-select" style="width:100px;">
+                    <select>
+                        <option value="0">한국어</option>
+                        <option value="1">영어</option>
+                        <option value="2">중국어</option>
+                    </select>
+                </div>
+                <div class="end-box">
+                    CONFIDENTIAL
+                </div>
+            </div>
         </div>
         <div id="content">
             <div id="lnb">
