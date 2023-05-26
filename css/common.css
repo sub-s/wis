@@ -480,7 +480,7 @@ button.btn:disabled .icon-refresh {background: url(../img/icon/refresh02.svg) no
   }
   
   .page-item.active .page-link {
-    z-index: 3;
+    /* z-index: 3; */
     color: var(--c-blue3);
     background-color: #fff;
     /* border-color: var(--c-blue3); */
