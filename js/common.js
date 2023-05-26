@@ -126,13 +126,14 @@ const lnbDrag = ()=>{
     const _thumb = event.currentTarget;
     const _lnb = document.querySelector("#lnb");
     const _con = document.querySelector("#content > .content_wrap");
+    const min = 160;
     _thumb.sx = event.pageX;
     _thumb.left = _lnb.clientWidth;
     console.log("_thumb.left : ",_thumb.left)
     const winMove = ()=>{
         _thumb.diffX = event.pageX - _thumb.sx;
         _thumb.calcX = _thumb.left + _thumb.diffX;
-        const applyX = (_thumb.calcX <= 0)?0:_thumb.calcX;
+        const applyX = (_thumb.calcX <= min)?min:_thumb.calcX;
         _lnb.style.width = applyX + "px";
         _con.style.width = "calc(100% - " + applyX + "px)";
     }

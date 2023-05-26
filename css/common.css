@@ -228,10 +228,10 @@ button {border:0;}
 
 .right-area .tab-menu { padding-left: 10px;}
 
-.right-area .top-menu {height: 40px; background: var(--c-gray2);  padding-right: 10px; }
+.right-area .top-menu {height: 40px; /*background: var(--c-gray2);  padding-right: 10px; */}
 .right-area .top-menu .small-zoom {background: url(../img/icon/top_zoom.svg) no-repeat; background-size: cover; width: 28.8px; height: 28.8px; }
 
-.right-area .top-menu .tab-menu {display: flex; justify-content: space-between; align-items: center; width: 100%;}
+.right-area .top-menu .tab-menu {display: flex; justify-content: space-between; align-items: center; width: 100%; padding:0 7px 0 12px; background: var(--c-gray2);}
 .right-area .top-menu .tab-menu nav {flex: 1; margin-left: 10px;}
 .right-area .top-menu .tab-menu nav .nav-tabs {border-bottom: 0;}
 .right-area .top-menu .tab-menu nav .nav-tabs {border-bottom: 0; padding-top: 7px;}
