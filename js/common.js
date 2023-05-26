@@ -110,6 +110,16 @@ const bookmark = () => {
     _this.classList.toggle('active')
 }
 
+// 로그인 정보
+const loginInfo = () => {
+    let _this = event.currentTarget;
+    _this.closest('.login-area').classList.toggle('active')
+}
+
+
+
+
+
 
 const lnbDrag = ()=>{
     event.preventDefault();

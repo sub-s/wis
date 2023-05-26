@@ -10,7 +10,7 @@
 
 #gnb .left-item { display: flex; justify-content: space-between; align-items: center; height: 100%;}
 
-#gnb .menu-wrap {width: 50px; height: 100%; position: relative;}
+#gnb .menu-wrap {width: 50px; height: 100%; position: relative; border-right: 1px solid var(--c-gray5); margin-right: 20px}
 #gnb .menu-wrap input[id="icon"] {display:none;} 
 #gnb .menu-wrap input[id="icon"] + label{position: absolute; top:0; left:0; display:block; padding: 17px 15px; width:50px; height:50px; cursor:pointer; z-index: 2;} 
 #gnb .menu-wrap input[id="icon"] + label > span {display:block; width:100%; height:2px; background: var(--c-black); transition: all 0.35s; }
@@ -30,7 +30,7 @@
 #gnb .gnb-menu ul li a:hover {color: var(--c-blue3);}
 
 
-#gnb .right-item { display: flex; justify-content: space-between; align-items: center; height: 100%;}
+#gnb .right-item { display: flex; justify-content: space-between; align-items: center; height: 100%; padding-right: 20px;}
 
 
 #gnb .right-item .txt-menu { margin-left: 20px;}
@@ -38,15 +38,24 @@
 #gnb .right-item .txt-menu ul li {display: flex; justify-content: space-between; align-items: center;}
 #gnb .right-item .txt-menu ul li::before {display: block; content:''; width: 1px; height: 17px; background: var(--c-gray5); margin: 0 5px 0}
 #gnb .right-item .txt-menu ul li:first-of-type::before {display: none;}
-#gnb .right-item .txt-menu ul li a {font-size: var(--fs-t6); color: var(--c-gray10); }
+#gnb .right-item .txt-menu ul li a {font-size: var(--fs-t6); color: var(--c-gray10);}
 
 #gnb .right-item .login-area {margin-left: 20px; position: relative; display: flex; justify-content: center; align-items: center;}
+#gnb .right-item .login-area.active .user-info {display: block;}
 #gnb .right-item .login-area .user {width: 24px; height: 24px; background: url(../img/icon/user.svg); padding: 0; margin: 0;}
-#gnb .right-item .login-area .user-info {position: absolute; top: 35px; left:0; width: 124px; height: 124px; border: 1px solid var(--c-gray5); z-index: 1; background: var(--c-white); border-radius: 4px;}
+
+
+#gnb .right-item .login-area .user-info {display: none; position: absolute; top: 35px; left: 50%; transform: translate( -50%, 0);  width: auto;  border: 1px solid var(--c-gray5); z-index: 1; background: var(--c-white); border-radius: 4px; padding: 10px;}
+#gnb .right-item .login-area .user-info .time {display: flex; justify-content: flex-start; align-items: center; font-size: var(--fs-t7); color:  var(--c-gray9); line-height: 12px;}
+#gnb .right-item .login-area .user-info .time::before {display: block; content: ''; width: 24px; height: 24px; background: url(../img/icon/clock.svg) no-repeat; margin-right: 5px;}
+
+#gnb .right-item .login-area .user-info .info {margin-top: 10px; margin-bottom: 15px;}
+#gnb .right-item .login-area .user-info .info .t1 {font-size: var(--fs-t8); color: var(--c-gray10);}
+#gnb .right-item .login-area .user-info .info .t2 {font-size: var(--fs-t7); color: var(--c-gray10); margin-top: 2px;}
+
 
 #gnb .right-item .custom-select {margin-left: 20px;}
-
-#gnb .right-item .end-box {font-size: var(--fs-t6); color: var(--c-blue3); margin-left: 20px;}
+#gnb .right-item .end-box {font-size: var(--fs-t9); color: var(--c-blue3); margin-left: 20px;}
 
 
 
