@@ -126,6 +126,7 @@
 .mb0 { margin-bottom: 0 !important; }
 .mt5 { margin-top: 5px !important; }
 .ml5 { margin-left: 5px !important; }
+.mr0 { margin-right: 0px !important; }
 .mt10 { margin-top: 10px !important; }
 .ml10 { margin-left: 10px !important; }
 .mb10 { margin-bottom: 10px !important; }
@@ -344,7 +345,11 @@ button {border:0;}
 .field .btn-right .search{ width: 16px; height: 16px; background: url(../img/icon/input_search.svg) no-repeat;}
 
 
+.field.date {position: relative; width: 140px;}
+.field.date::after {display: block; content:''; background: url(../img/common/calendar.svg) no-repeat; width: 24px; height: 24px; position:absolute; top:3px; right:3px;}
 
+
+.space {width:20px; font-size:15px; text-align: center; vertical-align: middle; padding-top: 5px;}
 
 
 
