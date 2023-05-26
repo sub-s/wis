@@ -104,6 +104,12 @@ const openSearch = () => {
 
 }
 
+// 북마크 
+const bookmark = () => {
+    let _this = event.currentTarget;
+    _this.classList.toggle('active')
+}
+
 
 const lnbDrag = ()=>{
     event.preventDefault();
