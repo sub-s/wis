@@ -1,4 +1,18 @@
-            
+HTMLElement.prototype.getIndex = function(){
+    let idx = -1;
+    const _c = this.parentNode.children;
+    for(let i=0; i<_c.length; i++){
+        const c = _c[i];
+        if(c === this){
+            idx = i;
+            break;
+        }
+    }
+    return idx;
+}
+
+
+
 const comboBox = () => {
     var x, i, j, l, ll, selElmnt, a, b, c;
     x = document.getElementsByClassName("custom-select");
@@ -194,7 +208,6 @@ const lnbSetting = ()=>{
         const time = i * 0;
         const _li = _active[i];
         setTimeout(()=>{
-            console.log(i,":",_li); 
             _li.click();
             if(i === (_active.length - 1)){
                 _lnbMenu.classList.remove("noTransition")
@@ -203,6 +216,34 @@ const lnbSetting = ()=>{
     }
 
 }
+const lnbTopTabClick = ()=>{
+    const _this = event.currentTarget;
+    const checked = _this.classList.contains("active");
+    const _wrap = _this.closest(".lnb_tab");
+    const _ul = _this.closest("ul");
+    const _li = _ul.querySelectorAll("li");
+    const idx = _this.getIndex();
+    const _book = _wrap.querySelector(".lnb_bookMark");
+    const _latest = _wrap.querySelector(".lnb_latestMenu");
+    if(checked){
+        _li[0].classList.remove("active");
+        _li[1].classList.remove("active");
+        _book.classList.remove("active");
+        _latest.classList.remove("active");
+
+    }else if(idx === 0){
+        _li[0].classList.add("active");
+        _li[1].classList.remove("active");
+        _book.classList.add("active");
+        _latest.classList.remove("active");
+    }else{
+        _li[0].classList.remove("active");
+        _li[1].classList.add("active");
+        _book.classList.remove("active");
+        _latest.classList.add("active");
+    }
+}
+
 $.datepicker.setDefaults({
     dateFormat: 'yy.mm.dd', //Input Display Format 변경
     showMonthAfterYear:true ,
