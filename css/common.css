@@ -296,7 +296,7 @@ button {border:0;}
 
 
 /* 조건 검색 */
-.tab-content .tab-pane .condition-search {position: relative;}
+.tab-content .tab-pane .condition-search {position: relative; z-index:1;}
 .tab-content .tab-pane .condition-search .hidden-search {position: relative; border-bottom: 1px solid var(--c-gray5); padding-bottom: 16px; }
 .tab-content .tab-pane .condition-search .hidden-search .inner { bottom:0; height: 1px; overflow: hidden; display: none;}
 .tab-content .tab-pane .condition-search .hidden-search.active .inner {background: transparent; height: 100%; overflow: initial; display: block;}

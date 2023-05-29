@@ -203,3 +203,18 @@ const lnbSetting = ()=>{
     }
 
 }
+$.datepicker.setDefaults({
+    dateFormat: 'yy.mm.dd', //Input Display Format 변경
+    showMonthAfterYear:true ,
+    
+    monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+    monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+    dayNamesMin: ['일','월','화','수','목','금','토'],
+    dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'],
+    //minDate: "-1M",//최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
+    //maxDate: "+1M", //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)         
+    yearSuffix: "년",
+    buttonText: "선택",
+});
+$(".datepicker").datepicker();
+lnbSetting();

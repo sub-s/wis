@@ -1,30 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="realgrid.2.6.3/realgrid-style.css" rel="stylesheet" />
-        <script src="realgrid.2.6.3/realgrid-lic.js"></script>
-        <script src="realgrid.2.6.3/realgrid.2.6.3.min.js"></script>
 
-        <style>
-        #realgrid {
-            width: 100%;
-            height: 440px;
-        }
-        </style>
+<head>
+  <meta charset='utf-8' />
+  <link href='./realgrid.2.0.2/realgrid-style.css' rel='stylesheet' />
+  <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  <script src="./realgrid.2.0.2//realgrid-lis.js"></script>
+  <script src='./realgrid.2.0.2/realgrid.2.0.3.min.js'></script>
+  <script src='./realgrid.2.0.2/realgrid-events.js'></script>
+  <style>
+  </style>
+</head>
 
-        <script>
-            const realGrid2Lic = 'upVcPE+wPOmtLjqyBIh9RkM/nBOseBrflwxYpzGZyYmdt0IGq/YgDKazDx2vUdBvh+4qFEmIFJYkR4UQ92KjRvQ4QdOsAuMW';
+<body>
+  <div class="realgrid-wrap">
+    <div id='realgrid1' style="height:394px"></div>
+  </div>
+  <script src='./realgrid.2.6.3/grid_page.js'></script>
+  <script src='realgrid_sample01.js'></script>
+  
+</body>
 
-            document.addEventListener('DOMContentLoaded', function () {
-                const container = document.getElementById('realgrid');
-                const provider = new RealGrid.LocalDataProvider(false);
-                const gridView = new RealGrid.GridView(container);
-                gridView.setDataSource(provider);
-            });
-        </script>
-    </head>
-
-    <body>
-    <div id="realgrid"></div>
-    </body>
 </html>
