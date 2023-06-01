@@ -196,3 +196,7 @@ li.active > .menu_wrap > ul{display:block;}
 
 /**/
 .bottom-btn-area{margin-top:20px; text-align:center;}
+
+/* */
+.alert-box{padding:5px 0 25px; text-align:center; font-size:14px; color:#FF3B30;}
+.alert-box:before{content:""; position:relative; top:-2px;  display:inline-block; width:20px; height:20px; margin-right:6px; vertical-align:middle; background:url(../img/icon/icon_alert-box.svg) no-repeat center;}
