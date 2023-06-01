@@ -137,10 +137,11 @@ const loginInfo = () => {
 
 const lnbDrag = ()=>{
     event.preventDefault();
+    const _out = document.querySelector(".outer_box");
     const _thumb = event.currentTarget;
     const _lnb = document.querySelector("#lnb");
     const _con = document.querySelector("#content > .content_wrap");
-    const min = 160;
+    const min = 0;
     _thumb.sx = event.pageX;
     _thumb.left = _lnb.clientWidth;
     console.log("_thumb.left : ",_thumb.left)
@@ -150,6 +151,13 @@ const lnbDrag = ()=>{
         const applyX = (_thumb.calcX <= min)?min:_thumb.calcX;
         _lnb.style.width = applyX + "px";
         _con.style.width = "calc(100% - " + applyX + "px)";
+        if(applyX === 0){
+            _out.classList.add("closedLnb");
+            _lnb.applyX = 280;
+        }else{
+            _out.classList.remove("closedLnb");
+            _lnb.applyX = applyX;
+        }
     }
     const winUp = ()=>{
         console.log("mpuse up ev/11")
@@ -328,3 +336,22 @@ $.datepicker.setDefaults({
 });
 $(".datepicker").datepicker();
 // lnbSetting();
+
+
+
+/* lnb */
+const lnbToggle = ()=>{
+    const checked = ($("#lnb").width() > 0)?true:false;
+    const applyX = window.innerWidth - $("#content > .content_wrap").width();
+    console.log("-------")
+    if(!$("#lnb")[0].applyX) $("#lnb")[0].applyX = applyX;
+    if(checked){
+        $(".outer_box").addClass("closedLnb");
+        $("#lnb").css("width",0);
+        $("#content > .content_wrap").css("width","calc(100% - 0px)")
+    }else{
+        $(".outer_box").removeClass("closedLnb");
+        $("#lnb").css("width",$("#lnb")[0].applyX);
+        $("#content > .content_wrap").css("width","calc(100% - " + $("#lnb")[0].applyX + "px)")
+    }
+}
