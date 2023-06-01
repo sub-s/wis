@@ -141,26 +141,24 @@ const lnbDrag = ()=>{
     const _thumb = event.currentTarget;
     const _lnb = document.querySelector("#lnb");
     const _con = document.querySelector("#content > .content_wrap");
-    const min = 0;
+    const min = 1;
     _thumb.sx = event.pageX;
     _thumb.left = _lnb.clientWidth;
-    console.log("_thumb.left : ",_thumb.left)
     const winMove = ()=>{
         _thumb.diffX = event.pageX - _thumb.sx;
         _thumb.calcX = _thumb.left + _thumb.diffX;
         const applyX = (_thumb.calcX <= min)?min:_thumb.calcX;
         _lnb.style.width = applyX + "px";
         _con.style.width = "calc(100% - " + applyX + "px)";
-        if(applyX === 0){
+        if(applyX === min){
             _out.classList.add("closedLnb");
-            _lnb.applyX = 280;
+            _lnb.applyX = _thumb.left;
         }else{
             _out.classList.remove("closedLnb");
             _lnb.applyX = applyX;
         }
     }
     const winUp = ()=>{
-        console.log("mpuse up ev/11")
         window.removeEventListener("mousemove",winMove);
         window.removeEventListener("mouseup",winUp);
     }
@@ -213,14 +211,10 @@ const getLnbLastChild = ()=>{
         for(let i=0; i<_lis.length; i++){
             const _li = _lis[i];
             const cl = (path === "")?String(i):path + "-" + i;
-            console.log(cl);
             _li.classList.add(cl);
             if(_li.querySelector("ul")){
                 innerFn(_li.querySelector("ul"),String(cl));
             }else{
-                console.log('-------------------------');
-                console.log('_li.querySelector("ul") : ',_li.querySelector("ul"));
-                console.log(',_li : ',_li);
                 temp.push({depth:cl,el:_li});
             }
         }
@@ -311,7 +305,6 @@ $("textarea[max]").each((i,t)=>{
         const max = Number($(t).attr("max"));
         const keycode = event.keyCode
         const txt = $(t).val();
-        console.log("keycode : ",keycode);
         if(max <= len && (keycode !== 8 && keycode !== 46 && keycode !== 37 && keycode !== 39 && keycode !== 40 && keycode !== 38)) event.preventDefault();
         if(max < len){
             $(t).val(txt.substring(0,max));
@@ -341,14 +334,13 @@ $(".datepicker").datepicker();
 
 /* lnb */
 const lnbToggle = ()=>{
-    const checked = ($("#lnb").width() > 0)?true:false;
+    const checked = ($("#lnb").width() > 1)?true:false;
     const applyX = window.innerWidth - $("#content > .content_wrap").width();
-    console.log("-------")
     if(!$("#lnb")[0].applyX) $("#lnb")[0].applyX = applyX;
     if(checked){
         $(".outer_box").addClass("closedLnb");
-        $("#lnb").css("width",0);
-        $("#content > .content_wrap").css("width","calc(100% - 0px)")
+        $("#lnb").css("width",1);
+        $("#content > .content_wrap").css("width","calc(100% - 1px)")
     }else{
         $(".outer_box").removeClass("closedLnb");
         $("#lnb").css("width",$("#lnb")[0].applyX);

@@ -117,6 +117,8 @@ li.active > .tit{font-weight:700;}
 .lnb_menu > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li:before{content:""; position:absolute; top:0; bottom:0; left:30px; width:1px; background:#DBDBDB;}
 .lnb_menu > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li.active:before{background:#3771F9;}
 
+
+.menu_wrap{min-width:250px;}
 li.active > .menu_wrap > ul{display:block;}
 
 
@@ -156,8 +158,8 @@ li.active > .menu_wrap > ul{display:block;}
 .latestMenu input{position:fixed; top:-1000%; left:-1000%;}
 .latestMenu:hover{text-decoration:underline;}
 
-.lnb_bookMark, .lnb_latestMenu{position:absolute; top:0; left:-100%; bottom:0; width:100%; padding:21px 13px 0 13px; font-size:14px; font-weight:400;  overflow:auto; background:#fff;}
-.lnb_bookMark.active, .lnb_latestMenu.active{left:0;}
+.lnb_bookMark, .lnb_latestMenu{position:absolute; top:0; left:-100%; bottom:0; display:none; width:100%; padding:21px 13px 0 13px; font-size:14px; font-weight:400;  overflow:auto; background:#fff;}
+.lnb_bookMark.active, .lnb_latestMenu.active{left:0; display:block;}
 .lnb_bookMark > ul > li + li, .lnb_latestMenu > ul > li + li{margin-top:12px;}
 
 
