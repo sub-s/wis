@@ -294,6 +294,7 @@ button {border:0; outline:none !important; box-shadow:none !important;}
 .dropdown-menu.show .dropdown-item {font-size: var(--fs-t7)}
 
 .tab-content { width: 100%;}
+.condition-search.line{padding:6px 0 15px 0; border-top:1px solid #E0E0E0; border-bottom:1px solid #E0E0E0; margin-bottom:16px;}
 .condition-search .row {--bs-gutter-x: 0; position:relative; width:100%;}
 .condition-search .row.line{padding:6px 0 15px 0; border-top:1px solid #E0E0E0; border-bottom:1px solid #E0E0E0;}
 .condition-search .row > [class *= cell-]{min-height:57px; padding-right:0px;}
@@ -447,6 +448,8 @@ button.btn.btn-outline-primary:disabled {background-color: var(--c-white); color
 .btn .icon-search { background: url(../img/icon/search.svg) no-repeat; }
 .btn .icon-excel { background: url(../img/icon/excel.svg) no-repeat; }
 .btn .icon-refresh {background: url(../img/icon/refresh.svg) no-repeat; }
+.btn .icon-duble-arr-r {position:relative; top:-2px; width:10px; height:11px; margin-left:3px; margin-right:0; vertical-align:middle; background: url(../img/icon/duble-arr-r.svg) no-repeat; }
+.btn .icon-arr-d {position:relative; top:-2px; width:10px; height:13px; margin-left:8px; margin-right:0; vertical-align:middle; background: url(../img/icon/arr-d.svg) no-repeat; }
 
 .btn.btn-sm.disabled .icon-excel,
 button.btn[disabled=disabled] .icon-excel, 
@@ -587,6 +590,7 @@ button.btn:disabled .icon-refresh {background: url(../img/icon/refresh02.svg) no
 
 
   /* table */
+  .table-layout{overflow:auto;}
   .table-layout > table{width:100%; font-size:13px; color:#212121; border-collapse:collapse;}
   .table-layout > table > thead > tr > th{font-weight: 700; font-size: 13px; background:#F0F0F0;}
 
@@ -610,3 +614,8 @@ button.btn:disabled .icon-refresh {background: url(../img/icon/refresh02.svg) no
   .text-center{text-align:center !important;}
   .text-left{text-align:left !important;}
   .text-right{text-align:right !important;}
+
+
+  .icon-x{display:inline-block; width:10px; height:10px; background:url(../img/icon/icon_x.svg) no-repeat center;}
+
+  .icon-small-check{display:inline-block; width:12px; height:12px; background:url(../img/icon/icon_small_check.svg) no-repeat center;}

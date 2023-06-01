@@ -202,3 +202,19 @@ li.active > .menu_wrap > ul{display:block;}
 /* */
 .alert-box{padding:5px 0 25px; text-align:center; font-size:14px; color:#FF3B30;}
 .alert-box:before{content:""; position:relative; top:-2px;  display:inline-block; width:20px; height:20px; margin-right:6px; vertical-align:middle; background:url(../img/icon/icon_alert-box.svg) no-repeat center;}
+/*   */
+.layout-type02{display:flex;}
+.layout-type02 .l, .layout-type02 .r{flex:1;}
+.layout-type02 .c{display:flex; align-items:center; justify-content:center; width:100px;}
+.layout-type02-top{display:flex; align-items:center; height:30px; margin-bottom:8px;}
+.layout-type02-top .tit{font-size:14px; color:#212121; font-weight:700;}
+.layout-type02-top .field{flex:1; margin-left:6px;}
+.layout-type02-con{height:300px;}
+
+/* dummy-box */
+.dummy-box{background:#D9D9D9;}
+
+/**/
+.btn-center-area{display:flex; align-items:center; justify-content:center; height:70px;}
+
+.bottom-area-con{height:160px;}

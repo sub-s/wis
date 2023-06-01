@@ -750,6 +750,7 @@
                                                 <!-- // 테이블 -->
                                                 <!-- 팝업 호출 버튼 -->
                                                 <div class="d-flex justify-content-start align-items-center mt30">
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p0').addClass('open')" >예약 등록 pop up</button>
                                                     <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p1').addClass('open')" >Wafer Recycle 결재 pop up</button>
                                                     <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p1_1').addClass('open')" >Wafer Recycle 신청 pop up</button>
                                                     <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p2').addClass('open')" >반려사유 pop up</button>
@@ -975,7 +976,7 @@
             </div>
             <div class="pop-con">
                 <!-- 조건 검색 -->
-                <div class="condition-search">
+                <div class="condition-search line">
                     <!-- row -->
                     <div class="row">
                         <div class="cell-1">
@@ -1005,7 +1006,7 @@
                             </div>
                         </div>
                         <div class="cell-4">
-                            <label class="form-label" for="a1">Layer / Step (계측 제외 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_398_7817)"><rect width="12" height="12" rx="2" fill="#3771F9"/><path d="M3 5.77108L5.19847 8.2L9 4" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_398_7817"><rect width="12" height="12" rx="2" fill="white"/></clipPath></defs></svg>) : Layer 입력 후 Enter </label>
+                            <label class="form-label" for="a1">Layer / Step (계측 제외 <i class="icon-small-check"></i>) : Layer 입력 후 Enter </label>
                             <div class="con">
                                 <div class="range-box-layout">
                                     <div class="range-box-area">
@@ -1114,93 +1115,174 @@
                         </div>
                     </div>
                     <!-- // row -->
-                    <!-- row -->
-                    <div class="row">
-                        <div class="cell-5">
-                            <label class="form-label" for="a1">Scrap slot  </label>
-                            <div class="con">
-                                <div class="field">
-                                    <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" value="01,02,03,04" onkeyup="inputClearBtn()" />
-                                    <div class="btn-right">
-                                        <button class="clear-btn" type="button" onclick="clearBtn()">
-                                            <span class="blind">삭제</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- // row -->
-                    <!-- row -->
-                    <div class="row">
-                        <div class="cell-5 ver">
-                            <label class="form-label" for="a1">원인 계측 step</label>
-                            <div class="con">
-                                <div class="field">
-                                    <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" value="Layer+Entet" onkeyup="inputClearBtn()" />
-                                    <div class="btn-right">
-                                        <button class="clear-btn" type="button" onclick="clearBtn()">
-                                            <span class="blind">삭제</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                
-                                <div class="custom-select" style="flex:2">
-                                    <select>
-                                        <option value="0">[stepseq] description (진행 slot) - 저장은 stepseq</option>
-                                        <option value="1">영어</option>
-                                        <option value="2">중국어</option>
-                                    </select>
-                                </div>
-                                <div class="field">
-                                    <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" value="기타 Step" onkeyup="inputClearBtn()" />
-                                    <div class="btn-right">
-                                        <button class="clear-btn" type="button" onclick="clearBtn()">
-                                            <span class="blind">삭제</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- // row -->
-                    <!-- row -->
-                    <div class="row">
-                        <div class="cell-5 ver">
-                            <label class="form-label" for="a1">원인 메인 step</label>
-                            <div class="con">
-                                <div class="field">
-                                    <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" value="Layer+Entet" onkeyup="inputClearBtn()" />
-                                    <div class="btn-right">
-                                        <button class="clear-btn" type="button" onclick="clearBtn()">
-                                            <span class="blind">삭제</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                
-                                <div class="custom-select" style="flex:2">
-                                    <select>
-                                        <option value="0">[stepseq] description (진행 slot) - 저장은 stepseq</option>
-                                        <option value="1">영어</option>
-                                        <option value="2">중국어</option>
-                                    </select>
-                                </div>
-                                <div class="duble-btn-layout">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">FDC</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">SPC</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- // row -->
                 </div>
                 <!-- // 조건 검색 -->
+                <!-- 테이블 -->
+                <div class="layout-type02">
+                    <div class="l">
+                        <!-- top -->
+                        <div class="layout-type02-top">
+                            <label class="input-box"><input type="radio" name="radio01" /><i></i>인명검색</label>
+                            <label class="input-box"><input type="radio" name="radio01" /><i></i>분업조</label>
+                            <label class="input-box"><input type="radio" name="radio01" /><i></i>Knox 주소록</label>
+                            <div class="field">
+                                <input type="text" class="form-control form-control-sm" id="inputPassword2" placeholder="데이터" onkeyup="inputClearBtn()">
+                                <div class="btn-right">
+                                    <button class="clear-btn" type="button" onclick="clearBtn()">
+                                        <span class="blind">삭제</span>
+                                    </button>
+                                    <button class="search" type="button">
+                                        <span class="blind">검색</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // top -->
+                        <!-- con -->
+                        <div class="layout-type02-con">
+                            <!-- grid -->
+                            <div class="dummy-box" style="height:100%"></div>
+                            <!-- // grid -->
+                        </div>
+                        <!-- // con -->
+                    </div>
+                    <div class="c">
+                        <button type="button" class="btn btn-sm btn-outline-primary">추가<i class="icon-duble-arr-r"></i></button>
+                    </div>
+                    <div class="r">
+                        <!-- top -->
+                        <div class="layout-type02-top">
+                            <div class="tit">수신인 목록</div>
+                        </div>
+                        <!-- // top -->
+                        <!-- con -->
+                        <div class="layout-type02-con">
+                            <!-- 테이블 -->
+                            <div class="table-layout" style="height:100%">
+                                <table cellpadding="0" cellspacing="0">
+                                    <colgroup>
+                                        <col stule="width:10px" />
+                                        <col stule="width:30px" />
+                                        <col stule="width:50px" />
+                                        <col stule="width:auto" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th><i class="icon-x"></i></th>
+                                            <th>이름</th>
+                                            <th>ID</th>
+                                            <th>부서</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center"><i class="icon-x"></i></td>
+                                            <td class="text-center">고태희</td>
+                                            <td class="text-center">tae.hee.ko</td>
+                                            <td class="text-center">SRE그룹(혁신센터)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><i class="icon-x"></i></td>
+                                            <td class="text-center">고태희</td>
+                                            <td class="text-center">tae.hee.ko</td>
+                                            <td class="text-center">SRE그룹(혁신센터)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><i class="icon-x"></i></td>
+                                            <td class="text-center">고태희</td>
+                                            <td class="text-center">tae.hee.ko</td>
+                                            <td class="text-center">SRE그룹(혁신센터)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><i class="icon-x"></i></td>
+                                            <td class="text-center">고태희</td>
+                                            <td class="text-center">tae.hee.ko</td>
+                                            <td class="text-center">SRE그룹(혁신센터)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><i class="icon-x"></i></td>
+                                            <td class="text-center">고태희</td>
+                                            <td class="text-center">tae.hee.ko</td>
+                                            <td class="text-center">SRE그룹(혁신센터)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><i class="icon-x"></i></td>
+                                            <td class="text-center">고태희</td>
+                                            <td class="text-center">tae.hee.ko</td>
+                                            <td class="text-center">SRE그룹(혁신센터)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><i class="icon-x"></i></td>
+                                            <td class="text-center">고태희</td>
+                                            <td class="text-center">tae.hee.ko</td>
+                                            <td class="text-center">SRE그룹(혁신센터)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><i class="icon-x"></i></td>
+                                            <td class="text-center">고태희</td>
+                                            <td class="text-center">tae.hee.ko</td>
+                                            <td class="text-center">SRE그룹(혁신센터)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><i class="icon-x"></i></td>
+                                            <td class="text-center">고태희</td>
+                                            <td class="text-center">tae.hee.ko</td>
+                                            <td class="text-center">SRE그룹(혁신센터)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><i class="icon-x"></i></td>
+                                            <td class="text-center">고태희</td>
+                                            <td class="text-center">tae.hee.ko</td>
+                                            <td class="text-center">SRE그룹(혁신센터)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><i class="icon-x"></i></td>
+                                            <td class="text-center">고태희</td>
+                                            <td class="text-center">tae.hee.ko</td>
+                                            <td class="text-center">SRE그룹(혁신센터)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><i class="icon-x"></i></td>
+                                            <td class="text-center">고태희</td>
+                                            <td class="text-center">tae.hee.ko</td>
+                                            <td class="text-center">SRE그룹(혁신센터)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><i class="icon-x"></i></td>
+                                            <td class="text-center">고태희</td>
+                                            <td class="text-center">tae.hee.ko</td>
+                                            <td class="text-center">SRE그룹(혁신센터)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><i class="icon-x"></i></td>
+                                            <td class="text-center">고태희</td>
+                                            <td class="text-center">tae.hee.ko</td>
+                                            <td class="text-center">SRE그룹(혁신센터)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- // 테이블 -->
+                        </div>
+                        <!-- // con -->
+                    </div>
+                </div>
+                <!-- 테이블 -->
+                <!-- 버튼 -->
+                <div class="btn-center-area">
+                    <button type="button" class="btn btn-sm btn-outline-primary">예약 내용 추가<i class="icon-arr-d"></i></button>
+                </div>
+                <!-- // 버튼 -->
+                <!-- 하단 그리드 -->
+                <div class="bottom-area-con">
+                    <div class="dummy-box" style="height:100%"></div>
+                </div>
+                <!-- // 하단 그리드 -->
             </div>
             <!-- btn set -->
             <div class="bottom-btn-area">
                 <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$(this).parents('.fixed-pop').removeClass('open')">취소</button>
-                <button type="button" class="btn btn-sm btn-color-red" onclick="$(this).parents('.fixed-pop').removeClass('open')">반려</button>
-                <button type="button" class="btn btn-sm btn-primary" onclick="$(this).parents('.fixed-pop').removeClass('open')">승인</button>
+                <button type="button" class="btn btn-sm btn-primary" onclick="$(this).parents('.fixed-pop').removeClass('open')">저장</button>
             </div>
             <!-- // btn set -->
         </div>
