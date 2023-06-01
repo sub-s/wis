@@ -27,7 +27,7 @@
 #gnb .gnb-menu ul {display: flex; justify-content: space-between; align-items: center;}
 #gnb .gnb-menu ul li {margin-left: 30px;}
 #gnb .gnb-menu ul li.active a {color: var(--c-blue3);}
-#gnb .gnb-menu ul li a {font-size: var(--fs-t3); font-weight: 700; color: var(--c-gray10); text-decoration: none;}
+#gnb .gnb-menu ul li a {font-family: var(--font); font-size: var(--fs-t3); font-weight: 700; color: var(--c-gray10); text-decoration: none;}
 #gnb .gnb-menu ul li a:hover {color: var(--c-blue3);}
 
 
@@ -106,9 +106,9 @@ li.active > .tit{font-weight:700;}
 .lnb_menu > ul > li{ border-bottom: 1px solid #DBDBDB;}
 .lnb_menu > ul > li > .menu_wrap:after, .lnb_menu > ul > li > .menu_wrap:before{display:none;}
 
-.lnb_menu .tit{position:relative; display:flex; align-items:center; font-family: 'SamsungOne'; font-weight: 400; font-style: normal; font-size:16px; color:var(--c-black); cursor:pointer; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.lnb_menu .tit{position:relative; display:flex; align-items:center; font-family: var(--font); font-weight: 400; font-style: normal; font-size:16px; color:var(--c-black); cursor:pointer; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 
-.lnb_menu > ul > li > .tit{ display:flex; align-items:center; height:40px;  padding:0 16px; font-family: 'SamsungOne'; font-style: normal; font-weight: 700; font-size: 18px; line-height: 22px; color: #000000; border-bottom:1px solid #DBDBDB;}
+.lnb_menu > ul > li > .tit{ display:flex; align-items:center; height:40px;  padding:0 16px; font-family: var(--font); font-style: normal; font-weight: 700; font-size: 18px; line-height: 22px; color: #000000; border-bottom:1px solid #DBDBDB;}
 .lnb_menu > ul > li > .menu_wrap > ul > li > .tit{height:40px; padding-left:20px;}
 
 .lnb_menu > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li > .tit{padding-left:30px; height:30px; font-size:14px;}
