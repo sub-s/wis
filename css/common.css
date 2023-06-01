@@ -295,6 +295,7 @@ button {border:0; outline:none !important; box-shadow:none !important;}
 
 .tab-content { width: 100%;}
 .condition-search .row {--bs-gutter-x: 0; position:relative; width:100%;}
+.condition-search .row.line{padding:6px 0 15px 0; border-top:1px solid #E0E0E0; border-bottom:1px solid #E0E0E0;}
 .condition-search .row > [class *= cell-]{min-height:57px; padding-right:0px;}
 .condition-search .row > [class *= cell-] > .con{display:flex; justify-content:space-between; width:100%; min-height:31px; padding-right:15px;}
 .condition-search .row > [class *= cell-]:last-child > .con{padding-right:0px;}
@@ -556,6 +557,9 @@ button.btn:disabled .icon-refresh {background: url(../img/icon/refresh02.svg) no
     border-top-right-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
   } */
+
+  /* input */
+  input[type = text]:disabled{color:#9E9E9E; border: 1px solid #F5F5F5; background-color:#F5F5F5; font-weight:400;}
 
   /* checkgos */
   .input-box + .input-box{margin-left:10px;}

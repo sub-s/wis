@@ -751,6 +751,7 @@
                                                 <!-- 팝업 호출 버튼 -->
                                                 <div class="d-flex justify-content-start align-items-center mt30">
                                                     <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p1').addClass('open')" >Wafer Recycle 결재 pop up</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p1_1').addClass('open')" >Wafer Recycle 신청 pop up</button>
                                                     <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p2').addClass('open')" >반려사유 pop up</button>
                                                 </div>
                                                 <!-- // 팝업 호출 버튼 -->
@@ -1197,9 +1198,9 @@
             </div>
             <!-- btn set -->
             <div class="bottom-btn-area">
-                <button type="button" class="btn btn-sm btn-outline-secondary">취소</button>
-                <button type="button" class="btn btn-sm btn-color-red">반려</button>
-                <button type="button" class="btn btn-sm btn-primary">승인</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$(this).parents('.fixed-pop').removeClass('open')">취소</button>
+                <button type="button" class="btn btn-sm btn-color-red" onclick="$(this).parents('.fixed-pop').removeClass('open')">반려</button>
+                <button type="button" class="btn btn-sm btn-primary" onclick="$(this).parents('.fixed-pop').removeClass('open')">승인</button>
             </div>
             <!-- // btn set -->
         </div>
@@ -1410,14 +1411,203 @@
             </div>
             <!-- btn set -->
             <div class="bottom-btn-area">
-                <button type="button" class="btn btn-sm btn-outline-secondary">취소</button>
-                <button type="button" class="btn btn-sm btn-color-red">반려</button>
-                <button type="button" class="btn btn-sm btn-primary">승인</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$(this).parents('.fixed-pop').removeClass('open')">취소</button>
+                <button type="button" class="btn btn-sm btn-color-red" onclick="$(this).parents('.fixed-pop').removeClass('open')">반려</button>
+                <button type="button" class="btn btn-sm btn-primary" onclick="$(this).parents('.fixed-pop').removeClass('open')">승인</button>
             </div>
             <!-- // btn set -->
         </div>
     </div>
     <!-- // Wafer Recycle 결재 pop up -->
+    <!-- Wafer Recycle 신청 pop up -->
+    <div class="fixed-pop p1_1">
+        <div class="pop-box" style="width:995px;">
+            <div class="pop-top">
+                <div class="tit">Wafer Recycle 신청</div>
+                <button class="pop-close" onclick="$(this).parents('.fixed-pop').removeClass('open')">close</button>
+            </div>
+            <div class="pop-con">
+                <!-- 조건 검색 -->
+                <div class="condition-search">
+                    <!-- row -->
+                    <div class="row line">
+                        <div class="cell-1">
+                            <label class="form-label" for="a1">Lot ID </label>
+                            <div class="con">
+                                <div class="field">
+                                    <input type="text" class="form-control form-control-sm text-center" id="a3" placeholder="데이터" value="PPP111.T1" onkeyup="inputClearBtn()" />
+                                    <div class="btn-right">
+                                        <button class="clear-btn" type="button" onclick="clearBtn()">
+                                            <span class="blind">삭제</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-1">
+                            <label class="form-label" for="a2">Line </label>
+                            <div class="con">
+                                <div class="field">
+                                    <input type="text" class="form-control form-control-sm text-center" id="a3" placeholder="데이터" value="P1" onkeyup="inputClearBtn()" />
+                                    <div class="btn-right">
+                                        <button class="clear-btn" type="button" onclick="clearBtn()">
+                                            <span class="blind">삭제</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-1">
+                            <label class="form-label" for="a3">Process ID </label>
+                            <div class="con">
+                                <div class="field">
+                                    <input type="text" class="form-control form-control-sm text-center" id="a3" placeholder="데이터" value="PPWD" onkeyup="inputClearBtn()" />
+                                    <div class="btn-right">
+                                        <button class="clear-btn" type="button" onclick="clearBtn()">
+                                            <span class="blind">삭제</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-2">
+                            <label class="form-label" for="a3">Step Seq</label>
+                            <div class="con">
+                                <div class="field">
+                                    <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" value="[WD037550] 3.7 TANSY TIN BUFFING CMP" onkeyup="inputClearBtn()" />
+                                    <div class="btn-right">
+                                        <button class="clear-btn" type="button" onclick="clearBtn()">
+                                            <span class="blind">삭제</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-1">
+                            <label class="form-label" for="a3">QTY </label>
+                            <div class="con">
+                                <div>
+                                    <div class="field" style="width:60px;">
+                                        <input type="text" class="form-control form-control-sm text-center" id="a3" placeholder="데이터" value="5" onkeyup="inputClearBtn()" />
+                                        <div class="btn-right">
+                                            <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                <span class="blind">삭제</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // row -->
+                    <!-- row -->
+                    <div class="row">
+                        <div class="cell-1 ver">
+                            <label class="form-label" for="a1">평가용도</label>
+                            <div class="con">
+                                <div class="field">
+                                    <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" value="Layer+Entet" onkeyup="inputClearBtn()" />
+                                    <div class="btn-right">
+                                        <button class="clear-btn" type="button" onclick="clearBtn()">
+                                            <span class="blind">삭제</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-4 ver">
+                            <label class="form-label" for="a1">평가용도</label>
+                            <div class="con">
+                                
+                                <div class="custom-select">
+                                    <select>
+                                        <option value="0">별도 Sql로 목록 생성</option>
+                                        <option value="1">영어</option>
+                                        <option value="2">중국어</option>
+                                    </select>
+                                </div>
+                                <div class="field" style="flex:1.5">
+                                    <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" value="데이터" onkeyup="inputClearBtn()" disabled />
+                                    <div class="btn-right">
+                                        <button class="clear-btn" type="button" onclick="clearBtn()">
+                                            <span class="blind">삭제</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // row -->
+                    <!-- row -->
+                    <div class="row">
+                        <div class="cell-4 ver">
+                            <label class="form-label" for="a1">평가  Step</label>
+                            <div class="con">
+                                <div class="field">
+                                    <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" value="Layer+Entet" onkeyup="inputClearBtn()" />
+                                    <div class="btn-right">
+                                        <button class="clear-btn" type="button" onclick="clearBtn()">
+                                            <span class="blind">삭제</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="custom-select" style="flex:2">
+                                    <select>
+                                        <option value="0">별도 Sql로 목록 생성</option>
+                                        <option value="1">영어</option>
+                                        <option value="2">중국어</option>
+                                    </select>
+                                </div>
+
+                                <div class="duble-btn-layout">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">FDC</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">SPC</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-1 ver">
+                        </div>
+                    </div>
+                    <!-- // row -->
+                    <!-- row -->
+                    <div class="row">
+                        <div class="cell-4 ver">
+                            <label class="form-label" for="a1">Hold  타입</label>
+                            <div class="con">
+                                
+                                <div class="custom-select" style="flex:2">
+                                    <select>
+                                        <option value="0">리스트리스트</option>
+                                        <option value="1">영어</option>
+                                        <option value="2">중국어</option>
+                                    </select>
+                                </div>
+                                <div class="custom-select" style="flex:1">
+                                    <select>
+                                        <option value="0">별도 Sql로 목록 생성</option>
+                                        <option value="1">영어</option>
+                                        <option value="2">중국어</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-1 ver">
+                        </div>
+                    </div>
+                    <!-- // row -->
+                </div>
+                <!-- // 조건 검색 -->
+            </div>
+            <!-- btn set -->
+            <div class="bottom-btn-area mt98">
+                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$(this).parents('.fixed-pop').removeClass('open')">취소</button>
+                <button type="button" class="btn btn-sm btn-primary" onclick="$(this).parents('.fixed-pop').removeClass('open')">신청</button>
+            </div>
+            <!-- // btn set -->
+        </div>
+    </div>
+    <!-- // Wafer Recycle 신청 pop up -->
     <!-- 반려사유 pop up -->
     <div class="fixed-pop p2">
         <div class="pop-box" style="width:800px;">
@@ -1436,8 +1626,8 @@
             </div>
             <!-- btn set -->
             <div class="bottom-btn-area">
-                <button type="button" class="btn btn-sm btn-outline-secondary">취소</button>
-                <button type="button" class="btn btn-sm btn-primary">확인</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$(this).parents('.fixed-pop').removeClass('open')">취소</button>
+                <button type="button" class="btn btn-sm btn-primary" onclick="$(this).parents('.fixed-pop').removeClass('open')">확인</button>
             </div>
             <!-- // btn set -->
         </div>
