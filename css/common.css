@@ -293,8 +293,25 @@ button {border:0; outline:none !important; box-shadow:none !important;}
 .dropdown-menu.show .dropdown-item {font-size: var(--fs-t7)}
 
 .tab-content { width: 100%;}
-.tab-content .tab-pane .condition-search .row {--bs-gutter-x: 0;}
+.tab-content .tab-pane .condition-search .row {--bs-gutter-x: 0; position:relative; width:100%;}
+.tab-content .tab-pane .condition-search .row > [class *= cell-]{min-height:57px; padding-right:0px;}
+.tab-content .tab-pane .condition-search .row > [class *= cell-] > .con{display:flex; justify-content:space-between; width:100%; min-height:31px; padding-right:10px;}
+.tab-content .tab-pane .condition-search .row > [class *= cell-]:last-child > .con{padding-right:0px;}
+.tab-content .tab-pane .condition-search .row > [class *= cell-] > .con > *{flex:1; padding-right:5px;}
+.tab-content .tab-pane .condition-search .row > [class *= cell-] > .con > *:last-child{padding-right:0px;}
+.tab-content .tab-pane .condition-search .row .cell-1{flex:1;}
+.tab-content .tab-pane .condition-search .row .cell-2{flex:2;}
+.tab-content .tab-pane .condition-search .row .cell-3{flex:3;}
+.tab-content .tab-pane .condition-search .row .cell-4{flex:4;}
+.tab-content .tab-pane .condition-search .row .cell-5{flex:5;}
+.tab-content .tab-pane .condition-search .row .cell-6{flex:6;}
+.tab-content .tab-pane .condition-search .row .cell-7{flex:7;}
+.tab-content .tab-pane .condition-search .row .cell-8{flex:8;}
+.tab-content .tab-pane .condition-search .row .cell-9{flex:9;}
+.tab-content .tab-pane .condition-search .row .cell-10{flex:10;}
+.tab-content .tab-pane .condition-search .row + .row{margin-top:10px;}
 .tab-content .tab-pane .condition-search .row [class*="col"] {padding: 0; margin: 0; margin-right: 5px;}
+.tab-content .tab-pane .condition-search .row .field.date{width:auto;}
 
 
 
@@ -340,7 +357,7 @@ button {border:0; outline:none !important; box-shadow:none !important;}
 .form-control:focus {border: 1px solid var(--c-gray10); box-shadow: none;}
 
 
-
+.condition-search .field{flex:1; width:auto;}
 .field {position: relative; width: 140px;}
 .field.min {width: 60px;}
 .field .btn-right { position: absolute; top: calc(50% - 8px); right:8px; display: flex; justify-content: space-between; align-items: center;}
@@ -532,7 +549,8 @@ button.btn:disabled .icon-refresh {background: url(../img/icon/refresh02.svg) no
   } */
 
   /* checkgos */
-  .input-box{position:relative; font-size:13px; font-weight:bold;}
+  .input-box + .input-box{margin-left:10px;}
+  .input-box{position:relative; font-size:13px; font-weight:400;}
   .input-box > input{position:fixed; top:-1000%; left:-1000%;}
   .input-box input[type = checkbox] + i{position:relative; top:-2px; display:inline-block; width:16px; height:16px; margin:0 6px 0 0; vertical-align:middle;  border:1px solid #757575; border-radius:2px; background-repeat:no-repeat; background-position:center; background-size:10px 8px;}
   .input-box input[type = checkbox]:checked + i{border-color:#3771F9; background-color:#3771F9; background-image:url(../img/icon/icon_checkbox.svg);}

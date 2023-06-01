@@ -164,3 +164,22 @@ li.active > .menu_wrap > ul{display:block;}
 
 .text-area-wrap .count{margin-top:5px; font-size:13px; font-weight:400; color:#616161; text-align:right;}
 .text-area-wrap .count > span{color:#212121;}
+
+
+
+/* range box layout */
+.range-box-layout{display:flex;}
+.range-box-layout > *{flex:1;}
+.range-box-layout > .center-txt, .range-box-layout > .unit{display:flex; align-items:center; justify-content:center; flex:none; font-size:14px; font-weight:400; color:#212121;}
+.range-box-layout > .center-txt{ width:20px;}
+.range-box-layout > .unit{width:17px; justify-content:flex-end;}
+.range-box-area{display:flex;}
+.range-box-area > *{flex:1;}
+.range-box-area > *:first-child{ padding-right:3px;}
+.range-box-area > *:last-child{ padding-left:2px;}
+
+
+/* textarea */
+.text-area-area > textarea{height:calc(100% - 20px);}
+
+.f-a-center{display:flex; align-items:center;}
