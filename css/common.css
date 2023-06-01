@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url(font.css);
 
 :root {
     /* size */
@@ -53,8 +54,11 @@
     --fs-h3: 20px;
     --fs-h4: 18px;
     --fs-h5: 16px;
-}
 
+    /* font-family */
+    --font: 'SamsungOne';
+  }
+  
 ::placeholder { color: var(); }
 ::-webkit-search-decoration,
 ::-webkit-search-cancel-button,
@@ -218,7 +222,7 @@ footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, 
 }
 
 a {text-decoration: none;}
-button {border:0;}
+button {border:0; outline:none !important; box-shadow:none !important;}
 
 
 .top-area { background-color: var(--c-blue2);} 
@@ -526,3 +530,18 @@ button.btn:disabled .icon-refresh {background: url(../img/icon/refresh02.svg) no
     border-top-right-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
   } */
+
+  /* checkgos */
+  .input-box{position:relative; font-size:13px; font-weight:bold;}
+  .input-box > input{position:fixed; top:-1000%; left:-1000%;}
+  .input-box input[type = checkbox] + i{position:relative; top:-2px; display:inline-block; width:16px; height:16px; margin:0 6px 0 0; vertical-align:middle;  border:1px solid #757575; border-radius:2px; background-repeat:no-repeat; background-position:center; background-size:10px 8px;}
+  .input-box input[type = checkbox]:checked + i{border-color:#3771F9; background-color:#3771F9; background-image:url(../img/icon/icon_checkbox.svg);}
+  .input-box input[type = checkbox]:disabled + i{border:1px solid #E0E0E0; background-color:#F5F5F5;}
+  .input-box input[type = checkbox]:checked:disabled + i{background-image:url(../img/icon/icon_checkbox_dis.svg);}
+  .input-box input[type = checkbox][small] + i{width:12px; height:12px;}
+
+  .input-box input[type = radio] + i{position:relative; top:-2px; display:inline-block; width:16px; height:16px; margin:0 6px 0 0; vertical-align:middle;  border:1px solid #757575; border-radius:100%; background-repeat:no-repeat; background-position:center; background-size:10px 8px;}
+  .input-box input[type = radio]:checked + i{border-color:#3771F9; border-color:#3771F9; background-image:url(../img/icon/icon_radio.svg);}
+  .input-box input[type = radio]:checked + i:after{content:""; position:absolute; top:50%; left:50%; width:8px; height:8px; border-radius:100%; transform:translate(-50%,-50%); background:#3771F9;}
+  .input-box input[type = radio]:disabled + i{border:1px solid #E0E0E0; background-color:#F5F5F5;}
+  .input-box input[type = radio]:checked:disabled + i:after{background-color:#E0E0E0;}

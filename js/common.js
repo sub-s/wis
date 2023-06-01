@@ -168,6 +168,7 @@ const lnbClick = ()=>{
     }
     let count = 0;
     const _this = event.currentTarget;
+    const _menuWrap = _this.querySelector(".menu_wrap");
     const _ul = _this.querySelector("ul");
     const checked = _this.classList.contains("active");
     const innerFn = (el,h)=>{
@@ -175,7 +176,7 @@ const lnbClick = ()=>{
         const topChecked = el.classList.contains("lnb_menu");
         if(!topChecked && tagCheck){
             const height = el.clientHeight;
-            el.style.height = (height + h) + "px";
+            el.parentNode.style.height = (height + h) + "px";
         }
         if(!topChecked) innerFn(el.parentNode,h);
     }
@@ -183,13 +184,62 @@ const lnbClick = ()=>{
     const h = (_ul)?_ul.scrollHeight:-1;
     if(checked){
         _this.classList.remove("active");
-        if(_ul) _ul.style.height = 0;
-        if(_ul) innerFn(_ul.parentNode,(h * -1));
+        
+        // if(_ul) _ul.style.display = "none";
+        // if(_menuWrap) _menuWrap.style.height = 0;
+        // if(_ul) innerFn(_ul.parentNode.parentNode,(h * -1));
     }else{
         _this.classList.add("active");
-        if(_ul) _ul.style.height = h + "px";
-        if(_ul) innerFn(_ul.parentNode,h);
+        $(_this).siblings().removeClass("active")
+        // if(_ul) _ul.style.display = "block";
+        // if(_menuWrap) _menuWrap.style.height = h + "px";
+        // if(_ul) innerFn(_ul.parentNode.parentNode,h);
     }
+}
+
+const getLnbLastChild = ()=>{
+    const _lnb = document.querySelector(".lnb_menu > ul");
+    const temp = [];
+    const innerFn = (el,path)=>{
+        const _lis = el.children;
+        for(let i=0; i<_lis.length; i++){
+            const _li = _lis[i];
+            const cl = (path === "")?String(i):path + "-" + i;
+            console.log(cl);
+            _li.classList.add(cl);
+            if(_li.querySelector("ul")){
+                innerFn(_li.querySelector("ul"),String(cl));
+            }else{
+                console.log('-------------------------');
+                console.log('_li.querySelector("ul") : ',_li.querySelector("ul"));
+                console.log(',_li : ',_li);
+                temp.push({depth:cl,el:_li});
+            }
+        }
+    }
+    innerFn(_lnb,"");
+    // const innerFn = (el,depth)=>{
+    //     const _lis = el.children;
+    //     for(let i=0; i<_lis.length; i++){
+    //         const _li = _lis[i];
+    //         const _ul = _li.querySelector("ul");
+    //         console.log("_ul : ",_ul)
+    //         if(_ul){
+    //             temp.push(_ul);
+    //             innerFn(_ul);
+    //         }else{
+    //             // temp.push(_li);
+    //         }
+    //     }
+    // }
+    // innerFn(_lnb)
+    // console.log("._lnb : ",_lnb);
+    // console.log("temp : ",temp);
+    // for(let i=temp.length - 1; i>=0; i--){
+    //     const _u = temp[i];
+    //     console.log(i,":",_u)
+    // }
+
 }
 
 const lnbSetting = ()=>{
@@ -244,6 +294,25 @@ const lnbTopTabClick = ()=>{
     }
 }
 
+
+$("textarea[max]").each((i,t)=>{
+    $(t).wrap("<div class='text-area-wrap'></div>");
+    $(t).parent(".text-area-wrap").append("<div class='count'><span>0</span>/"+$(t).attr("max")+"</div>")
+    $(t).keyup(()=>{
+        let len = $(t).val().length;
+        const max = Number($(t).attr("max"));
+        const keycode = event.keyCode
+        const txt = $(t).val();
+        console.log("keycode : ",keycode);
+        if(max <= len && (keycode !== 8 && keycode !== 46 && keycode !== 37 && keycode !== 39 && keycode !== 40 && keycode !== 38)) event.preventDefault();
+        if(max < len){
+            $(t).val(txt.substring(0,max));
+            len = max;
+        }
+        $(t).parent().find(".count").html("<span>"+len+"</soan>/"+max);
+    })
+})
+
 $.datepicker.setDefaults({
     dateFormat: 'yy.mm.dd', //Input Display Format 변경
     showMonthAfterYear:true ,
@@ -258,4 +327,4 @@ $.datepicker.setDefaults({
     buttonText: "선택",
 });
 $(".datepicker").datepicker();
-lnbSetting();
+// lnbSetting();

@@ -1,6 +1,7 @@
 @charset "utf-8";
 .outer_box{
   width:100%;
+  min-width:1400px;
   height:100vh;
 }
 
@@ -26,7 +27,7 @@
 #gnb .gnb-menu ul {display: flex; justify-content: space-between; align-items: center;}
 #gnb .gnb-menu ul li {margin-left: 30px;}
 #gnb .gnb-menu ul li.active a {color: var(--c-blue3);}
-#gnb .gnb-menu ul li a {font-size: var(--fs-t3); font-weight: 700; color: var(--c-gray10); text-decoration: none;}
+#gnb .gnb-menu ul li a {font-family: var(--font); font-size: var(--fs-t3); font-weight: 700; color: var(--c-gray10); text-decoration: none;}
 #gnb .gnb-menu ul li a:hover {color: var(--c-blue3);}
 
 
@@ -63,14 +64,14 @@
 
 #content{height:calc(100% - 74px); font-size:0; white-space:nowrap;}
 #content > .content_wrap{position:relative; display:inline-block; width:calc(100% - 280px); height:100%; vertical-align:top; overflow:auto; background:#fff;}
-#content > .content_wrap > .row{min-width:auto; padding:0; margin:0; width:100%; height:100%;}
+#content > .content_wrap > .row{padding:0; margin:0; width:100%; height:100%;}
 #content > .content_wrap > .row > .right-area{width:100%; min-width:auto; height:100%; margin:0; padding:0;}
 #content > .content_wrap > .row > .right-area > .top-menu{height:100%;}
 #content > .content_wrap > .row > .right-area > .top-menu > .tab-content{height:calc(100% - 39px); padding:20px 7px 0 20px; overflow:auto;}
 #lnb{position:relative; display:inline-block; width:280px; height:100%; font-size:12px; border-right:1px solid #DBDBDB;}
 
 .content-layout-type{height:calc(100% - 40px);}
-.content-layout-type > .tab-pane{height:100%;}
+.content-layout-type > .tab-pane{min-width:1340px; height:100%;}
 .content-layout-type > .tab-pane > .content-tab{height:calc(100% - 40px); overflow:auto;}
 
 #lnb .lnb_wrap{position:relative; top:0; right:0; height:100%;}
@@ -94,43 +95,40 @@
 
 
 
-.depth1_area{
-  display:flex;
-  align-items:center;
-  height:40px; 
-  padding:0 16px;
-  font-family: 'SamsungOne';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-  /* identical to box height */
-  
-  display: flex;
-  align-items: center;
-  letter-spacing: -0.05em;
-  
-  color: #000000;}
-.lnb_menu .tit{position:relative; /*display:flex; align-items:center;*/ height:40px; padding: 4px 30px 0 20px; font-family: 'SamsungOne'; font-weight: 400; font-style: normal; font-size:16px; color:var(--c-black); cursor:pointer; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+
+
 .lnb_menu .tit:hover{text-decoration:underline;}
+.lnb_menu ul{display:none;;}
+.lnb_menu > ul{display:block;}
 .lnb_menu ul > li{position:relative;}
 li.active > .tit{font-weight:700;}
 .lnb_menu > ul > li{ border-bottom: 1px solid #DBDBDB;}
-.lnb_menu > ul > li > .tit{font-size:16px; padding-top:8px;}
-.lnb_menu > ul > li > .menu_wrap > ul > li > .tit{padding-left:30px; height:30px; font-size:14px;}
-.lnb_menu > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li > .tit{height:30px; padding-left:46px; font-size:16px; font-weight:400;}
-.lnb_menu > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li.active > .tit{color:#3771F9;}
-.lnb_menu > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li:before{content:""; position:absolute; top:0; bottom:0; left:30px; width:1px; background:#DBDBDB;}
-.lnb_menu > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li.active:before{background:#3771F9;}
-.lnb_menu > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li > .tit{height:30px; padding-left:60px; font-size:16px;}
+.lnb_menu > ul > li > .menu_wrap:after, .lnb_menu > ul > li > .menu_wrap:before{display:none;}
+
+.lnb_menu .tit{position:relative; display:flex; align-items:center; font-family: var(--font); font-weight: 400; font-style: normal; font-size:16px; color:var(--c-black); cursor:pointer; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+.lnb_menu > ul > li > .tit{ display:flex; align-items:center; height:40px;  padding:0 16px; font-family: var(--font); font-style: normal; font-weight: 700; font-size: 18px; line-height: 22px; color: #000000; border-bottom:1px solid #DBDBDB;}
+.lnb_menu > ul > li > .menu_wrap > ul > li > .tit{height:40px; padding-left:20px;}
+
+.lnb_menu > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li > .tit{padding-left:30px; height:30px; font-size:14px;}
+.lnb_menu > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li.active > .tit{color:#3771F9;}
+.lnb_menu > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li > .tit{height:30px; padding-left:46px; font-size:14px;}
+.lnb_menu > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li:before{content:""; position:absolute; top:0; bottom:0; left:30px; width:1px; background:#DBDBDB;}
+.lnb_menu > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li.active:before{background:#3771F9;}
+
+li.active > .menu_wrap > ul{display:block;}
+
+
+
 
 
 .menu_wrap{position:relative;}
 
 .menu_wrap:before{content:""; position:absolute; top:-28px; right:15px; width:1px; height:12px; transform-origin:0; transform:rotate(0deg); transition:transform ease 0.5s; background:#212121;}
 .menu_wrap:after{content:""; position:absolute; top:-22px; right:10px;; width:12px; height:1px; background:#212121;}
-.lnb_menu > ul > li > .menu_wrap > ul > li > .menu_wrap:before{top:-22px;}
-.lnb_menu > ul > li > .menu_wrap > ul > li > .menu_wrap:after{top:-16px;}
+.lnb_menu > ul > li > .menu_wrap > ul > li > .menu_wrap:before{top:-25px;}
+.lnb_menu > ul > li > .menu_wrap > ul > li > .menu_wrap:after{top:-19px;}
 
 .lnb_menu > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li > .menu_wrap:before{top:-22px;}
 .lnb_menu > ul > li > .menu_wrap > ul > li > .menu_wrap > ul > li > .menu_wrap:after{top:-16px;}
@@ -158,6 +156,11 @@ li.active > .tit{font-weight:700;}
 .latestMenu input{position:fixed; top:-1000%; left:-1000%;}
 .latestMenu:hover{text-decoration:underline;}
 
-.lnb_bookMark, .lnb_latestMenu{position:absolute; top:0; left:-100%; bottom:0; width:100%; padding:21px 13px 0 13px; font-size:14px; font-weight:400;  overflow:auto; transition:ease left 0.5s; background:#fff;}
+.lnb_bookMark, .lnb_latestMenu{position:absolute; top:0; left:-100%; bottom:0; width:100%; padding:21px 13px 0 13px; font-size:14px; font-weight:400;  overflow:auto; background:#fff;}
 .lnb_bookMark.active, .lnb_latestMenu.active{left:0;}
 .lnb_bookMark > ul > li + li, .lnb_latestMenu > ul > li + li{margin-top:12px;}
+
+
+
+.text-area-wrap .count{margin-top:5px; font-size:13px; font-weight:400; color:#616161; text-align:right;}
+.text-area-wrap .count > span{color:#212121;}
