@@ -183,3 +183,16 @@ li.active > .menu_wrap > ul{display:block;}
 .text-area-area > textarea{height:calc(100% - 20px);}
 
 .f-a-center{display:flex; align-items:center;}
+
+
+/* fixed-pop */
+.fixed-pop.open{display:flex;}
+.fixed-pop{position:fixed; top:0; left:0; right:0; bottom:0; z-index:10000000; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.5);}
+.pop-box{padding:20px; border-radius:4px; background:#fff;}
+.pop-top{position:relative; margin:0 0 10px 0;}
+.pop-top > .tit{font-weight: 700; font-size: 16px;}
+.pop-close{position:absolute; top:0; right:0; width:20px; height:20px; font-size:0; background:url(../img/common/pop_close.svg) no-repeat center;}
+
+
+/**/
+.bottom-btn-area{margin-top:20px; text-align:center;}
