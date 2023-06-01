@@ -564,3 +564,35 @@ button.btn:disabled .icon-refresh {background: url(../img/icon/refresh02.svg) no
   .input-box input[type = radio]:checked + i:after{content:""; position:absolute; top:50%; left:50%; width:8px; height:8px; border-radius:100%; transform:translate(-50%,-50%); background:#3771F9;}
   .input-box input[type = radio]:disabled + i{border:1px solid #E0E0E0; background-color:#F5F5F5;}
   .input-box input[type = radio]:checked:disabled + i:after{background-color:#E0E0E0;}
+
+
+  /* label-card */
+  .label-card{display:inline-flex; align-items:center; justify-content:center; width:32px; height:20px; border-radius: 2px; font-size:11px; color:#fff;}
+  .label-card.a{background: #11A3B3;}
+  .label-card.c{background: #FF6F66;}
+
+
+  /* table */
+  .table-layout > table{width:100%; font-size:13px; color:#212121; border-collapse:collapse;}
+  .table-layout > table > thead > tr > th{font-weight: 700; font-size: 13px; background:#F0F0F0;}
+
+  .table-layout > table > thead > tr > th,
+  .table-layout > table > thead > tr > td,
+  .table-layout > table > tbody > tr > th,
+  .table-layout > table > tbody > tr > td{
+    min-height:28px;
+    border:1px solid #E0E0E0;
+  }
+  .table-layout > table > thead > tr > th,
+  .table-layout > table > thead > tr > td{
+    text-align:center;
+    padding:4px 18px;
+  }
+  .table-layout > table > tbody > tr > th,
+  .table-layout > table > tbody > tr > td{
+    padding:4px 6px;
+  }
+
+  .text-center{text-align:center !important;}
+  .text-left{text-align:left !important;}
+  .text-right{text-align:right !important;}
