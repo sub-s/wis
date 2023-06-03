@@ -376,21 +376,21 @@ $(".tab-menu > .btn-set > .btn-close").click(function(){
 
 })
 
-$("nav > .nav.nav-tabs button > span").click(function(){
-    if(event.stopPropagation){
-        event.stopPropagation();
-    }else{
-        event.cancleBubble = true;
-    }
-    const idx = $(this).parent().index();
-    const $tabs = $(this).parents(".nav-tabs").find("button");
-    const len = $tabs.length - 1;
-    const $cons = $(".tab-content > .tab-pane");
-    const nextIdx = (idx - 1 < 0)?1:idx - 1;
-    const _tab = new bootstrap.Tab($tabs[nextIdx]);
-    console.log("len : ",len);
-    if(len === 0) return;
-    $tabs[idx].remove();
-    $cons[idx].remove();
-    _tab.show();
-})
+// $("nav > .nav.nav-tabs button > span").click(function(){
+//     if(event.stopPropagation){
+//         event.stopPropagation();
+//     }else{
+//         event.cancleBubble = true;
+//     }
+//     const idx = $(this).parent().index();
+//     const $tabs = $(this).parents(".nav-tabs").find("button");
+//     const len = $tabs.length - 1;
+//     const $cons = $(".tab-content > .tab-pane");
+//     const nextIdx = (idx - 1 < 0)?1:idx - 1;
+//     const _tab = new bootstrap.Tab($tabs[nextIdx]);
+//     console.log("len : ",len);
+//     if(len === 0) return;
+//     $tabs[idx].remove();
+//     $cons[idx].remove();
+//     _tab.show();
+// })
