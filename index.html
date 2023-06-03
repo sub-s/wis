@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="js/bootstrap.js"></script>
+    <!-- <script src="js/bootstrap-multiselect.js"></script> -->
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/bootstrap.esm.js"></script>
     <script src="js/jquery.js"></script>
@@ -18,17 +19,24 @@
     <link media="all" rel="stylesheet" href="css/bootstrap-grid.css">
     <link media="all" rel="stylesheet" href="css/bootstrap-utilities.css">
     <link media="all" rel="stylesheet" href="css/bootstrap-reboot.css">
+    <!-- <link media="all" rel="stylesheet" href="css/bootstrap-multiselect.css"> -->
     <link media="all" rel="stylesheet" href="css/common.css">
     <link media="all" rel="stylesheet" href="css/layout.css">
+    <link media="all" rel="stylesheet" href='css/realgrid-style-add.css' />
 
 
      <!-- RealGrid -->
     
-    <link href='./realgrid.2.0.2/realgrid-style.css' rel='stylesheet' />
-    <!-- <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script> -->
-    <script src="./realgrid.2.0.2//realgrid-lis.js"></script>
-    <script src='./realgrid.2.0.2/realgrid.2.0.3.min.js'></script>
-    <script src='./realgrid.2.0.2/realgrid-events.js'></script>
+     <link href="realgrid.2.6.3/realgrid-style.css" rel="stylesheet" />
+    <script src="realgrid.2.6.3/realgrid-lic.js"></script>
+    <script src="realgrid.2.6.3/realgrid.2.6.3.min.js"></script>
+    <script src="realgrid.2.6.3/libs/jszip.min.js"></script>
+
+
+    <!-- <link href='realgrid.2.0.2/realgrid-style.css' rel='stylesheet' />
+    <script src="realgrid.2.0.2//realgrid-lis.js"></script>
+    <script src='realgrid.2.0.2/realgrid.2.0.3.min.js'></script>
+    <script src='realgrid.2.0.2/realgrid-events.js'></script> -->
 
     <title>Document</title>
 </head>
@@ -120,16 +128,22 @@
             </div>
         </div>
         <div id="content">
+            <!-- lnb -->
             <div id="lnb">
+                <!-- lnb content -->
                 <div class="lnb_wrap">
                     <div class="lnb_tab">
+                        <!-- lnb top tab-->
                         <div class="lnb_tab_tit">
                             <ul>
                                 <li onclick="lnbTopTabClick()">즐겨찾기</li>
                                 <li onclick="lnbTopTabClick()">최근 본 메뉴</li>
                             </ul>
                         </div>
+                        <!-- // lnb top tab-->
+                        <!-- lnb top content-->
                         <div class="lnb_tab_con">
+                            <!-- menu -->
                             <ul>
                                 <li class="open">
                                     <!-- menu -->
@@ -293,6 +307,8 @@
                                 </li>
                                 <li>2</li>
                             </ul>
+                            <!-- // menu -->
+                            <!-- 즐겨찾기 -->
                             <div class="lnb_bookMark">
                                 <ul>
                                     <li>
@@ -306,6 +322,8 @@
                                     </li>
                                 </ul>
                             </div>
+                            <!-- // 즐겨찾기 -->
+                            <!-- 최근 본 메뉴 -->
                             <div class="lnb_latestMenu">
                                 <ul>
                                     <li>
@@ -319,21 +337,32 @@
                                     </li>
                                 </ul>
                             </div>
+                            <!-- // 최근 본 메뉴 -->
                         </div>
+                        <!-- // lnb top content-->
                     </div>
                 </div>
+                <!-- // lnb content -->
+                <!-- lnb drag -->
                 <span class="lnb_thumb" onmousedown="lnbDrag()"></span>
+                <!-- // lnb drag -->
             </div>
+            <!-- // lnb -->
+            <!-- content -->
             <div class="content_wrap">
                 <div class="row">
-                    <!-- // 좌측 LNB 영역 -->
                     <!-- 우측 콘텐츠 영역 -->
                     <div class="col right-area col-auto">
+                        <!-- depth1 tab area-->
                         <div class="top-menu">
+                            <!-- content top -->
                             <div class="tab-menu w-100">
+                                <!-- lnb toggle folder btn-->
                                 <button class="btn small-zoom" type="button" onclick="lnbToggle()">
                                     <span class="blind">축소하기</span>
                                 </button>
+                                <!-- // lnb toggle folder btn-->
+                                <!-- depth1 tab header -->
                                 <nav>
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                         <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
@@ -362,6 +391,8 @@
                                         </button>
                                     </div>
                                 </nav>
+                                <!-- // depth1 tab header -->
+                                <!-- controll box -->
                                 <div class="btn-set">
                                     <button class="btn btn-prev">
                                         <span class="blind">뒤로이동</span>
@@ -373,7 +404,10 @@
                                         <span class="blind">닫기</span>
                                     </button>
                                 </div>
+                                <!-- // controll box -->
                             </div>
+                            <!-- // content top -->
+                            <!-- depth1 tab content -->
                             <div class="tab-content  content-layout-type" id="nav-tabContent">
                                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
                                     aria-labelledby="nav-home-tab">
@@ -401,27 +435,28 @@
                                             <li class="nav-item" role="presentation">
                                                 <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
                                                     data-bs-target="#pills-home" type="button" role="tab"
-                                                    aria-controls="pills-home" aria-selected="true">
-                                                    사용대기
+                                                    aria-controls="pills-home" aria-selected="true" onclick="contentTab()">
+                                                    컴포넌트
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
                                                 <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
                                                     data-bs-target="#pills-profile" type="button" role="tab"
-                                                    aria-controls="pills-profile" aria-selected="false">
-                                                    사용중
+                                                    aria-controls="pills-profile" aria-selected="false" onclick="contentTab()">
+                                                    리얼그리드
                                                 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
                                                 <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
                                                     data-bs-target="#pills-contact" type="button" role="tab"
-                                                    aria-controls="pills-contact" aria-selected="false">
+                                                    aria-controls="pills-contact" aria-selected="false" onclick="contentTab()">
                                                     사용완료
                                                 </button>
                                             </li>
                                         </ul>
                                         <!-- 콘텐츠 탭 내용 -->
                                         <div class="tab-content" id="pills-tabContent">
+                                            <!-- tab content 01 -->
                                             <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                                                 aria-labelledby="pills-home-tab">
                                                 <!-- 조건 검색 -->
@@ -723,17 +758,38 @@
                                                     <!-- hidden -->
                                                 </div>
                                                 <!-- // 조건 검색 -->
+
+                                                <select id="example-getting-started" multiple="multiple">
+                                                    <option value="cheese">Cheese</option>
+                                                    <option value="tomatoes">Tomatoes</option>
+                                                    <option value="Mozzarella">Mozzarella</option>
+                                                    <option value="Mushrooms">Mushrooms</option>
+                                                    <option value="Pepperoni">Pepperoni</option>
+                                                    <option value="Onions">Onions</option>
+                                                </select>
+                                                <!-- <script type="text/javascript">
+                                                    $(document).ready(function() {
+                                                        $('#example-getting-started').multiselect({
+                                                            enableHTML: true
+                                                        });
+                                                    });
+                                                </script> -->
                                                 <!-- 테이블 -->
                                                 <div class="table-layout">
                                                     <table cellpadding="0" cellspacing="0">
                                                         <colgroup>
-                                                            <col stule="width:25%" />
+                                                            <col stule="width:auto" />
                                                         </colgroup>
                                                         <thead>
                                                             <tr>
                                                                 <th>승인</th>
                                                                 <th>반려</th>
                                                                 <th class="text-left">DATA</th>
+                                                                <th>DATA</th>
+                                                                <th>DATA</th>
+                                                                <th>DATA</th>
+                                                                <th>DATA</th>
+                                                                <th>DATA</th>
                                                                 <th>DATA</th>
                                                             </tr>
                                                         </thead>
@@ -742,7 +798,45 @@
                                                                 <td class="text-center"><div class="label-card a">승인</div></td>
                                                                 <td class="text-center"><div class="label-card c">발려</div></td>
                                                                 <td>DATA</td>
-                                                                <td class="text-right">DATA</td>
+                                                                <td>DATA</td>
+                                                                <td>DATA</td>
+                                                                <td>DATA</td>
+                                                                <td>DATA</td>
+                                                                <td>DATA</td>
+                                                                <td>DATA</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center"><div class="label-card a">승인</div></td>
+                                                                <td class="text-center"><div class="label-card c">발려</div></td>
+                                                                <td>DATA</td>
+                                                                <td>DATA</td>
+                                                                <td>DATA</td>
+                                                                <td>DATA</td>
+                                                                <td>DATA</td>
+                                                                <td>DATA</td>
+                                                                <td>DATA</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center"><div class="label-card a">승인</div></td>
+                                                                <td class="text-center"><div class="label-card c">발려</div></td>
+                                                                <td>DATA</td>
+                                                                <td>DATA</td>
+                                                                <td>DATA</td>
+                                                                <td>DATA</td>
+                                                                <td>DATA</td>
+                                                                <td>DATA</td>
+                                                                <td>DATA</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center"><div class="label-card a">승인</div></td>
+                                                                <td class="text-center"><div class="label-card c">발려</div></td>
+                                                                <td>DATA</td>
+                                                                <td>DATA</td>
+                                                                <td>DATA</td>
+                                                                <td><button type="button" class="btn btn-sm btn-success ah w-100 size_h20">신청</button></td>
+                                                                <td><button type="button" class="btn btn-sm btn-outline-secondary ah w-100 size_h20">GMP변경필요</button></td>
+                                                                <td><div class="label-card a">승인</div><div class="label-card c">발려</div></td>
+                                                                <td><button class="label-card a">승인</button><button class="label-card c">발려</button><button class="icon-btn i-link"></button></td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -754,6 +848,10 @@
                                                     <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p1').addClass('open')" >Wafer Recycle 결재 pop up</button>
                                                     <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p1_1').addClass('open')" >Wafer Recycle 신청 pop up</button>
                                                     <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p2').addClass('open')" >반려사유 pop up</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p3').addClass('open')" >검색 조건 저장 pop up</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p4').addClass('open')" >확인 pop up</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p5').addClass('open')" >GPM 변경 필요 List</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p6').addClass('open')" >FDC List</button>
                                                 </div>
                                                 <!-- // 팝업 호출 버튼 -->
                                                 <div class="d-flex justify-content-end align-items-center mt30">
@@ -919,48 +1017,53 @@
         
         
                                             </div>
+                                            <!-- // tab content 01 -->
+                                            <!-- tab content 02 -->
                                             <div class="tab-pane fade" id="pills-profile" role="tabpanel"
                                                 aria-labelledby="pills-profile-tab">
-                                                사용중 
+                                                <div style="font-size:20px;">
+
+                                                    <!-- real grid -->
+                                                    <div class="realgrid-wrap mt20">
+                                                        <div id='realgrid' style="height:394px"></div>
+                                                        <div class="toolbar">
+                                                            <div id="paging"></div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- // real grid -->
+                                                    <!-- real grid -->
+                                                    <div class="realgrid-wrap mt20">
+                                                        <div id='realgrid1' style="height:394px"></div>
+                                                    </div>
+                                                    <!-- // real grid -->
+
+                                                </div>
                                             </div>
+                                            <!-- // tab content 02 -->
+                                            <!-- tab content 03 -->
                                             <div class="tab-pane fade" id="pills-contact" role="tabpanel"
                                                 aria-labelledby="pills-contact-tab">
                                                 사용완료 
                                             </div>
-        
-        
-        
-        
-        
-                                            
+                                            <!-- // tab content 03 -->
                                         </div>
                                         <!-- // 콘텐츠 탭 내용 -->
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                    <!-- real grid -->
-                                    <div class="realgrid-wrap mt20">
-                                        <div id='realgrid' style="height:394px"></div>
-                                        <div class="toolbar">
-                                            <div id="paging"></div>
-                                        </div>
-                                    </div>
-                                    <!-- // real grid -->
-                                    <!-- real grid -->
-                                    <div class="realgrid-wrap mt20">
-                                        <div id='realgrid1' style="height:394px"></div>
-                                    </div>
-                                    <!-- // real grid -->
                                 </div>
                                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                                     세번째 화면 탭</div>
                                 <!-- // 콘텐츠 탭 -->
                             </div>
+                            <!-- // depth1 tab content -->
                         </div>
+                        <!-- // depth1 tab area-->
                     </div>
                     <!-- // 우측 콘텐츠 영역 -->
                 </div>
             </div>
+            <!-- // content -->
         </div>
         <div id="footer">
             <span>© 2023 Samsung. All Rights Reserved.</span>
@@ -1006,7 +1109,7 @@
                             </div>
                         </div>
                         <div class="cell-4">
-                            <label class="form-label" for="a1">Layer / Step (계측 제외 <i class="icon-small-check"></i>) : Layer 입력 후 Enter </label>
+                            <label class="form-label" for="a1">Layer / Step (<label class="input-box">계측 제외<input type="checkbox" small /><i></i></label>) : Layer 입력 후 Enter </label>
                             <div class="con">
                                 <div class="range-box-layout">
                                     <div class="range-box-area">
@@ -1715,12 +1818,194 @@
         </div>
     </div>
     <!-- // 반려사유 pop up -->
+    <!-- 검색 조건 저장 pop up -->
+    <div class="fixed-pop p3">
+        <div class="pop-box" style="width:400px;">
+            <div class="pop-top">
+                <div class="tit">검색 조건 저장</div>
+                <button class="pop-close" onclick="$(this).parents('.fixed-pop').removeClass('open')">close</button>
+            </div>
+            <div class="pop-con">
+                <!-- 조건 검색 -->
+                <div class="condition-search">
+                    <!-- row -->
+                    <div class="row">
+                        <div class="cell-1">
+                            <label class="form-label" for="a1">Filter</label>
+                            <div class="con">
+                                <div class="custom-select" style="width:100px;">
+                                    <select>
+                                        <option value="0">직접입력</option>
+                                        <option value="1">직접입력</option>
+                                        <option value="2">직접입력</option>
+                                        <option value="3">직접입력</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // row -->
+                    <!-- row -->
+                    <div class="row">
+                        <div class="cell-1">
+                            <label class="form-label" for="a1">Filter</label>
+                            <div class="con">
+                                <div class="field">
+                                    <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" value="" onkeyup="inputClearBtn()" />
+                                    <div class="btn-right">
+                                        <button class="clear-btn" type="button" onclick="clearBtn()">
+                                            <span class="blind">삭제</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // row -->
+                </div>
+                <!-- // 조건 검색 -->
+            </div>
+            <!-- btn set -->
+            <div class="bottom-btn-area">
+                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$(this).parents('.fixed-pop').removeClass('open')">취소</button>
+                <button type="button" class="btn btn-sm btn-primary" onclick="$(this).parents('.fixed-pop').removeClass('open')">신청</button>
+            </div>
+            <!-- // btn set -->
+        </div>
+    </div>
+    <!-- // 검색 조건 저장 pop up -->
+    <!-- 확인 pop up -->
+    <div class="fixed-pop p4">
+        <div class="pop-box" style="width:400px;">
+            <div class="pop-top">
+                <div class="tit">확인</div>
+                <button class="pop-close" onclick="$(this).parents('.fixed-pop').removeClass('open')">close</button>
+            </div>
+            <div class="pop-con">
+                <p class="alert-con-box">
+                    원인 계측 STEP을 선택하지 않은 경우<br />
+                    “원인 계측 Step을 선택해주세요.”
+                </p>
+            </div>
+            <!-- btn set -->
+            <div class="bottom-btn-area">
+                <button type="button" class="btn btn-sm btn-primary" onclick="$(this).parents('.fixed-pop').removeClass('open')">확인</button>
+            </div>
+            <!-- // btn set -->
+        </div>
+    </div>
+    <!-- // 확인 pop up -->
+    <!-- GPM 변경 필요 List pop up -->
+    <div class="fixed-pop p5">
+        <div class="pop-box" style="width:600px;">
+            <div class="pop-top">
+                <div class="tit">GPM 변경 필요 List</div>
+                <button class="pop-close" onclick="$(this).parents('.fixed-pop').removeClass('open')">close</button>
+            </div>
+            <div class="pop-con">
+                <!-- alert box -->
+                <div class="alert-box normal">
+                    GPM STEP.EXTENSION_2 메뉴내 아래 Step들의 WRS_NOSKIP_YN 컬럼 값이<br />
+                    모두 Y로 변경되어야 Recycle Wafer 사용 신청이 가능합니다.<button class="icon-btn i-alert ml5"></button>
+                </div>
+                <!-- // alert box -->
+                <!-- 테이블 -->
+                <div class="table-layout" style="margin-bottom:90px;">
+                    <table cellpadding="0" cellspacing="0">
+                        <colgroup>
+                            <col stule="width:15%" />
+                            <col stule="width:15%" />
+                            <col stule="width:auto" />
+                            <col stule="width:15%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>DATA</th>
+                                <th>DATA</th>
+                                <th>DATA</th>
+                                <th>DATA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>DATA</td>
+                                <td>DATA</td>
+                                <td>DATA</td>
+                                <td>DATA</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- // 테이블 -->
+
+            </div>
+            <!-- btn set -->
+            <div class="bottom-btn-area">
+                <button type="button" class="btn btn-sm btn-primary" onclick="$(this).parents('.fixed-pop').removeClass('open')">닫기</button>
+            </div>
+            <!-- // btn set -->
+        </div>
+    </div>
+    <!-- // GPM 변경 필요 List pop up -->
+    <!-- FDC List pop up -->
+    <div class="fixed-pop p6">
+        <div class="pop-box" style="width:600px;">
+            <div class="pop-top">
+                <div class="tit">FDC List</div>
+                <button class="pop-close" onclick="$(this).parents('.fixed-pop').removeClass('open')">close</button>
+            </div>
+            <div class="pop-con">
+                <!-- alert box -->
+                <div class="alert-box normal">
+                    입력시 입력된 원인 EQP ID의 FDC 인터락 이력이 제공됩니다 
+                </div>
+                <!-- // alert box -->
+                <!-- 테이블 -->
+                <div class="table-layout" style="margin-bottom:105px;">
+                    <table cellpadding="0" cellspacing="0">
+                        <colgroup>
+                            <col stule="width:15%" />
+                            <col stule="width:15%" />
+                            <col stule="width:auto" />
+                            <col stule="width:15%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>LOT ID</th>
+                                <th>Slot</th>
+                                <th>EQP ID</th>
+                                <th>DATA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>DATA</td>
+                                <td>DATA</td>
+                                <td>DATA</td>
+                                <td class="text-center"><button class="icon-btn i-link"></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- // 테이블 -->
+
+            </div>
+            <!-- btn set -->
+            <div class="bottom-btn-area">
+                <button type="button" class="btn btn-sm btn-primary" onclick="$(this).parents('.fixed-pop').removeClass('open')">닫기</button>
+            </div>
+            <!-- // btn set -->
+        </div>
+    </div>
+    <!-- // FDC List pop up -->
 
     <script src="js/common.js"></script>
     <!-- real grid -->
     <script src='./realgrid.2.6.3/grid_page.js'></script>
     <script src='./realgrid_sample.js'></script>
-    <script src='./realgrid_sample01.js'></script>
+    <script>
+        // $('.fixed-pop.p6').addClass('open')
+    </script>
 </body>
 
 </html>

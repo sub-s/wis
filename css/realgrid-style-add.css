@@ -1,0 +1,70 @@
+/* 그리드 스타일 수정 */
+.rg-grid .rg-header{background:#eee;}
+.realgrid-cell-btn{display:flex; justify-content:center; align-items:center; width:100%; height:13px; font-size:11px; color:#212121; border:1px solid #E0E0E0; background:#fff;}
+.rg-grid .rg-footer .rg-table tr td,
+.rg-grid .rg-foot .rg-table tr td{background-color:#F4F6FB;}
+
+/* 새로 추가한 컴퍼넌트 */
+.realgrid-btn-set{display:flex; justify-content:space-between; padding:0 10px 0 5px;}
+.realgrid-btn-set > .realgrid-cell-btn{flex:1; width:auto; margin-left:5px;}
+
+.realgrid-txt-center{text-align:center;}
+.realgrid-txt-left{text-align:left;}
+.realgrid-txt-right{text-align:right;}
+
+.realgrid-icon-circle{display:inline-block; width:16px; height:16px; font-size:0; border-radius:100%; background:gray;}
+.realgrid-icon-circle.m{background:#5EA4EB;}
+.realgrid-icon-circle.w{background:#EC5B4B;}
+
+.grid-gage-bar > ul, .grid-gage-bar li{list-style:none; padding:0; margin:0;}
+.grid-gage-bar > ul{font-size:0;}
+.grid-gage-bar > ul > li{display:inline-block; width:16px; height:16px; border-radius:2px; vertical-align:middle; background:#E0E0E0;}
+.grid-gage-bar > ul > li.active{background-color:#3771F9;}
+.grid-gage-bar > ul > li + li{margin-left:2px;}
+
+.realgrid-gage-bar{position:relative; height:16px; border-radius:2px;}
+.realgrid-gage-bar > span{display:block; width:0; height:100%; border-radius:inherit; transition:width ease 0.5s; background:#FF3B30;}
+.realgrid-gage-bar.b > span{background-color:#1ABE58;}
+.realgrid-gage-bar > p{position:absolute; top:0; left:0; right:0; bottom:0; display:flex; align-items:center; justify-content:center; padding:0; margin:0; font-size:14px; font-weight:400; font-family:var(--font);}
+
+.realgrid-address{display:block; padding:0 0 0 20px; font-family: var(--font); font-style: normal; font-weight: 400; font-size: 13px; line-height: 16px; text-align: left; letter-spacing: -0.05em; color: #212121; background:url(../img/realgrid//img/icon/icon_address.svg) no-repeat 5px center;}
+
+
+.toolbar #paging{ padding-top:12px; font-size:0; text-align:center;}
+.toolbar #paging > a{display:inline-flex; justify-content:center; align-items:center; width:24px !important; height:24px !important; padding:0 !important; margin:0; border:1px solid transparent; border-radius:4px; font-family:var(--font); font-weight:400; font-size:13px; line-height:15.59px; letter-spacing:-5%; text-decoration:none; vertical-align:top;}
+.toolbar #paging > a + a{margin-left:8px;}
+
+#paging > #first,
+#paging > #prev,
+#paging > #last,
+#paging > #next{
+  color:transparent !important;
+}
+
+#paging > #first{color:transparent; background:url(../img/realgrid/ico_paging_arr_first.svg) no-repeat center;}
+#paging > #first.disabled{background:url(../img/realgrid/ico_paging_arr_first_dis.svg) no-repeat center;}
+
+#paging > #prev{background:url(../img/realgrid/ico_paging_arr_prev.svg) no-repeat center;}
+#paging > #prev.disabled{background:url(../img/realgrid/ico_paging_arr_prev_dis.svg) no-repeat center;}
+
+
+#paging > #next{background:url(../img/realgrid/ico_paging_arr_next.svg) no-repeat center;}
+#paging > #next.disabled{background:url(../img/realgrid/ico_paging_arr_next_dis.svg) no-repeat center;}
+
+#paging > #last{background:url(../img/realgrid/ico_paging_arr_last.svg) no-repeat center;}
+#paging > #last.disabled{background:url(../img/realgrid/ico_paging_arr_last_dis.svg) no-repeat center;}
+
+.realgrid-cell-color-01{background-color:#6BD68A !important;}
+.realgrid-cell-color-02{background-color:#FFD700 !important;}
+.realgrid-cell-color-03{background-color:#E0E0E0 !important;}
+
+
+.rg-focus-mask .rg-focus{border-color:#ccc;}
+.rg-selection{border-color:#ccc !important; background-color:rgba(0,0,0,0.15) !important;}
+
+.rg-focused-cell{
+  background: #EEEEEE;
+}
+.rg-focused-row{
+  background: #EEEEEE;
+}

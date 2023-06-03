@@ -59,6 +59,8 @@
     --font: 'SamsungOne';
   }
   
+
+  .w100{width:100% !important;}
 ::placeholder { color: var(); }
 ::-webkit-search-decoration,
 ::-webkit-search-cancel-button,
@@ -394,8 +396,9 @@ button {border:0; outline:none !important; box-shadow:none !important;}
 
 .btn.aw {min-width: 100px;}
 .btn.as {min-width: 40px;}
+.btn.ah.size_h20, .btn.size_h20{height:20px;}
 
-.btn.ah {min-width: 94px; height: 17px; font-size: var(--fs-t9); line-height: 8px;}
+.btn.ah {min-width: 94px; height: 17px; font-size: var(--fs-t9); line-height: 8px; background:var(--c-white);}
 
 
 
@@ -405,7 +408,7 @@ button {border:0; outline:none !important; box-shadow:none !important;}
 .btn-color-red {color: var(--c-white); background-color: #FF6F66; border-color: #FF6F66;}
 .btn-color-red:hover {color: var(--c-white); background-color: var(--c-red); border-color: var(--c-red);}
 
-.btn-success {color:  var(--c-white); background-color: var(--c-mint); border-color:  var(--c-mint);}
+.btn.ah.btn-success {color:  var(--c-white); background-color: var(--c-mint); border-color:  var(--c-mint);}
 .btn-success:hover {background-color: var(--c-mint2); border-color: var(--c-mint2);}
 
 .btn.disabled,
@@ -608,8 +611,15 @@ button.btn:disabled .icon-refresh {background: url(../img/icon/refresh02.svg) no
   }
   .table-layout > table > tbody > tr > th,
   .table-layout > table > tbody > tr > td{
-    padding:4px 6px;
+    padding:3px 6px 4px 6px;
   }
+  .table-layout > table > tbody > tr > th:hover,
+  .table-layout > table > tbody > tr > td:hover{
+    color:#3771F9    ;
+    text-decoration:underline;
+  }
+
+  .table-layout > table > tbody > tr:nth-child(even){background:#F5F5F5;}
 
   .text-center{text-align:center !important;}
   .text-left{text-align:left !important;}
@@ -619,3 +629,9 @@ button.btn:disabled .icon-refresh {background: url(../img/icon/refresh02.svg) no
   .icon-x{display:inline-block; width:10px; height:10px; background:url(../img/icon/icon_x.svg) no-repeat center;}
 
   .icon-small-check{display:inline-block; width:12px; height:12px; background:url(../img/icon/icon_small_check.svg) no-repeat center;}
+
+
+/* icon btn */
+  .icon-btn{display:inline-block; width:20px; height:20px; padding:0; margin:0; vertical-align:middle; border-radius:100%; background:#DCE8F6 no-repeat center;}
+  .icon-btn.i-alert{background-image:url(../img/icon/icon_btn_alet.svg);}
+  .icon-btn.i-link{width:23px; height:23px; background-color:transparent; background-image:url(../img/icon/icon_btn_link.svg);}

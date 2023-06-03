@@ -347,3 +347,17 @@ const lnbToggle = ()=>{
         $("#content > .content_wrap").css("width","calc(100% - " + $("#lnb")[0].applyX + "px)")
     }
 }
+
+/* content tab */
+function contentTab(){
+    const _this = event.currentTarget;
+    const _li = _this.closest("li");
+    const idx = _li.getIndex();
+    if(idx === 1 && !_li.first){
+        _li.first = true;
+        setTimeout(()=>{
+            initGrid01();
+            initGrid02();
+        },500)
+    }
+}
