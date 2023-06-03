@@ -361,3 +361,36 @@ function contentTab(){
         },500)
     }
 }
+
+$(".tab-menu > .btn-set > .btn-next, .tab-menu > .btn-set > .btn-prev").click(function(){
+    const checked = $(this).hasClass("btn-prev");
+    const len = $(".nav.nav-tabs > button").length - 1;
+    const idx = $(".nav.nav-tabs > .active").index();
+    const nextNum = (checked)?idx - 1:idx + 1;
+    const applyIdx = (nextNum < 0)?len:(nextNum > len)?0:nextNum
+    const _tab = new bootstrap.Tab($(".nav.nav-tabs > button")[applyIdx]);
+    _tab.show();
+})
+
+$(".tab-menu > .btn-set > .btn-close").click(function(){
+
+})
+
+$("nav > .nav.nav-tabs button > span").click(function(){
+    if(event.stopPropagation){
+        event.stopPropagation();
+    }else{
+        event.cancleBubble = true;
+    }
+    const idx = $(this).parent().index();
+    const $tabs = $(this).parents(".nav-tabs").find("button");
+    const len = $tabs.length - 1;
+    const $cons = $(".tab-content > .tab-pane");
+    const nextIdx = (idx - 1 < 0)?1:idx - 1;
+    const _tab = new bootstrap.Tab($tabs[nextIdx]);
+    console.log("len : ",len);
+    if(len === 0) return;
+    $tabs[idx].remove();
+    $cons[idx].remove();
+    _tab.show();
+})

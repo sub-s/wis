@@ -292,7 +292,7 @@ button {border:0; outline:none !important; box-shadow:none !important;}
 .content-tab .nav-item .nav-link.active  {background-color: var(--c-blue3); color: var(--c-white)}
 
 
-.dropdown-menu.show {width: 140px; margin-top: 6px !important;}
+.dropdown-menu.show {width: 140px; margin-top: 6px !important;  padding:6px 0;}
 .dropdown-menu.show .dropdown-item {font-size: var(--fs-t7)}
 
 .tab-content { width: 100%;}
@@ -356,7 +356,7 @@ button {border:0; outline:none !important; box-shadow:none !important;}
 
 .custom-select .select-items div,
 .custom-select .select-selected {display:flex; align-items:center; color: var(--c-gray10); font-size: var(--fs-t6);  padding:0 7px; border-color: rgba(0, 0, 0, 0.1); cursor: pointer;}
-.custom-select .select-items {position: absolute;  border: 1px solid var(--c-gray5);  top: 34px; left: 0; right: 0; z-index: 99; border-radius: 4px; padding: 10px 0 10px; background-color: var(--c-white);}
+.custom-select .select-items {position: absolute;  border: 1px solid var(--c-gray5);  top: 34px; left: 0; right: 0; z-index: 99; border-radius: 4px; padding: 6px 0; background-color: var(--c-white);}
 .custom-select .select-hide {display: none;}
 .custom-select .select-items div:hover, .same-as-selected {background-color: rgba(0, 0, 0, 0.05);}
 

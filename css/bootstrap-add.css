@@ -1,0 +1,102 @@
+.btn-group .dropdown-menu{
+    border-color:#E0E0E0;
+}
+
+.dropdown-menu.show .dropdown-item{
+    padding:0 0 0 8px;
+    margin:0;
+}
+
+button:not(:disabled), [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled){
+    height:30px;
+    padding:0 7px;
+}
+
+.multiselect-selected-text{
+    display:block;
+    width:calc(100% - 30px);
+    color: var(--c-gray10);
+    font-size: var(--fs-t6);
+    text-align:left;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.multiselect-container .multiselect-option .form-check, .multiselect-container .multiselect-group .form-check, .multiselect-container .multiselect-all .form-check{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    height:30px;
+    /* padding:0 0 0 8px; */
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--fs-t7);
+    line-height: var(--fs-t4);
+}
+
+.form-check-input[type=checkbox]{
+    width:16px;
+    height:16px;
+    margin-right:6px;
+}
+
+.multiselect-container .multiselect-option .form-check-label, .multiselect-container .multiselect-group .form-check-label, .multiselect-container .multiselect-all .form-check-label{
+    position:relative;
+    top:3px;
+}
+
+.form-check .form-check-input{
+    float:none;
+}
+
+.multiselect-container .multiselect-option.active:not(.multiselect-active-item-fallback), .multiselect-container .multiselect-group.active:not(.multiselect-active-item-fallback), .multiselect-container .multiselect-all.active:not(.multiselect-active-item-fallback), .multiselect-container .multiselect-option:not(.multiselect-active-item-fallback):active, .multiselect-container .multiselect-group:not(.multiselect-active-item-fallback):active, .multiselect-container .multiselect-all:not(.multiselect-active-item-fallback):active{
+    background-color: #EEEEEE !important;
+}
+.multiselect-container .multiselect-option:hover, .multiselect-container .multiselect-group:hover, .multiselect-container .multiselect-all:hover, .multiselect-container .multiselect-option:focus, .multiselect-container .multiselect-group:focus, .multiselect-container .multiselect-all:focus{
+    background-color: #F5F5F5 !important;
+}
+
+.multiselect-container .multiselect-filter > input.multiselect-search{
+    width:calc(100% - 44px);
+    margin-left:0px;
+    margin-right:6px;
+    padding:0 10px;
+    border:1px solid #E0E0E0;
+    border-radius:4px;
+}
+.multiselect-container .multiselect-filter > input.multiselect-search:focus{
+    border-color:#212121;
+}
+
+.align-items-center{
+    flex-direction:row-reverse;
+    padding:0 6px;
+}
+
+.multiselect-container .multiselect-filter > .fa-search{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:40px;
+    height:30px;
+    padding:0;
+    margin:0;
+    border:1px solid blue;
+    border-radius:4px;
+    font-size:12px;
+}
+.multiselect-container .multiselect-filter > .fa-search:before{
+    content:"검색";
+    font-family: 'SamsungOne';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.btn-group .dropdown-menu,
+span.multiselect-native-select,
+.btn-group, .btn-group-vertical{
+    width:100%;
+}

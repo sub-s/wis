@@ -7,22 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="js/jquery.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
+    <script src="js/jquery-ui.min.js"></script>
+
     <script src="js/bootstrap.js"></script>
-    <!-- <script src="js/bootstrap-multiselect.js"></script> -->
+    <script src="js/bootstrap-multiselect.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/bootstrap.esm.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
 
     <link media="all" rel="stylesheet" href="css/jquery-ui.css">
     <link media="all" rel="stylesheet" href="css/bootstrap.css">
     <link media="all" rel="stylesheet" href="css/bootstrap-grid.css">
     <link media="all" rel="stylesheet" href="css/bootstrap-utilities.css">
     <link media="all" rel="stylesheet" href="css/bootstrap-reboot.css">
-    <!-- <link media="all" rel="stylesheet" href="css/bootstrap-multiselect.css"> -->
+    <link media="all" rel="stylesheet" href="css/bootstrap-multiselect.css">
     <link media="all" rel="stylesheet" href="css/common.css">
     <link media="all" rel="stylesheet" href="css/layout.css">
     <link media="all" rel="stylesheet" href='css/realgrid-style-add.css' />
+    <link media="all" rel="stylesheet" href='css/bootstrap-add.css' />
 
 
      <!-- RealGrid -->
@@ -383,8 +386,8 @@
                                             세번째 화면 탭
                                             <span class="closed"></span>
                                         </button>
-                                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
-                                            data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
+                                        <button class="nav-link" id="nav-fourth-tab" data-bs-toggle="tab"
+                                            data-bs-target="#nav-fourth" type="button" role="tab" aria-controls="nav-fourth"
                                             aria-selected="false">
                                             네번째 화면 탭
                                             <span class="closed"></span>
@@ -409,6 +412,7 @@
                             <!-- // content top -->
                             <!-- depth1 tab content -->
                             <div class="tab-content  content-layout-type" id="nav-tabContent">
+                                <!-- 탭01-->
                                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
                                     aria-labelledby="nav-home-tab">
                                     <!-- 타이틀 영역 -->
@@ -758,22 +762,6 @@
                                                     <!-- hidden -->
                                                 </div>
                                                 <!-- // 조건 검색 -->
-
-                                                <select id="example-getting-started" multiple="multiple">
-                                                    <option value="cheese">Cheese</option>
-                                                    <option value="tomatoes">Tomatoes</option>
-                                                    <option value="Mozzarella">Mozzarella</option>
-                                                    <option value="Mushrooms">Mushrooms</option>
-                                                    <option value="Pepperoni">Pepperoni</option>
-                                                    <option value="Onions">Onions</option>
-                                                </select>
-                                                <!-- <script type="text/javascript">
-                                                    $(document).ready(function() {
-                                                        $('#example-getting-started').multiselect({
-                                                            enableHTML: true
-                                                        });
-                                                    });
-                                                </script> -->
                                                 <!-- 테이블 -->
                                                 <div class="table-layout">
                                                     <table cellpadding="0" cellspacing="0">
@@ -843,7 +831,7 @@
                                                 </div>
                                                 <!-- // 테이블 -->
                                                 <!-- 팝업 호출 버튼 -->
-                                                <div class="d-flex justify-content-start align-items-center mt30">
+                                                <div class="d-flex justify-content-start mt30">
                                                     <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p0').addClass('open')" >예약 등록 pop up</button>
                                                     <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p1').addClass('open')" >Wafer Recycle 결재 pop up</button>
                                                     <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p1_1').addClass('open')" >Wafer Recycle 신청 pop up</button>
@@ -854,6 +842,26 @@
                                                     <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p6').addClass('open')" >FDC List</button>
                                                 </div>
                                                 <!-- // 팝업 호출 버튼 -->
+                                                <div class="d-flex justify-content-start mt30">
+                                                    <div class="d-inline-flex" style="width:150px">
+                                                        <select id="mul" multiple="multiple">
+                                                            <option value="One">One</option>
+                                                            <option value="Two">Two</option>
+                                                            <option value="Three">Three</option>
+                                                            <option value="four">four</option>
+                                                            <option value="five">five</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="d-inline-flex" style="width:150px">
+                                                        <select id="mul1" multiple data-live-search="true">
+                                                            <option value="One">One</option>
+                                                            <option value="Two">Two</option>
+                                                            <option value="Three">Three</option>
+                                                            <option value="four">four</option>
+                                                            <option value="five">five</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
                                                 <div class="d-flex justify-content-end align-items-center mt30">
                                                     <button type="button" class="btn btn-sm btn-success" >신청</button>
                                                     <button type="button" class="btn btn-sm btn-success" >예약</button>
@@ -1050,10 +1058,922 @@
                                         <!-- // 콘텐츠 탭 내용 -->
                                     </div>
                                 </div>
+                                <!-- // 탭01-->
+                                <!-- 탭02-->
                                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                    <!-- 타이틀 영역 -->
+                                    <div class="title-area d-flex justify-content-between align-items-center mb20">
+                                        <div class="title">
+                                            <p class="bookmark" onclick="bookmark()">
+                                                <span class="blind">즐겨찾기</span>
+                                            </p>
+                                            <h2>두번째 탭</h2>
+                                        </div>
+                                        <div class="path">
+                                            <ul class="d-flex justify-content-between ">
+                                                <li>홈</li>
+                                                <li>Wafer Recycling</li>
+                                                <li>Recycling WF현황</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // 타이틀 영역 -->
+                                    <!-- 조건 검색 -->
+                                    <div class="condition-search">
+                                        <!-- row -->
+                                        <div class="row">
+                                            <div class="cell-1">
+                                                <label class="form-label required" for="a1">조건불러오기</label>
+                                                <div class="con">
+                                                    <div class="custom-select">
+                                                        <select id="a1" >
+                                                            <option value="0">조건전체</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell-1">
+                                                <label class="form-label" for="a2">Recycle 상태</label>
+                                                <div class="con">
+                                                    <div class="custom-select">
+                                                        <select id="a2" >
+                                                            <option value="0">신청가능</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell-1">
+                                                <label class="form-label" for="a3">Line</label>
+                                                <div class="con">
+                                                    <div class="custom-select">
+                                                        <select id="a3" >
+                                                            <option value="0">조건전체</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell-1">
+                                                <label class="form-label" for="a3">Process ID</label>
+                                                <div class="con">
+                                                    <div class="custom-select">
+                                                        <select id="a3" >
+                                                            <option value="0">조건전체</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell-4">
+                                                <label class="form-label required" for="a3">Layer/Step (계측 제외)</label>
+                                                <div class="con">
+                                                    <div class="range-box-layout">
+                                                        <div class="range-box-area">
+                                                            <div class="field">
+                                                                <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                                <div class="btn-right">
+                                                                    <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                        <span class="blind">삭제</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="custom-select">
+                                                                <select id="a3" >
+                                                                    <option value="0">mon</option>
+                                                                    <option value="1">텍스트</option>
+                                                                    <option value="2">텍스트</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="center-txt">~</div>
+                                                        <div class="range-box-area">
+                                                            <div class="field">
+                                                                <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                                <div class="btn-right">
+                                                                    <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                        <span class="blind">삭제</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="custom-select">
+                                                                <select id="a3" >
+                                                                    <option value="0">mon</option>
+                                                                    <option value="1">텍스트</option>
+                                                                    <option value="2">텍스트</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- // row -->
+                                        <!-- row -->
+                                        <div class="row">
+                                            <div class="cell-1">
+                                                <label class="form-label" for="a4">등록 Part</label>
+                                                <div class="con">
+                                                    <div class="custom-select">
+                                                        <select id="a4" >
+                                                            <option value="0">전체조건</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell-1">
+                                                <label class="form-label" for="a4">Lot ID</label>
+                                                <div class="con">
+                                                    <div class="custom-select">
+                                                        <select id="a4" >
+                                                            <option value="0">전체조건</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell-1">
+                                                <label class="form-label" for="a4">필요매수</label>
+                                                <div class="con">
+                                                    <div class="range-box-layout">
+                                                        <div class="field">
+                                                            <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                            <div class="btn-right">
+                                                                <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                    <span class="blind">삭제</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="center-txt">~</div>
+                                                        <div class="field">
+                                                            <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                            <div class="btn-right">
+                                                                <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                    <span class="blind">삭제</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="unit">매</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell-5">
+                                            </div>
+                                        </div>
+                                        <!-- // row -->
+                                        <!-- hidden -->
+                                        <div class="hidden-search">
+                                            <button class="search-btn" onclick="openSearch()"> 
+                                                <span class="blind">열림</span>
+                                            </button>
+                                            <div class="inner">
+                                                <!-- row -->
+                                                <div class="row mt10">
+                                                    <div class="cell-1">
+                                                        <label class="form-label" for="a4">필요매수</label>
+                                                        <div class="con">
+                                                            <div class="range-box-layout">
+                                                                <div class="field">
+                                                                    <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                                    <div class="btn-right">
+                                                                        <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                            <span class="blind">삭제</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="center-txt">~</div>
+                                                                <div class="field">
+                                                                    <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                                    <div class="btn-right">
+                                                                        <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                            <span class="blind">삭제</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="unit">매</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell-1">
+                                                        <label class="form-label" for="a4">알림방법</label>
+                                                        <div class="con">
+                                                            <div class="f-a-center">
+                                                                <label class="input-box"><input type="checkbox" /><i></i>메일</label>
+                                                                <label class="input-box"><input type="checkbox" /><i></i>메신저</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell-2">
+                                                        <label class="form-label" for="a4">알림기간</label>
+                                                        <div class="con">
+                                                            <div class="d-flex justify-content-start">
+                                                                <div class="col-auto field date">
+                                                                    <input type="text" class="form-control form-control-sm datepicker" placeholder="날짜 선택"/>
+                                                                </div>
+                                                                <div class="space"> ~ </div>
+                                                                <div class="col-auto field date">
+                                                                    <input type="text" class="form-control form-control-sm datepicker" placeholder="날짜 선택"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell-4">
+                                                    </div>
+                                                </div>
+                                                <!-- // row -->
+                                            </div>
+                                        </div>
+                                        <!-- hidden -->
+                                    </div>
+                                    <!-- // 조건 검색 -->
+                                    <!-- 테이블 -->
+                                    <div class="table-layout" style="margin-top:27px;">
+                                        <table cellpadding="0" cellspacing="0">
+                                            <colgroup>
+                                                <col stule="width:auto" />
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>승인</th>
+                                                    <th>반려</th>
+                                                    <th class="text-left">DATA</th>
+                                                    <th>DATA</th>
+                                                    <th>DATA</th>
+                                                    <th>DATA</th>
+                                                    <th>DATA</th>
+                                                    <th>DATA</th>
+                                                    <th>DATA</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center"><div class="label-card a">승인</div></td>
+                                                    <td class="text-center"><div class="label-card c">발려</div></td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><div class="label-card a">승인</div></td>
+                                                    <td class="text-center"><div class="label-card c">발려</div></td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><div class="label-card a">승인</div></td>
+                                                    <td class="text-center"><div class="label-card c">발려</div></td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><div class="label-card a">승인</div></td>
+                                                    <td class="text-center"><div class="label-card c">발려</div></td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td><button type="button" class="btn btn-sm btn-success ah w-100 size_h20">신청</button></td>
+                                                    <td><button type="button" class="btn btn-sm btn-outline-secondary ah w-100 size_h20">GMP변경필요</button></td>
+                                                    <td><div class="label-card a">승인</div><div class="label-card c">발려</div></td>
+                                                    <td><button class="label-card a">승인</button><button class="label-card c">발려</button><button class="icon-btn i-link"></button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- // 테이블 -->
                                 </div>
+                                <!-- // 탭02-->
+                                <!-- 탭03-->
                                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                                    세번째 화면 탭</div>
+                                    <!-- 타이틀 영역 -->
+                                    <div class="title-area d-flex justify-content-between align-items-center mb20">
+                                        <div class="title">
+                                            <p class="bookmark" onclick="bookmark()">
+                                                <span class="blind">즐겨찾기</span>
+                                            </p>
+                                            <h2>세번째 탭</h2>
+                                        </div>
+                                        <div class="path">
+                                            <ul class="d-flex justify-content-between ">
+                                                <li>홈</li>
+                                                <li>Wafer Recycling</li>
+                                                <li>Recycling WF현황</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // 타이틀 영역 -->
+                                    <!-- 조건 검색 -->
+                                    <div class="condition-search">
+                                        <!-- row -->
+                                        <div class="row">
+                                            <div class="cell-1">
+                                                <label class="form-label required" for="a1">조건불러오기</label>
+                                                <div class="con">
+                                                    <div class="custom-select">
+                                                        <select id="a1" >
+                                                            <option value="0">조건전체</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell-1">
+                                                <label class="form-label" for="a2">Recycle 상태</label>
+                                                <div class="con">
+                                                    <div class="custom-select">
+                                                        <select id="a2" >
+                                                            <option value="0">신청가능</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell-1">
+                                                <label class="form-label" for="a3">Line</label>
+                                                <div class="con">
+                                                    <div class="custom-select">
+                                                        <select id="a3" >
+                                                            <option value="0">조건전체</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell-1">
+                                                <label class="form-label" for="a3">Process ID</label>
+                                                <div class="con">
+                                                    <div class="custom-select">
+                                                        <select id="a3" >
+                                                            <option value="0">조건전체</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell-4">
+                                                <label class="form-label required" for="a3">Layer/Step (계측 제외)</label>
+                                                <div class="con">
+                                                    <div class="range-box-layout">
+                                                        <div class="range-box-area">
+                                                            <div class="field">
+                                                                <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                                <div class="btn-right">
+                                                                    <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                        <span class="blind">삭제</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="custom-select">
+                                                                <select id="a3" >
+                                                                    <option value="0">mon</option>
+                                                                    <option value="1">텍스트</option>
+                                                                    <option value="2">텍스트</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="center-txt">~</div>
+                                                        <div class="range-box-area">
+                                                            <div class="field">
+                                                                <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                                <div class="btn-right">
+                                                                    <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                        <span class="blind">삭제</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="custom-select">
+                                                                <select id="a3" >
+                                                                    <option value="0">mon</option>
+                                                                    <option value="1">텍스트</option>
+                                                                    <option value="2">텍스트</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- // row -->
+                                        <!-- row -->
+                                        <div class="row">
+                                            <div class="cell-1">
+                                                <label class="form-label" for="a4">등록 Part</label>
+                                                <div class="con">
+                                                    <div class="custom-select">
+                                                        <select id="a4" >
+                                                            <option value="0">전체조건</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell-1">
+                                                <label class="form-label" for="a4">Lot ID</label>
+                                                <div class="con">
+                                                    <div class="custom-select">
+                                                        <select id="a4" >
+                                                            <option value="0">전체조건</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell-1">
+                                                <label class="form-label" for="a4">필요매수</label>
+                                                <div class="con">
+                                                    <div class="range-box-layout">
+                                                        <div class="field">
+                                                            <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                            <div class="btn-right">
+                                                                <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                    <span class="blind">삭제</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="center-txt">~</div>
+                                                        <div class="field">
+                                                            <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                            <div class="btn-right">
+                                                                <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                    <span class="blind">삭제</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="unit">매</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell-5">
+                                            </div>
+                                        </div>
+                                        <!-- // row -->
+                                        <!-- hidden -->
+                                        <div class="hidden-search">
+                                            <button class="search-btn" onclick="openSearch()"> 
+                                                <span class="blind">열림</span>
+                                            </button>
+                                            <div class="inner">
+                                                <!-- row -->
+                                                <div class="row mt10">
+                                                    <div class="cell-1">
+                                                        <label class="form-label" for="a4">필요매수</label>
+                                                        <div class="con">
+                                                            <div class="range-box-layout">
+                                                                <div class="field">
+                                                                    <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                                    <div class="btn-right">
+                                                                        <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                            <span class="blind">삭제</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="center-txt">~</div>
+                                                                <div class="field">
+                                                                    <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                                    <div class="btn-right">
+                                                                        <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                            <span class="blind">삭제</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="unit">매</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell-1">
+                                                        <label class="form-label" for="a4">알림방법</label>
+                                                        <div class="con">
+                                                            <div class="f-a-center">
+                                                                <label class="input-box"><input type="checkbox" /><i></i>메일</label>
+                                                                <label class="input-box"><input type="checkbox" /><i></i>메신저</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell-2">
+                                                        <label class="form-label" for="a4">알림기간</label>
+                                                        <div class="con">
+                                                            <div class="d-flex justify-content-start">
+                                                                <div class="col-auto field date">
+                                                                    <input type="text" class="form-control form-control-sm datepicker" placeholder="날짜 선택"/>
+                                                                </div>
+                                                                <div class="space"> ~ </div>
+                                                                <div class="col-auto field date">
+                                                                    <input type="text" class="form-control form-control-sm datepicker" placeholder="날짜 선택"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell-4">
+                                                    </div>
+                                                </div>
+                                                <!-- // row -->
+                                            </div>
+                                        </div>
+                                        <!-- hidden -->
+                                    </div>
+                                    <!-- // 조건 검색 -->
+                                    <!-- 테이블 -->
+                                    <div class="table-layout" style="margin-top:27px;">
+                                        <table cellpadding="0" cellspacing="0">
+                                            <colgroup>
+                                                <col stule="width:auto" />
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>승인</th>
+                                                    <th>반려</th>
+                                                    <th class="text-left">DATA</th>
+                                                    <th>DATA</th>
+                                                    <th>DATA</th>
+                                                    <th>DATA</th>
+                                                    <th>DATA</th>
+                                                    <th>DATA</th>
+                                                    <th>DATA</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center"><div class="label-card a">승인</div></td>
+                                                    <td class="text-center"><div class="label-card c">발려</div></td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><div class="label-card a">승인</div></td>
+                                                    <td class="text-center"><div class="label-card c">발려</div></td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><div class="label-card a">승인</div></td>
+                                                    <td class="text-center"><div class="label-card c">발려</div></td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><div class="label-card a">승인</div></td>
+                                                    <td class="text-center"><div class="label-card c">발려</div></td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td><button type="button" class="btn btn-sm btn-success ah w-100 size_h20">신청</button></td>
+                                                    <td><button type="button" class="btn btn-sm btn-outline-secondary ah w-100 size_h20">GMP변경필요</button></td>
+                                                    <td><div class="label-card a">승인</div><div class="label-card c">발려</div></td>
+                                                    <td><button class="label-card a">승인</button><button class="label-card c">발려</button><button class="icon-btn i-link"></button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- // 테이블 -->
+                                </div>
+                                <!-- // 탭03-->
+                                <!-- 탭04-->
+                                <div class="tab-pane fade" id="nav-fourth" role="tabpanel" aria-labelledby="nav-fourth-tab">
+                                    <!-- 타이틀 영역 -->
+                                    <div class="title-area d-flex justify-content-between align-items-center mb20">
+                                        <div class="title">
+                                            <p class="bookmark" onclick="bookmark()">
+                                                <span class="blind">즐겨찾기</span>
+                                            </p>
+                                            <h2>네번째 탭</h2>
+                                        </div>
+                                        <div class="path">
+                                            <ul class="d-flex justify-content-between ">
+                                                <li>홈</li>
+                                                <li>Wafer Recycling</li>
+                                                <li>Recycling WF현황</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // 타이틀 영역 -->
+                                    <!-- 조건 검색 -->
+                                    <div class="condition-search">
+                                        <!-- row -->
+                                        <div class="row">
+                                            <div class="cell-1">
+                                                <label class="form-label required" for="a1">조건불러오기</label>
+                                                <div class="con">
+                                                    <div class="custom-select">
+                                                        <select id="a1" >
+                                                            <option value="0">조건전체</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell-1">
+                                                <label class="form-label" for="a2">Recycle 상태</label>
+                                                <div class="con">
+                                                    <div class="custom-select">
+                                                        <select id="a2" >
+                                                            <option value="0">신청가능</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell-1">
+                                                <label class="form-label" for="a3">Line</label>
+                                                <div class="con">
+                                                    <div class="custom-select">
+                                                        <select id="a3" >
+                                                            <option value="0">조건전체</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell-1">
+                                                <label class="form-label" for="a3">Process ID</label>
+                                                <div class="con">
+                                                    <div class="custom-select">
+                                                        <select id="a3" >
+                                                            <option value="0">조건전체</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell-4">
+                                                <label class="form-label required" for="a3">Layer/Step (계측 제외)</label>
+                                                <div class="con">
+                                                    <div class="range-box-layout">
+                                                        <div class="range-box-area">
+                                                            <div class="field">
+                                                                <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                                <div class="btn-right">
+                                                                    <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                        <span class="blind">삭제</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="custom-select">
+                                                                <select id="a3" >
+                                                                    <option value="0">mon</option>
+                                                                    <option value="1">텍스트</option>
+                                                                    <option value="2">텍스트</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="center-txt">~</div>
+                                                        <div class="range-box-area">
+                                                            <div class="field">
+                                                                <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                                <div class="btn-right">
+                                                                    <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                        <span class="blind">삭제</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="custom-select">
+                                                                <select id="a3" >
+                                                                    <option value="0">mon</option>
+                                                                    <option value="1">텍스트</option>
+                                                                    <option value="2">텍스트</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- // row -->
+                                        <!-- row -->
+                                        <div class="row">
+                                            <div class="cell-1">
+                                                <label class="form-label" for="a4">등록 Part</label>
+                                                <div class="con">
+                                                    <div class="custom-select">
+                                                        <select id="a4" >
+                                                            <option value="0">전체조건</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell-1">
+                                                <label class="form-label" for="a4">Lot ID</label>
+                                                <div class="con">
+                                                    <div class="custom-select">
+                                                        <select id="a4" >
+                                                            <option value="0">전체조건</option>
+                                                            <option value="1">텍스트</option>
+                                                            <option value="2">텍스트</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell-1">
+                                                <label class="form-label" for="a4">필요매수</label>
+                                                <div class="con">
+                                                    <div class="range-box-layout">
+                                                        <div class="field">
+                                                            <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                            <div class="btn-right">
+                                                                <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                    <span class="blind">삭제</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="center-txt">~</div>
+                                                        <div class="field">
+                                                            <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                            <div class="btn-right">
+                                                                <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                    <span class="blind">삭제</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="unit">매</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell-5">
+                                            </div>
+                                        </div>
+                                        <!-- // row -->
+                                        <!-- hidden -->
+                                        <div class="hidden-search">
+                                            <button class="search-btn" onclick="openSearch()"> 
+                                                <span class="blind">열림</span>
+                                            </button>
+                                            <div class="inner">
+                                                <!-- row -->
+                                                <div class="row mt10">
+                                                    <div class="cell-1">
+                                                        <label class="form-label" for="a4">필요매수</label>
+                                                        <div class="con">
+                                                            <div class="range-box-layout">
+                                                                <div class="field">
+                                                                    <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                                    <div class="btn-right">
+                                                                        <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                            <span class="blind">삭제</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="center-txt">~</div>
+                                                                <div class="field">
+                                                                    <input type="text" class="form-control form-control-sm" id="a3" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                                                    <div class="btn-right">
+                                                                        <button class="clear-btn" type="button" onclick="clearBtn()">
+                                                                            <span class="blind">삭제</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="unit">매</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell-1">
+                                                        <label class="form-label" for="a4">알림방법</label>
+                                                        <div class="con">
+                                                            <div class="f-a-center">
+                                                                <label class="input-box"><input type="checkbox" /><i></i>메일</label>
+                                                                <label class="input-box"><input type="checkbox" /><i></i>메신저</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell-2">
+                                                        <label class="form-label" for="a4">알림기간</label>
+                                                        <div class="con">
+                                                            <div class="d-flex justify-content-start">
+                                                                <div class="col-auto field date">
+                                                                    <input type="text" class="form-control form-control-sm datepicker" placeholder="날짜 선택"/>
+                                                                </div>
+                                                                <div class="space"> ~ </div>
+                                                                <div class="col-auto field date">
+                                                                    <input type="text" class="form-control form-control-sm datepicker" placeholder="날짜 선택"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell-4">
+                                                    </div>
+                                                </div>
+                                                <!-- // row -->
+                                            </div>
+                                        </div>
+                                        <!-- hidden -->
+                                    </div>
+                                    <!-- // 조건 검색 -->
+                                    <!-- 테이블 -->
+                                    <div class="table-layout" style="margin-top:27px;">
+                                        <table cellpadding="0" cellspacing="0">
+                                            <colgroup>
+                                                <col stule="width:auto" />
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>승인</th>
+                                                    <th>반려</th>
+                                                    <th class="text-left">DATA</th>
+                                                    <th>DATA</th>
+                                                    <th>DATA</th>
+                                                    <th>DATA</th>
+                                                    <th>DATA</th>
+                                                    <th>DATA</th>
+                                                    <th>DATA</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center"><div class="label-card a">승인</div></td>
+                                                    <td class="text-center"><div class="label-card c">발려</div></td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><div class="label-card a">승인</div></td>
+                                                    <td class="text-center"><div class="label-card c">발려</div></td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><div class="label-card a">승인</div></td>
+                                                    <td class="text-center"><div class="label-card c">발려</div></td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><div class="label-card a">승인</div></td>
+                                                    <td class="text-center"><div class="label-card c">발려</div></td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td>DATA</td>
+                                                    <td><button type="button" class="btn btn-sm btn-success ah w-100 size_h20">신청</button></td>
+                                                    <td><button type="button" class="btn btn-sm btn-outline-secondary ah w-100 size_h20">GMP변경필요</button></td>
+                                                    <td><div class="label-card a">승인</div><div class="label-card c">발려</div></td>
+                                                    <td><button class="label-card a">승인</button><button class="label-card c">발려</button><button class="icon-btn i-link"></button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- // 테이블 -->
+                                </div>
+                                <!-- // 탭04-->
                                 <!-- // 콘텐츠 탭 -->
                             </div>
                             <!-- // depth1 tab content -->
@@ -2005,6 +2925,14 @@
     <script src='./realgrid_sample.js'></script>
     <script>
         // $('.fixed-pop.p6').addClass('open')
+        const _tab = window.ex = new bootstrap.Tab(document.querySelector("#nav-profile-tab"));
+        // _tab.show();
+        $(document).ready(function(){
+            $("#mul").multiselect();
+            $("#mul1").multiselect({
+                enableFiltering: true
+            });
+        })
     </script>
 </body>
 
