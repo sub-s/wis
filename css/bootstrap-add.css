@@ -70,7 +70,7 @@ button:not(:disabled):not(.realgrid-cell-btn):not(.icon-btn), [type=button]:not(
     border-color:#212121;
 }
 
-.align-items-center{
+.multiselect-filter {
     flex-direction:row-reverse;
     padding:0 6px;
 }
