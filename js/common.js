@@ -57,6 +57,14 @@ const comboBox = () => {
             closeAllSelect(this);
             this.nextSibling.classList.toggle("select-hide");
             this.classList.toggle("select-arrow-active");
+            const checked = !$(this).hasClass("select-arrow-active")
+            if(checked){
+                const _wrap = this.closest(".custom-select");
+                const _sel = _wrap.querySelector("select");
+                const ev = document.createEvent("HTMLEvents");
+                ev.initEvent("change",true,true);
+                _sel.dispatchEvent(ev);
+            }
         });
     }
 

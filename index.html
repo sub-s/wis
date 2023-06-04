@@ -477,10 +477,10 @@
                                                                     <label class="form-label required" for="a1">조건불러오기</label>
                                                                     <div class="con">
                                                                         <div class="custom-select">
-                                                                            <select id="a1" >
-                                                                                <option value="0">조건전체</option>
-                                                                                <option value="1">텍스트</option>
-                                                                                <option value="2">텍스트</option>
+                                                                            <select id="a1">
+                                                                                <option value="조건전체">조건전체</option>
+                                                                                <option value="조건1">조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1</option>
+                                                                                <option value="조건2">조건2</option>
                                                                             </select>
                                                                         </div>
                                                                     </div>
@@ -831,7 +831,7 @@
                                                 </div>
                                                 <!-- // 테이블 -->
                                                 <!-- 팝업 호출 버튼 -->
-                                                <div class="mt30">
+                                                <div class="d-flex justify-content-end align-items-center flex-wrap mt30">
                                                     <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p0').addClass('open')" >예약 등록 pop up</button>
                                                     <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p1').addClass('open')" >Wafer Recycle 결재 pop up</button>
                                                     <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p1_1').addClass('open')" >Wafer Recycle 신청 pop up</button>
@@ -872,6 +872,7 @@
                                                     </div>
                                                 </div>
                                                 <!-- // field-->
+                                                <!-- multi dropdown-->
                                                 <div class="guide_box">
                                                     <div class="d-inline-flex" style="width:150px">
                                                         <select id="mul" multiple="multiple" data-mdb-clear-button="true">
@@ -886,12 +887,13 @@
                                                         <select id="mul1" multiple data-live-search="true" data-mdb-validation="true">
                                                             <option value="One">One</option>
                                                             <option value="Two">Two</option>
-                                                            <option value="Three">Three</option>
+                                                            <option value="Three">ThreeThreeThreeThreeThreeThree</option>
                                                             <option value="four">four</option>
                                                             <option value="five">five</option>
                                                         </select>
                                                     </div>
                                                 </div>
+                                                <!-- // multi dropdown-->
                                                 <div class="d-flex justify-content-end align-items-center mt30">
                                                     <button type="button" class="btn btn-sm btn-success" >신청</button>
                                                     <button type="button" class="btn btn-sm btn-success" >예약</button>
@@ -1733,9 +1735,9 @@
                                                         <div class="con">
                                                             <div class="custom-select">
                                                                 <select id="a1" >
-                                                                    <option value="0">조건전체</option>
-                                                                    <option value="1">텍스트</option>
-                                                                    <option value="2">텍스트</option>
+                                                                    <option value="조건전체">조건전체</option>
+                                                                    <option value="조건1">조건1</option>
+                                                                    <option value="조건2">조건2</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -3174,6 +3176,14 @@
 
             // $('.fixed-pop.p3').addClass('open')
         })
+        setTimeout(()=>{
+            $(".custom-select select").change(selChangeEv)
+        },500)
+        function selChangeEv(){
+            const _this = event.currentTarget;
+            console.log("_this : ",_this);
+            console.log("value : ",_this.value);
+        }
     </script>
 </body>
 
