@@ -394,3 +394,8 @@ $(".tab-menu > .btn-set > .btn-close").click(function(){
 //     $cons[idx].remove();
 //     _tab.show();
 // })
+
+function exid(){
+    const _this = event.currentTarget;
+    console.log("_this : ",_this)
+}
