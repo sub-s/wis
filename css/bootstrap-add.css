@@ -93,6 +93,7 @@ button:not(:disabled):not(.realgrid-cell-btn), [type=button]:not(:disabled):not(
     font-style: normal;
     font-weight: 700;
     font-size: 13px;
+    color:#3771F9;
 }
 
 .btn-group .dropdown-menu,

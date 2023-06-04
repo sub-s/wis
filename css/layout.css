@@ -223,3 +223,6 @@ li.active > .menu_wrap > ul{display:block;}
 .bottom-area-con{height:160px;}
 
 .alert-con-box{padding:15px 0; font-weight: 400; font-size:var(--fs-t6); line-height: 20px; align-items: center; text-align: center; letter-spacing: -0.05em; color: var(--c-gray10);}
+
+.guide_box{margin-top:20px;}
+.guide_box > * + *{margin-left:5px;}
