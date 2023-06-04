@@ -189,7 +189,7 @@ li.active > .menu_wrap > ul{display:block;}
 
 /* fixed-pop */
 .fixed-pop.open{display:flex;}
-.fixed-pop{position:fixed; top:0; left:0; right:0; bottom:0; z-index:1; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.5);}
+.fixed-pop{position:fixed; top:0; left:0; right:0; bottom:0; z-index:50; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.5);}
 .pop-box{padding:20px; border-radius:4px; background:var(--c-white);}
 .pop-top{position:relative; margin:0 0 16px 0;}
 .pop-top > .tit{font-weight: 700; font-size:var(--fs-t5);}

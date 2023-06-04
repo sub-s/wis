@@ -349,7 +349,7 @@ button {border:0; outline:none !important; box-shadow:none !important;}
 
 
 /* custom-select */
-.custom-select {position: relative; margin: 0; padding: 0;}
+.custom-select {position: relative; height:30px; margin: 0; padding: 0;}
 .custom-select select {display: none; /*hide original SELECT element: */}
 .custom-select .select-selected {position:absolute; left:0; right:0; background-color: var(--c-white); border: 1px solid var(--c-gray3); border-radius: 4px; height: 30px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; word-break:break-all}
 .custom-select .select-selected:after {position: absolute; content: ""; top: 7px; right: 10px; width: 16px; height: 16px; background: url(../img/icon/select_arrow.svg) no-repeat;}
