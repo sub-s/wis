@@ -616,10 +616,10 @@ button.btn:disabled .icon-refresh {background: url(../img/icon/refresh02.svg) no
   }
   .table-layout > table > tbody > tr > th:hover,
   .table-layout > table > tbody > tr > td:hover{
-    color:#3771F9    ;
+    color:#3771F9;
     text-decoration:underline;
-    background-color:#F5F5F5;
   }
+  .table-layout > table > tbody > tr:hover{background-color:#F5F5F5;}
 
   /* .table-layout > table > tbody > tr:nth-child(even){background:#F5F5F5;} */
 
