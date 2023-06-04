@@ -71,7 +71,7 @@ button:not(:disabled):not(.realgrid-cell-btn), [type=button]:not(:disabled):not(
 }
 
 .align-items-center{
-    flex-direction:row-reverse;
+    /* flex-direction:row-reverse; */
     padding:0 6px;
 }
 
