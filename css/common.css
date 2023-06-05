@@ -294,8 +294,13 @@ button {border:0; outline:none !important; box-shadow:none !important;}
 
 .dropdown-menu.show {width: 140px; margin-top: 6px !important;  padding:6px 0;}
 .dropdown-menu.show .dropdown-item {font-size: var(--fs-t7)}
+/* .dropdown-menu .dropdown-item > span > .form-check-input[type=radio]{display:none;}
+.dropdown-menu .dropdown-item > span > .form-check-input[type=radio] + label{position:relative; left:-18px;} */
+[singleselect] + .btn-group .dropdown-menu .dropdown-item > span{padding-left:0;}
+[singleselect] + .btn-group .dropdown-menu .dropdown-item > span > .form-check-input[type=radio]{display:none;}
 
 .tab-content { width: 100%;}
+
 .condition-search{margin-bottom:30px;}
 .condition-search.line{padding:6px 0 15px 0; border-top:1px solid #E0E0E0; border-bottom:1px solid #E0E0E0; margin-bottom:16px;}
 .condition-search .row {--bs-gutter-x: 0; position:relative; width:100%;}
@@ -303,7 +308,7 @@ button {border:0; outline:none !important; box-shadow:none !important;}
 .condition-search .row > [class *= cell-]{min-height:57px; padding-right:0px;}
 .condition-search .row > [class *= cell-] > .con{display:flex; justify-content:space-between; width:100%; min-height:31px; padding-right:15px;}
 .condition-search .row > [class *= cell-]:last-child > .con{padding-right:0px;}
-.condition-search .row > [class *= cell-] > .con > *{flex:1; padding-right:5px;}
+.condition-search .row > [class *= cell-] > .con > *{flex:1; padding-right:5px; width:50px;}
 .condition-search .row > [class *= cell-] > .con > *:last-child{padding-right:0px;}
 .condition-search .row .cell-1{flex:1;}
 .condition-search .row .cell-2{flex:2;}
@@ -349,7 +354,7 @@ button {border:0; outline:none !important; box-shadow:none !important;}
 
 
 /* custom-select */
-.custom-select {position: relative; height:30px; margin: 0; padding: 0;}
+.custom-select {position: relative; display:inline-block; height:30px; margin: 0; padding: 0; vertical-align:top;}
 .custom-select select {display: none; /*hide original SELECT element: */}
 .custom-select .select-selected {position:absolute; left:0; right:0; background-color: var(--c-white); border: 1px solid var(--c-gray3); border-radius: 4px; height: 30px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; word-break:break-all}
 .custom-select .select-selected:after {position: absolute; content: ""; top: 7px; right: 10px; width: 16px; height: 16px; background: url(../img/icon/select_arrow.svg) no-repeat;}
@@ -357,7 +362,7 @@ button {border:0; outline:none !important; box-shadow:none !important;}
 
 .custom-select .select-items div,
 .custom-select .select-selected {display:block; align-items:center; color: var(--c-gray10); font-size: var(--fs-t6); line-height:30px; padding:0 27px 0 7px; border-color: rgba(0, 0, 0, 0.1); cursor: pointer;}
-.custom-select .select-items {position: absolute;  border: 1px solid var(--c-gray5);  top: 34px; left: 0; z-index: 99; min-width:100%; border-radius: 4px; padding: 6px 0; background-color: var(--c-white);}
+.custom-select .select-items {position: absolute;  border: 1px solid var(--c-gray5);  top: 38px; left: 0; z-index: 99; min-width:100%; border-radius: 4px; padding: 6px 0; background-color: var(--c-white);}
 .custom-select .select-hide {display: none;}
 .custom-select .select-items div:hover, .same-as-selected {background-color: rgba(0, 0, 0, 0.05);}
 

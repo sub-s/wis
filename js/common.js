@@ -65,6 +65,9 @@ const comboBox = () => {
                 ev.initEvent("change",true,true);
                 _sel.dispatchEvent(ev);
             }
+            $(".multiselect.show").each(function(i,d){
+                $(d).removeClass("show").attr("aria-expanded","false").next().removeClass("show");
+            })
         });
     }
 

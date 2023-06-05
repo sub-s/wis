@@ -488,11 +488,13 @@
                                                                 <div class="cell-1">
                                                                     <label class="form-label" for="a2">Recycle 상태</label>
                                                                     <div class="con">
-                                                                        <div class="custom-select">
-                                                                            <select id="a2" >
-                                                                                <option value="0">신청가능</option>
-                                                                                <option value="1">텍스트</option>
-                                                                                <option value="2">텍스트</option>
+                                                                        <div class="d-inline-flex">
+                                                                            <select multiple>
+                                                                            <option value="One">One</option>
+                                                                                <option value="Two">Two</option>
+                                                                                <option value="Three">ThreeThreeThreeThreeThreeThree</option>
+                                                                                <option value="four">four</option>
+                                                                                <option value="five">five</option>
                                                                             </select>
                                                                         </div>
                                                                     </div>
@@ -500,11 +502,13 @@
                                                                 <div class="cell-1">
                                                                     <label class="form-label" for="a3">Line</label>
                                                                     <div class="con">
-                                                                        <div class="custom-select">
-                                                                            <select id="a3" >
-                                                                                <option value="0">조건전체</option>
-                                                                                <option value="1">텍스트</option>
-                                                                                <option value="2">텍스트</option>
+                                                                        <div class="d-inline-flex">
+                                                                            <select multiple data-live-search="true" data-mdb-validation="true">
+                                                                                <option value="One">One</option>
+                                                                                <option value="Two">Two</option>
+                                                                                <option value="Three">ThreeThreeThreeThreeThreeThree</option>
+                                                                                <option value="four">four</option>
+                                                                                <option value="five">five</option>
                                                                             </select>
                                                                         </div>
                                                                     </div>
@@ -512,11 +516,13 @@
                                                                 <div class="cell-1">
                                                                     <label class="form-label" for="a3">Process ID</label>
                                                                     <div class="con">
-                                                                        <div class="custom-select">
-                                                                            <select id="a3" >
-                                                                                <option value="0">조건전체</option>
-                                                                                <option value="1">텍스트</option>
-                                                                                <option value="2">텍스트</option>
+                                                                        <div class="d-inline-flex align-top">
+                                                                            <select singleSelect>
+                                                                                <option value="One">One</option>
+                                                                                <option value="Two">Two</option>
+                                                                                <option value="Three">ThreeThreeThreeThreeThreeThree</option>
+                                                                                <option value="four">four</option>
+                                                                                <option value="five">five</option>
                                                                             </select>
                                                                         </div>
                                                                     </div>
@@ -870,28 +876,47 @@
                                                             </button>
                                                         </div>
                                                     </div>
+                                                        <div class="custom-select" style="width:150px">
+                                                            <select id="a1">
+                                                                <option value="조건전체">조건전체</option>
+                                                                <option value="조건1">조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1</option>
+                                                                <option value="조건2">조건2</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="d-inline-flex align-top" style="width:150px">
+                                                            <select multiple>
+                                                            <option value="One">One</option>
+                                                                <option value="Two">Two</option>
+                                                                <option value="Three">ThreeThreeThreeThreeThreeThree</option>
+                                                                <option value="four">four</option>
+                                                                <option value="five">five</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="d-inline-flex align-top" style="width:150px">
+                                                            <select multiple data-live-search>
+                                                                <option value="One">One</option>
+                                                                <option value="Two">Two</option>
+                                                                <option value="Three">ThreeThreeThreeThreeThreeThree</option>
+                                                                <option value="four">four</option>
+                                                                <option value="five">five</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="d-inline-flex align-top" style="width:150px">
+                                                            <select singleSelect>
+                                                                <option value="One">One</option>
+                                                                <option value="Two">Two</option>
+                                                                <option value="Three">ThreeThreeThreeThreeThreeThree</option>
+                                                                <option value="four">four</option>
+                                                                <option value="five">five</option>
+                                                            </select>
+                                                        </div>
                                                 </div>
                                                 <!-- // field-->
                                                 <!-- multi dropdown-->
                                                 <div class="guide_box">
-                                                    <div class="d-inline-flex" style="width:150px">
-                                                        <select id="mul" multiple="multiple" data-mdb-clear-button="true">
-                                                        <option value="One">One</option>
-                                                            <option value="Two">Two</option>
-                                                            <option value="Three">Three</option>
-                                                            <option value="four">four</option>
-                                                            <option value="five">five</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="d-inline-flex" style="width:150px">
-                                                        <select id="mul1" multiple data-live-search="true" data-mdb-validation="true">
-                                                            <option value="One">One</option>
-                                                            <option value="Two">Two</option>
-                                                            <option value="Three">ThreeThreeThreeThreeThreeThree</option>
-                                                            <option value="four">four</option>
-                                                            <option value="five">five</option>
-                                                        </select>
-                                                    </div>
                                                 </div>
                                                 <!-- // multi dropdown-->
                                                 <div class="d-flex justify-content-end align-items-center mt30">
@@ -3162,15 +3187,15 @@
 
     <script src="js/common.js"></script>
     <!-- real grid -->
-    <script src='./realgrid.2.6.3/grid_page.js'></script>
     <script src='./realgrid_sample.js'></script>
     <script>
         // $('.fixed-pop.p6').addClass('open')
         const _tab = window.ex = new bootstrap.Tab(document.querySelector("#nav-profile-tab"));
         // _tab.show();
         $(document).ready(function(){
-            $("#mul").multiselect();
-            $("#mul1").multiselect({
+            $("select:not([data-live-search])[multiple]").multiselect();
+            $("[singleSelect]").multiselect();
+            $("select[multiple][data-live-search]").multiselect({
                 enableFiltering: true
             });
 
