@@ -7,7 +7,7 @@
 
 
 /* GNB */
-#gnb {height:50px; display: flex; justify-content: space-between; align-items: center;}
+#gnb {height:50px; display: flex; justify-content: space-between; align-items: center; }
 
 
 #gnb .left-item { display: flex; justify-content: space-between; align-items: center; height: 100%;}
@@ -36,7 +36,7 @@
 
 
 /* Dropdown menu styles */
-.gnb-menu .sub-menu {display: none; position: fixed; top: 50px; left: 0; right: 0; width: 100%; background-color: #fff; padding: 33px 0 33px; z-index: 11;}
+.gnb-menu .sub-menu {display: none; position: fixed; top: 50px; left: 0; right: 0; width: 100%; background-color: var(--c-white); border-top: 1px solid var(--c-gray5);  padding: 33px 0 33px; z-index: 11;}
 .gnb-menu .sub-menu:hover,
 .gnb-menu li:hover .sub-menu {display: flex; justify-content: center; align-items: flex-start;}
 .gnb-menu li:hover .sub-menu .item {width: 160px;;}
