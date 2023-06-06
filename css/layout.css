@@ -59,7 +59,8 @@
 #gnb .gnb-menu li:hover .sub-menu {display: flex; justify-content: center; align-items: flex-start;}
 #gnb .gnb-menu li:hover .sub-menu .item {width: 160px;}
 #gnb .gnb-menu li:hover .sub-menu .item .tit {font-size: var(--fs-t4); font-weight: 700; color: var(--c-gray10); padding-bottom: 13px; border-bottom: 1px solid var(--c-gray5)}
-#gnb .gnb-menu li:hover .sub-menu .item .tit a {font-size: inherit;}
+#gnb .gnb-menu li:hover .sub-menu .item .tit a {font-size: inherit; color: var(--c-gray10);}
+#gnb .gnb-menu li:hover .sub-menu .item .tit a:hover {color: var(--c-blue3);}
 #gnb .gnb-menu li:hover .sub-menu .item + .item {margin-left: 60px;}
 #gnb .gnb-menu .item ul {display: block !important;}
 #gnb .gnb-menu .item ul li {display: block; padding-top: 10px;}
