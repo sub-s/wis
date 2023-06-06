@@ -477,10 +477,10 @@
                                                                     <label class="form-label required" for="a1">조건불러오기</label>
                                                                     <div class="con">
                                                                         <div class="custom-select">
-                                                                            <select id="a1" >
-                                                                                <option value="0">조건전체</option>
-                                                                                <option value="1">텍스트</option>
-                                                                                <option value="2">텍스트</option>
+                                                                            <select id="a1">
+                                                                                <option value="조건전체">조건전체</option>
+                                                                                <option value="조건1">조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1</option>
+                                                                                <option value="조건2">조건2</option>
                                                                             </select>
                                                                         </div>
                                                                     </div>
@@ -488,11 +488,13 @@
                                                                 <div class="cell-1">
                                                                     <label class="form-label" for="a2">Recycle 상태</label>
                                                                     <div class="con">
-                                                                        <div class="custom-select">
-                                                                            <select id="a2" >
-                                                                                <option value="0">신청가능</option>
-                                                                                <option value="1">텍스트</option>
-                                                                                <option value="2">텍스트</option>
+                                                                        <div class="d-inline-flex">
+                                                                            <select multiple>
+                                                                            <option value="One">One</option>
+                                                                                <option value="Two">Two</option>
+                                                                                <option value="Three">ThreeThreeThreeThreeThreeThree</option>
+                                                                                <option value="four">four</option>
+                                                                                <option value="five">five</option>
                                                                             </select>
                                                                         </div>
                                                                     </div>
@@ -500,11 +502,13 @@
                                                                 <div class="cell-1">
                                                                     <label class="form-label" for="a3">Line</label>
                                                                     <div class="con">
-                                                                        <div class="custom-select">
-                                                                            <select id="a3" >
-                                                                                <option value="0">조건전체</option>
-                                                                                <option value="1">텍스트</option>
-                                                                                <option value="2">텍스트</option>
+                                                                        <div class="d-inline-flex">
+                                                                            <select multiple data-live-search="true" data-mdb-validation="true">
+                                                                                <option value="One">One</option>
+                                                                                <option value="Two">Two</option>
+                                                                                <option value="Three">ThreeThreeThreeThreeThreeThree</option>
+                                                                                <option value="four">four</option>
+                                                                                <option value="five">five</option>
                                                                             </select>
                                                                         </div>
                                                                     </div>
@@ -512,11 +516,13 @@
                                                                 <div class="cell-1">
                                                                     <label class="form-label" for="a3">Process ID</label>
                                                                     <div class="con">
-                                                                        <div class="custom-select">
-                                                                            <select id="a3" >
-                                                                                <option value="0">조건전체</option>
-                                                                                <option value="1">텍스트</option>
-                                                                                <option value="2">텍스트</option>
+                                                                        <div class="d-inline-flex align-top">
+                                                                            <select singleSelect>
+                                                                                <option value="One">One</option>
+                                                                                <option value="Two">Two</option>
+                                                                                <option value="Three">ThreeThreeThreeThreeThreeThree</option>
+                                                                                <option value="four">four</option>
+                                                                                <option value="five">five</option>
                                                                             </select>
                                                                         </div>
                                                                     </div>
@@ -831,7 +837,7 @@
                                                 </div>
                                                 <!-- // 테이블 -->
                                                 <!-- 팝업 호출 버튼 -->
-                                                <div class="mt30">
+                                                <div class="d-flex justify-content-end align-items-center flex-wrap mt30">
                                                     <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p0').addClass('open')" >예약 등록 pop up</button>
                                                     <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p1').addClass('open')" >Wafer Recycle 결재 pop up</button>
                                                     <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$('.fixed-pop.p1_1').addClass('open')" >Wafer Recycle 신청 pop up</button>
@@ -870,28 +876,49 @@
                                                             </button>
                                                         </div>
                                                     </div>
+                                                        <div class="custom-select" style="width:150px">
+                                                            <select id="a1">
+                                                                <option value="조건전체">조건전체</option>
+                                                                <option value="조건1">조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1조건1</option>
+                                                                <option value="조건2">조건2</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="d-inline-flex align-top" style="width:150px">
+                                                            <select multiple>
+                                                            <option value="One">One</option>
+                                                                <option value="Two">Two</option>
+                                                                <option value="Three">ThreeThreeThreeThreeThreeThree</option>
+                                                                <option value="four">four</option>
+                                                                <option value="five">five</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="d-inline-flex align-top" style="width:150px">
+                                                            <select multiple data-live-search>
+                                                                <option value="One">One</option>
+                                                                <option value="Two">Two</option>
+                                                                <option value="Three">ThreeThreeThreeThreeThreeThree</option>
+                                                                <option value="four">four</option>
+                                                                <option value="five">five</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="d-inline-flex align-top" style="width:150px">
+                                                            <select singleSelect>
+                                                                <option value="One">One</option>
+                                                                <option value="Two">Two</option>
+                                                                <option value="Three">ThreeThreeThreeThreeThreeThree</option>
+                                                                <option value="four">four</option>
+                                                                <option value="five">five</option>
+                                                            </select>
+                                                        </div>
                                                 </div>
                                                 <!-- // field-->
+                                                <!-- multi dropdown-->
                                                 <div class="guide_box">
-                                                    <div class="d-inline-flex" style="width:150px">
-                                                        <select id="mul" multiple="multiple" data-mdb-clear-button="true">
-                                                        <option value="One">One</option>
-                                                            <option value="Two">Two</option>
-                                                            <option value="Three">Three</option>
-                                                            <option value="four">four</option>
-                                                            <option value="five">five</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="d-inline-flex" style="width:150px">
-                                                        <select id="mul1" multiple data-live-search="true" data-mdb-validation="true">
-                                                            <option value="One">One</option>
-                                                            <option value="Two">Two</option>
-                                                            <option value="Three">Three</option>
-                                                            <option value="four">four</option>
-                                                            <option value="five">five</option>
-                                                        </select>
-                                                    </div>
                                                 </div>
+                                                <!-- // multi dropdown-->
                                                 <div class="d-flex justify-content-end align-items-center mt30">
                                                     <button type="button" class="btn btn-sm btn-success" >신청</button>
                                                     <button type="button" class="btn btn-sm btn-success" >예약</button>
@@ -1733,9 +1760,9 @@
                                                         <div class="con">
                                                             <div class="custom-select">
                                                                 <select id="a1" >
-                                                                    <option value="0">조건전체</option>
-                                                                    <option value="1">텍스트</option>
-                                                                    <option value="2">텍스트</option>
+                                                                    <option value="조건전체">조건전체</option>
+                                                                    <option value="조건1">조건1</option>
+                                                                    <option value="조건2">조건2</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -3160,20 +3187,28 @@
 
     <script src="js/common.js"></script>
     <!-- real grid -->
-    <script src='./realgrid.2.6.3/grid_page.js'></script>
     <script src='./realgrid_sample.js'></script>
     <script>
         // $('.fixed-pop.p6').addClass('open')
         const _tab = window.ex = new bootstrap.Tab(document.querySelector("#nav-profile-tab"));
         // _tab.show();
         $(document).ready(function(){
-            $("#mul").multiselect();
-            $("#mul1").multiselect({
+            $("select:not([data-live-search])[multiple]").multiselect();
+            $("[singleSelect]").multiselect();
+            $("select[multiple][data-live-search]").multiselect({
                 enableFiltering: true
             });
 
             // $('.fixed-pop.p3').addClass('open')
         })
+        setTimeout(()=>{
+            $(".custom-select select").change(selChangeEv)
+        },500)
+        function selChangeEv(){
+            const _this = event.currentTarget;
+            console.log("_this : ",_this);
+            console.log("value : ",_this.value);
+        }
     </script>
 </body>
 

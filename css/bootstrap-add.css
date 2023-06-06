@@ -7,7 +7,7 @@
     margin:0;
 }
 
-button:not(:disabled):not(.realgrid-cell-btn), [type=button]:not(:disabled):not(.realgrid-cell-btn), [type=reset]:not(:disabled):not(.realgrid-cell-btn), [type=submit]:not(:disabled):not(.realgrid-cell-btn){
+button:not(:disabled):not(.realgrid-cell-btn):not(.icon-btn), [type=button]:not(:disabled):not(.realgrid-cell-btn):not(.icon-btn), [type=reset]:not(:disabled):not(.realgrid-cell-btn):not(.icon-btn), [type=submit]:not(:disabled):not(.realgrid-cell-btn):not(.icon-btn){
     height:30px;
     padding:0 7px;
 }
@@ -70,8 +70,13 @@ button:not(:disabled):not(.realgrid-cell-btn), [type=button]:not(:disabled):not(
     border-color:#212121;
 }
 
+<<<<<<< HEAD
 .align-items-center{
     /* flex-direction:row-reverse; */
+=======
+.multiselect-filter {
+    flex-direction:row-reverse;
+>>>>>>> refs/remotes/origin/main
     padding:0 6px;
 }
 
@@ -107,3 +112,14 @@ span.multiselect-native-select,
 .right-area .top-menu .tab-menu nav .nav-link.active::after{content:""; position:absolute; top:10px; left:-8px; bottom:0; display:block !important; width:8px; height:auto; border-radius:0 0 10px 0; background:#f5f5f5;}
 .nav-link.active .closed:before{content:""; position:absolute; top:10px; right:-9px; bottom:0; width:8px; background:white;}
 .nav-link.active .closed:after{content:""; position:absolute; top:10px; right:-9px; bottom:0; display:block !important; width:8px; height:auto; border-radius:0 0 0 10px; background:#f5f5f5;}
+
+.multiselect-container.dropdown-menu.show{
+    display:inline-flex;
+    flex-direction:column;
+    width:auto;
+}
+
+.btn-group .dropdown-menu .dropdown-item{
+    display:inline-block;
+    width:auto;
+}
