@@ -36,7 +36,7 @@
 
 
 /* Dropdown menu styles */
-#gnb .gnb-menu ul + .sub-menu {display: none; position: fixed; top: 50px; left: 0; right: 0; width: 100%; background-color: var(--c-white); border-top: 1px solid var(--c-gray5);  padding: 33px 0 33px; z-index: 11;}
+/* #gnb .gnb-menu ul + .sub-menu {display: none; position: fixed; top: 50px; left: 0; right: 0; width: 100%; background-color: var(--c-white); border-top: 1px solid var(--c-gray5);  padding: 33px 0 33px; z-index: 11;}
 #gnb .gnb-menu:hover ul + .sub-menu {display: flex; justify-content: center; align-items: flex-start;}
 #gnb .gnb-menu .sub-menu:hover,
 #gnb .gnb-menu .sub-menu {display: flex; justify-content: center; align-items: flex-start;}
@@ -46,24 +46,25 @@
 #gnb .gnb-menu .item ul {display: block !important;}
 #gnb .gnb-menu .item ul li {display: block; padding-top: 10px;}
 #gnb .gnb-menu .item ul li a {font-size: var(--fs-t5); font-weight: 400; color: var(--c-gray10);}
-#gnb .gnb-menu .item ul li a:hover {color: var(--c-blue3);}
+#gnb .gnb-menu .item ul li a:hover {color: var(--c-blue3);} */
 
 
 
 
 
 
-/* #gnb .gnb-menu .sub-menu {display: none; position: fixed; top: 50px; left: 0; right: 0; width: 100%; background-color: var(--c-white); border-top: 1px solid var(--c-gray5);  padding: 33px 0 33px; z-index: 11;}
+#gnb .gnb-menu .sub-menu {display: none; position: fixed; top: 50px; left: 0; right: 0; width: 100%; background-color: var(--c-white); border-top: 1px solid var(--c-gray5);  padding: 33px 0 33px; z-index: 11;}
 #gnb .gnb-menu:hover,
 #gnb .gnb-menu .sub-menu:hover,
 #gnb .gnb-menu li:hover .sub-menu {display: flex; justify-content: center; align-items: flex-start;}
 #gnb .gnb-menu li:hover .sub-menu .item {width: 160px;}
 #gnb .gnb-menu li:hover .sub-menu .item .tit {font-size: var(--fs-t4); font-weight: 700; color: var(--c-gray10); padding-bottom: 13px; border-bottom: 1px solid var(--c-gray5)}
+#gnb .gnb-menu li:hover .sub-menu .item .tit a {font-size: inherit;}
 #gnb .gnb-menu li:hover .sub-menu .item + .item {margin-left: 60px;}
 #gnb .gnb-menu .item ul {display: block !important;}
 #gnb .gnb-menu .item ul li {display: block; padding-top: 10px;}
 #gnb .gnb-menu .item ul li a {font-size: var(--fs-t5); font-weight: 400; color: var(--c-gray10);}
-#gnb .gnb-menu .item ul li a:hover {color: var(--c-blue3);} */
+#gnb .gnb-menu .item ul li a:hover {color: var(--c-blue3);}
 
 
 
