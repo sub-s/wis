@@ -1,5 +1,5 @@
 .btn-group .dropdown-menu{
-    border-color:#E0E0E0;
+    border-color:var(--c-gray5);
 }
 
 .dropdown-menu.show .dropdown-item{
