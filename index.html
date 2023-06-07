@@ -30,16 +30,16 @@
 
      <!-- RealGrid -->
     
-     <link href="realgrid.2.6.3/realgrid-style.css" rel="stylesheet" />
+     <!-- <link href="realgrid.2.6.3/realgrid-style.css" rel="stylesheet" />
     <script src="realgrid.2.6.3/realgrid-lic.js"></script>
     <script src="realgrid.2.6.3/realgrid.2.6.3.min.js"></script>
-    <script src="realgrid.2.6.3/libs/jszip.min.js"></script>
+    <script src="realgrid.2.6.3/libs/jszip.min.js"></script> -->
 
 
-    <!-- <link href='realgrid.2.0.2/realgrid-style.css' rel='stylesheet' />
+    <link href='realgrid.2.0.2/realgrid-style.css' rel='stylesheet' />
     <script src="realgrid.2.0.2//realgrid-lis.js"></script>
     <script src='realgrid.2.0.2/realgrid.2.0.3.min.js'></script>
-    <script src='realgrid.2.0.2/realgrid-events.js'></script> -->
+    <script src='realgrid.2.0.2/realgrid-events.js'></script>
 
     <title>Document</title>
 </head>
@@ -350,7 +350,7 @@
                         <button class="clear-btn" type="button" onclick="clearBtn()">
                             <span class="blind">삭제</span>
                         </button>
-                        <button class="search" type="button">
+                        <button class="search-btn2" type="button">
                             <span class="blind">검색</span>
                         </button>
                     </div>
@@ -897,11 +897,11 @@
                                                                     <label class="form-label" for="a4">날짜</label>
                                                                     <div class="con">
                                                                         <div class="d-flex justify-content-start">
-                                                                            <div class="col-auto field date">
+                                                                            <div class="field date"><!-- col-auto 삭제 : 230607-->
                                                                                 <input type="text" class="form-control form-control-sm datepicker" placeholder="날짜 선택"/>
                                                                             </div>
                                                                             <div class="space"> ~ </div>
-                                                                            <div class="col-auto field date">
+                                                                            <div class="field date"><!-- col-auto 삭제 : 230607-->
                                                                                 <input type="text" class="form-control form-control-sm datepicker" placeholder="날짜 선택"/>
                                                                             </div>
                                                                         </div>
@@ -923,7 +923,7 @@
                                                                                 <button class="clear-btn" type="button" onclick="clearBtn()">
                                                                                     <span class="blind">삭제</span>
                                                                                 </button>
-                                                                                <button class="search" type="button">
+                                                                                <button class="search-btn2" type="button">
                                                                                     <span class="blind">검색</span>
                                                                                 </button>
                                                                             </div>
@@ -941,7 +941,7 @@
                                                                                 <button class="clear-btn" type="button" onclick="clearBtn()">
                                                                                     <span class="blind">삭제</span>
                                                                                 </button>
-                                                                                <button class="search" type="button">
+                                                                                <button class="search-btn2" type="button">
                                                                                     <span class="blind">검색</span>
                                                                                 </button>
                                                                             </div>
@@ -957,7 +957,7 @@
                                                                                 <button class="clear-btn" type="button" onclick="clearBtn()">
                                                                                     <span class="blind">삭제</span>
                                                                                 </button>
-                                                                                <button class="search" type="button">
+                                                                                <button class="search-btn2" type="button">
                                                                                     <span class="blind">검색</span>
                                                                                 </button>
                                                                             </div>
@@ -1014,11 +1014,11 @@
                                                                     <label class="form-label" for="a4">알림기간</label>
                                                                     <div class="con">
                                                                         <div class="d-flex justify-content-start">
-                                                                            <div class="col-auto field date">
+                                                                            <div class="field date"><!-- col-auto 삭제 : 230607-->
                                                                                 <input type="text" class="form-control form-control-sm datepicker" placeholder="날짜 선택"/>
                                                                             </div>
                                                                             <div class="space"> ~ </div>
-                                                                            <div class="col-auto field date">
+                                                                            <div class="field date"><!-- col-auto 삭제 : 230607-->
                                                                                 <input type="text" class="form-control form-control-sm datepicker" placeholder="날짜 선택"/>
                                                                             </div>
                                                                         </div>
@@ -2207,11 +2207,11 @@
                                                         <label class="form-label" for="a4">알림기간</label>
                                                         <div class="con">
                                                             <div class="d-flex justify-content-start">
-                                                                <div class="col-auto field date">
+                                                                <div class="field date"><!-- col-auto 삭제 : 230607-->
                                                                     <input type="text" class="form-control form-control-sm datepicker" placeholder="날짜 선택"/>
                                                                 </div>
                                                                 <div class="space"> ~ </div>
-                                                                <div class="col-auto field date">
+                                                                <div class="field date"><!-- col-auto 삭제 : 230607-->
                                                                     <input type="text" class="form-control form-control-sm datepicker" placeholder="날짜 선택"/>
                                                                 </div>
                                                             </div>
@@ -2437,13 +2437,14 @@
                             <div class="con">
                                 <div  style="flex:0 0 300px">
                                     <div class="d-flex justify-content-start">
-                                        <div class="col-auto field date">
+                                        <div class="field date"><!-- col-auto 삭제 : 230607-->
                                             <input type="text" class="form-control form-control-sm datepicker" placeholder="날짜 선택"/>
                                         </div>
                                         <div class="space"> ~ </div>
-                                        <div class="col-auto field date">
+                                        <div class="field date"><!-- col-auto 삭제 : 230607-->
                                             <input type="text" class="form-control form-control-sm datepicker" placeholder="날짜 선택"/>
                                         </div>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -2476,7 +2477,7 @@
                                     <button class="clear-btn" type="button" onclick="clearBtn()">
                                         <span class="blind">삭제</span>
                                     </button>
-                                    <button class="search" type="button">
+                                    <button class="search-btn2" type="button">
                                         <span class="blind">검색</span>
                                     </button>
                                 </div>
@@ -3452,7 +3453,7 @@
 
     <script src="js/common.js"></script>
     <!-- real grid -->
-    <script src='./realgrid_sample.js'></script>
+    <script src='js/realgrid_sample.js'></script>
     <script>
         // $('.fixed-pop.p6').addClass('open')
         const _tab = window.ex = new bootstrap.Tab(document.querySelector("#nav-profile-tab"));

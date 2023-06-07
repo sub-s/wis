@@ -68,3 +68,5 @@
 .rg-focused-row{
   background: #EEEEEE;
 }
+
+.rg-grid .rg-empty-grid span{font-size:var(--fs-t7); color:var(--c-gray10);}

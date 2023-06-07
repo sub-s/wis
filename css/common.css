@@ -309,8 +309,8 @@ button {border:0; outline:none !important; box-shadow:none !important;}
 .condition-search .row > [class *= cell-]{min-height:57px; padding-right:0px;}
 .condition-search .row > [class *= cell-] > .con{display:flex; justify-content:space-between; width:100%; min-height:31px; padding-right:15px;}
 .condition-search .row > [class *= cell-]:last-child > .con{padding-right:0px;}
-.condition-search .row > [class *= cell-] > .con > *{flex:1; padding-right:5px; width:50px;}
-.condition-search .row > [class *= cell-] > .con > *:last-child{padding-right:0px;}
+.condition-search .row > [class *= cell-] > .con > *{flex:1; margin-right:5px; width:50px;}
+.condition-search .row > [class *= cell-] > .con > *:last-child{margin-right:0px;}
 .condition-search .row .cell-1{flex:1;}
 .condition-search .row .cell-2{flex:2;}
 .condition-search .row .cell-3{flex:3;}
@@ -380,7 +380,7 @@ button {border:0; outline:none !important; box-shadow:none !important;}
 .field .btn-right { position: absolute; top: calc(50% - 8px); right:8px; display: flex; justify-content: space-between; align-items: center;}
 .field .btn-right button {border: 0; padding: 0; margin: 0;}
 .field .btn-right .clear-btn {width: 16px; height: 16px; display: none; background: url(../img/icon/input_clear.svg) no-repeat; }
-.field .btn-right .search{ width: 16px; height: 16px; background: url(../img/icon/input_search.svg) no-repeat;}
+.field .btn-right .search-btn2{ width: 16px; height: 16px; background: url(../img/icon/input_search.svg) no-repeat;}
 
 
 .field.date {position: relative; width: 140px;}
@@ -645,3 +645,12 @@ button.btn:disabled .icon-refresh {background: url(../img/icon/refresh02.svg) no
   .icon-btn.i-link{width:23px; height:23px; background-color:transparent; background-image:url(../img/icon/icon_btn_link.svg);}
 
   .btn{text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+
+
+
+  /* 메인 추가 */
+.main-top {display:inline-block;width:100%;height:681px;padding-top:90px; background-image:url(../img/common/top-BG-big2.png);}
+.main-img {display:block;margin:0 auto; width:1578px;height:570px; background-image:url(../img/common/top.png);}
+.main-bttm {padding-top:60px;background-color: #F5F5F5;}
+.main-img2 {display:block;margin:0 auto; width:1578px;height:1119px;background-image:url(../img/common/bttm.png);}
+

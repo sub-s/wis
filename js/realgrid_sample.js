@@ -26,6 +26,22 @@ const initGrid01 = ()=>{
             }
         );
     }
+    // gridView.setStyles({ 
+    //     body: { 
+    //         empty: { 
+    //             background: "#20884488", 
+    //             foreground: "#FFFF8888", 
+    //             textAlignment: "center", 
+    //             lineAlignment: "center", 
+    //             fontSize: 20, 
+    //             fontBold: true 
+    //         } 
+    //     } 
+    // });
+    gridView.setDisplayOptions({
+        showEmptyMessage: true,
+        emptyMessage: "조회된 데이터가 없습니다."
+    })
     gridView.setDataSource(provider);
     provider.setFields([
         {
@@ -220,19 +236,19 @@ const initGrid01 = ()=>{
     gridView.setColumnProperty("Column01", "autoFilter", true);
     
     const dummyDatas = [];
-    for(let i=0; i<100; i++){
+    // for(let i=0; i<100; i++){
     
-        dummyDatas.push({
-            country : "한국",
-            gender : (Math.floor(Math.random() * 2) % 2 === 0)?"남":"여",
-            pay : Math.floor(Math.random() * 10000000000),
-            appraisal : Math.ceil(Math.random() * 5),
-            level : Math.ceil(Math.random() * 100) + "%",
-            address : "서울특별시 중구 연세빌딩  엘지유플러스 ",
-            data : "삭제",
+    //     dummyDatas.push({
+    //         country : "한국",
+    //         gender : (Math.floor(Math.random() * 2) % 2 === 0)?"남":"여",
+    //         pay : Math.floor(Math.random() * 10000000000),
+    //         appraisal : Math.ceil(Math.random() * 5),
+    //         level : Math.ceil(Math.random() * 100) + "%",
+    //         address : "서울특별시 중구 연세빌딩  엘지유플러스 ",
+    //         data : "삭제",
     
-        })
-    }
+    //     })
+    // }
     provider.setRows(dummyDatas);
     setPaging(provider);
 }

@@ -339,6 +339,9 @@ $.datepicker.setDefaults({
     buttonText: "선택",
 });
 $(".datepicker").datepicker();
+$(".field.date").click(function(){
+    $(this).find("input").focus();
+})
 // lnbSetting();
 
 
@@ -367,6 +370,7 @@ function contentTab(){
     if(idx === 1 && !_li.first){
         _li.first = true;
         setTimeout(()=>{
+            console.log("dkdkdkdk")
             initGrid01();
             initGrid02();
         },500)
