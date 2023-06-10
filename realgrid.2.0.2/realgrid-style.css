@@ -1643,6 +1643,7 @@ THEME : Realgrid light(Default)
   background: #E56615 !important; }
 
 /* add style */
+/*
 .realgrid-cell-btn{
   display: inline-flex;
   flex-direction: column;
@@ -1696,7 +1697,6 @@ THEME : Realgrid light(Default)
 
 .realgrid-address{display:block; padding:0 0 0 20px; font-family: var(--font); font-style: normal; font-weight: 400; font-size: 13px; line-height: 16px; text-align: left; letter-spacing: -0.05em; color: #212121; background:url(../img/icon/icon_address.svg) no-repeat 5px center;}
 
-
 .toolbar #paging{ padding-top:12px; font-size:0; text-align:center;}
 .toolbar #paging > a{display:inline-flex; justify-content:center; align-items:center; width:24px; height:24px; padding:0 !important; margin:0; border:1px solid transparent; border-radius:4px; font-family:var(--font); font-weight:400; font-size:13px; line-height:15.59px; letter-spacing:-5%; text-decoration:none; vertical-align:top;}
 .toolbar #paging > a + a{margin-left:8px;}
@@ -1728,3 +1728,4 @@ THEME : Realgrid light(Default)
 .rg-focused-row{
   background: #EEEEEE;
 }
+*/
