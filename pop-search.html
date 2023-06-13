@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wis</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.esm.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <link media="all" rel="stylesheet" href="css/jquery-ui.css">
+    <link media="all" rel="stylesheet" href="css/bootstrap.css">
+    <link media="all" rel="stylesheet" href="css/bootstrap-grid.css">
+    <link media="all" rel="stylesheet" href="css/bootstrap-utilities.css">
+    <link media="all" rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link media="all" rel="stylesheet" href="css/common.css">
+    <link media="all" rel="stylesheet" href="css/layout.css">
+	<link media="all" rel="stylesheet" href="css/common2.css">
+	<link media="all" rel="stylesheet" href="css/layout.css">
+
+
+     <!-- RealGrid -->
+    
+    <link href='./realgrid.2.0.2/realgrid-style.css' rel='stylesheet' />
+    <!-- <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script> -->
+    <script src="./realgrid.2.0.2//realgrid-lis.js"></script>
+    <script src='./realgrid.2.0.2/realgrid.2.0.3.min.js'></script>
+    <script src='./realgrid.2.0.2/realgrid-events.js'></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+                           
+    <!-- popup layout 반려 -->
+        <div class="pop-box" style="width:995px;">
+			<!-- popup 타이틀 -->
+            <div class="pop-top">
+                <div class="tit">인명검색</div>
+            </div>
+			<!--// popup 타이틀 -->
+            <div class="pop-con">
+                
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-selected="true">
+                            임직원
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab"  aria-selected="false">
+                            사용중
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-selected="false">
+                            사용완료
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                        <!-- 검색 영역 -->
+                        <div class="search-bar">
+                            <div class="field">
+                                <input type="text" class="form-control form-control-sm" id="inputPassword2" placeholder="데이터" onkeyup="inputClearBtn()" />
+                                <div class="btn-right">
+                                    <button class="clear-btn" type="button" onclick="clearBtn()">
+                                        <span class="blind">삭제</span>
+                                    </button>
+                                    <button class="search-btn2" type="button">
+                                        <span class="blind">검색</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="total">
+                                총
+                                <span>10</span>
+                            </div>
+                        </div>
+                        <!-- 검색 영역 -->
+                        <div class="table-between">
+
+                            <div class="table-layout">
+                                <table cellpadding="0" cellspacing="0">
+                                <colgroup>
+                                    <col width="50%">
+                                    <col width="50%">
+                                </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="custom-select">
+                                                    <select id="a1" >
+                                                        <option value="0">항목</option>
+                                                        <option value="1">텍스트</option>
+                                                        <option value="2">텍스트</option>
+                                                    </select>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="custom-select">
+                                                    <select id="a2" >
+                                                        <option value="0">항목</option>
+                                                        <option value="1">텍스트</option>
+                                                        <option value="2">텍스트</option>
+                                                    </select>
+                                                </div>
+                                            </th>                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">
+                                                <div class="search-list">
+                                                    <ul>
+                                                        <li>검색결과</li>
+                                                        <li>검색결과</li>
+                                                        <li>검색결과</li>
+                                                        <li>검색결과</li>
+                                                        <li>검색결과</li>
+                                                        <li>검색결과</li>
+                                                        <li>검색결과</li>
+                                                        <li>검색결과</li>
+                                                        <li>검색결과</li>
+                                                        <li>검색결과</li>
+                                                        <li>검색결과</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+    
+                            <div class="table-layout">
+                                <table cellpadding="0" cellspacing="0">
+                                <colgroup>
+                                    <col width="auto">
+                                    <col width="32%">
+                                    <col width="32%">
+                                    <col width="32%">
+                                </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <label class="input-box"><input type="checkbox" /><i></i></label>
+                                            </th>
+                                            <th>DATA</th>
+                                            <th>DATA</th>
+                                            <th>DATA</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center"><label class="input-box"><input type="checkbox" /><i></i></label></td>
+                                            <td class="text-center">DATA</td>
+                                            <td>DATA</td>
+                                            <td>DATA</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><label class="input-box"><input type="checkbox" /><i></i></label></td>
+                                            <td class="text-center">DATA</td>
+                                            <td>DATA</td>
+                                            <td>DATA</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><label class="input-box"><input type="checkbox" /><i></i></label></td>
+                                            <td class="text-center">DATA</td>
+                                            <td>DATA</td>
+                                            <td>DATA</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><label class="input-box"><input type="checkbox" /><i></i></label></td>
+                                            <td class="text-center">DATA</td>
+                                            <td>DATA</td>
+                                            <td>DATA</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end align-items-center">
+                            <button type="button" class="btn btn-sm btn-secondary">전체추가</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">선택추가</button>
+                        </div>
+
+                        <div class="file-list">
+                            <ul>
+                                <li>
+                                    <p>홍길동 avlssss1234/ALabDS</p>
+                                    <button class="del"><span class="blind">삭제</span></button>
+                                </li>
+                                <li>
+                                    <p>홍길동 avlssss1234/ALabDS</p>
+                                    <button class="del"><span class="blind">삭제</span></button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center">
+                            <button type="button" class="btn btn-sm btn-secondary">전체삭제</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">추가</button>
+                        </div>
+
+                        <!-- btn set -->
+                        <div class="bottom-btn-area">
+                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="$(this).parents('.fixed-pop').removeClass('open')">취소</button>
+                            <!-- <button type="button" class="btn btn-sm btn-color-red" onclick="$(this).parents('.fixed-pop').removeClass('open')">반려</button> -->
+                            <button type="button" class="btn btn-sm btn-primary" onclick="$(this).parents('.fixed-pop').removeClass('open')">추가</button>
+                        </div>
+                        
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">...</div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
+                </div>
+
+            </div>
+
+          
+           
+            <!-- // btn set -->
+        </div>
+    
+    <!-- // popup layout 반려 -->
+
+    <!-- // popup layout 검색조건 저장 -->
+    <script src="js/common.js"></script>
+</body>
+
+</html>

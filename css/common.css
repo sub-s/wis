@@ -578,7 +578,7 @@ button.btn:disabled .icon-refresh {background: url(../img/icon/refresh02.svg) no
   .input-box + .input-box{margin-left:10px;}
   .input-box{position:relative; font-size:13px; font-weight:400;}
   .input-box > input{position:fixed; top:-1000%; left:-1000%;}
-  .input-box input[type = checkbox] + i{position:relative; top:-2px; display:inline-block; width:16px; height:16px; margin:0 6px 0 0; vertical-align:middle;  border:1px solid #757575; border-radius:2px; background-repeat:no-repeat; background-position:center; background-size:10px 8px;}
+  .input-box input[type = checkbox] + i{position:relative; top:-2px; display:inline-block; width:16px; height:16px; margin:0 6px 0 0; vertical-align:middle;  border:1px solid #757575; border-radius:2px; background-repeat:no-repeat; background-position:center; background-size:10px 8px; background-color: #fff;}
   .input-box input[type = checkbox]:checked + i{border-color:#3771F9; background-color:#3771F9; background-image:url(../img/icon/icon_checkbox.svg);}
   .input-box input[type = checkbox]:disabled + i{border:1px solid #E0E0E0; background-color:#F5F5F5;}
   .input-box input[type = checkbox]:checked:disabled + i{background-image:url(../img/icon/icon_checkbox_dis.svg);}

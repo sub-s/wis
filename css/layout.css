@@ -215,11 +215,72 @@ li.active > .menu_wrap > ul{display:block;}
 /* fixed-pop */
 .fixed-pop.open{display:flex;}
 .fixed-pop{position:fixed; top:0; left:0; right:0; bottom:0; z-index:50; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.5);}
+
+
+
+
 .pop-box{padding:20px; border-radius:4px; background:var(--c-white);}
 .pop-top{position:relative; margin:0 0 16px 0;}
 .pop-top > .tit{font-weight: 700; font-size:var(--fs-t5);}
 .pop-close{position:absolute; top:0; right:0; width:20px; height:20px; font-size:0; background:url(../img/common/pop_close.svg) no-repeat center;}
-.pop-con{max-height:calc(100vh - 300px); overflow:auto;}
+
+/* .pop-con {max-height:calc(100vh - 300px); overflow:auto;} */
+.pop-con {max-height:calc(100vh - 300px);}
+.pop-con .nav-pills {border-bottom: 1px solid var(--c-gray5);}
+.pop-con .nav-pills .nav-link {border-radius: 0.25rem 0.25rem 0 0; height: 30px; font-size: var(--fs-t6); background-color: var(--c-gray2); color: var(--c-gray9); line-height: 18px;}
+.pop-con .nav-pills .nav-item + .nav-item {margin-left: 5px;}
+.pop-con .nav-pills .nav-link.active, .nav-pills .show > .nav-link {background-color: var(--c-blue3); color: var(--c-white) }
+.pop-con .search-bar {display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 10px}
+.pop-con .search-bar .field {width: 452px;}
+.pop-con .search-bar .total {font-size: var(--fs-t7); color: var(--c-gray10);}
+.pop-con .search-bar .total span {font-size: var(--fs-t7); color: var(--c-blue3);}
+
+/* table */
+.pop-con .table-between {display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px}
+.pop-con .table-between .table-layout + .table-layout {width: calc(100% - 340px);}
+
+.pop-con .table-layout{overflow: unset}
+.pop-con .table-layout > table{width:100%; font-size:13px; color:#212121; border-collapse:collapse;}
+.pop-con .table-layout > table > thead > tr > th{font-weight: 700; font-size: 13px; background:#F0F0F0; height: 44px;}
+.pop-con .table-layout td .search-list {height: 129px; margin: -7px -3px -5px; overflow: scroll;}
+.pop-con .table-layout td .search-list li {border-bottom: 1px solid #E0E0E0; padding: 7px 3px 5px 2px; text-align: center; font-size: 13px;}
+.pop-con .table-layout td .search-list li:first-of-type {border-top: 0;}
+
+.pop-con .table-layout > table > tbody > tr:hover{background-color: unset;}
+.pop-con .table-layout > table > tbody > tr > td {padding: 7px 3px 5px 3px}
+.pop-con .table-layout > table > tbody > tr > td:hover{color: unset; text-decoration: unset;}
+
+.pop-con .file-list {border: 1px solid #E0E0E0; border-radius: 5px; padding: 10px; margin: 10px 0 10px}
+.pop-con .file-list ul {}
+.pop-con .file-list ul li {display: flex; justify-content: space-between; align-items: center;}
+.pop-con .file-list ul li p{font-size: 13px; color: #616161;}
+.pop-con .file-list .del {width: 16px; height: 16px; background: url(../img/icon/input_clear.svg) no-repeat; }
+
+/* custom-select */
+.pop-con .custom-select {position: relative; display:inline-block; width: 150px; height:30px; margin: 0; padding: 0; vertical-align:top;}
+.pop-con .custom-select select {display: none; /*hide original SELECT element: */}
+.pop-con .custom-select .select-selected {position:absolute; left:0; right:0; background-color: var(--c-white); border: 1px solid var(--c-gray3); border-radius: 4px; height: 30px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; word-break:break-all}
+.pop-con .custom-select .select-selected:after {position: absolute; content: ""; top: 7px; right: 10px; width: 16px; height: 16px; background: url(../img/icon/select_arrow.svg) no-repeat;}
+.pop-con .custom-select .select-selected.select-arrow-active:after { top: 7px; /* background: url(../img/icon/select_arrow.svg) no-repeat; */}
+
+.pop-con .custom-select .select-items div,
+.pop-con .custom-select .select-selected {display:block; align-items:center; color: var(--c-gray10); font-size: var(--fs-t6); line-height:30px; padding:0 27px 0 7px; border-color: rgba(0, 0, 0, 0.1); cursor: pointer; text-align: left;}
+.pop-con .custom-select .select-items {position: absolute;  border: 1px solid var(--c-gray5);  top: 38px; left: 0; z-index: 99; min-width:100%; border-radius: 4px; padding: 6px 0; background-color: var(--c-white);}
+.pop-con .custom-select .select-hide {display: none;}
+.pop-con .custom-select .select-items div:hover, .same-as-selected {background-color: rgba(0, 0, 0, 0.05);}
+
+.pop-con .custom-select .select-selected.select-arrow-active {border-color: var(--c-gray10)}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /**/
