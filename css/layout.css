@@ -312,3 +312,12 @@ li.active > .menu_wrap > ul{display:block;}
 
 .guide_box{margin-top:20px;}
 .guide_box > * + *{margin-left:5px;}
+
+
+
+
+.table-layout-type01{height:131px; overflow:auto; border:1px solid #E0E0E0; border-width:0 1px 1px 0px;}
+
+.pop-con .table-layout-type01 .table-layout > table > tbody > tr > td:first-child{border-left-width:0;}
+.pop-con .table-layout-type01 .table-layout > table > tbody > tr > td:last-child{border-right-width:0;}
+.pop-con .table-layout-type01 .table-layout > table > tbody > tr:nth-child(1n + 5):last-child > td{border-bottom-width:0;}
