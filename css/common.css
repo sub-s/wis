@@ -654,3 +654,6 @@ button.btn:disabled .icon-refresh {background: url(../img/icon/refresh02.svg) no
 .main-bttm {padding-top:60px;background-color: #F5F5F5;}
 .main-img2 {display:block;margin:0 auto; width:1578px;height:1119px;background-image:url(../img/common/bttm.png);}
 
+
+/* 멀티셀럭트 말줄임 대응 */
+.condition-search .d-inline-flex{flex:1; min-width:10px;}
