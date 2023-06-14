@@ -414,3 +414,14 @@ function exid(){
     const _this = event.currentTarget;
     console.log("_this : ",_this)
 }
+
+/* file list */
+const fileListClick = ()=>{
+    const _this = event.currentTarget;
+    const checked = !_this.classList.contains("active");
+    if(checked){
+        _this.classList.add("active");
+    }else{
+        _this.classList.remove("active");
+    }
+}

@@ -255,6 +255,9 @@ li.active > .menu_wrap > ul{display:block;}
 .pop-con .file-list ul li {display: flex; justify-content: space-between; align-items: center;}
 .pop-con .file-list ul li p{font-size: 13px; color: #616161;}
 .pop-con .file-list .del {width: 16px; height: 16px; background: url(../img/icon/input_clear.svg) no-repeat; }
+.pop-con .file-list ul li:hover{background:#DBDBDB;}
+.pop-con .file-list ul li.active{color:#fff; background:#3771F9;}
+.pop-con .file-list ul li.active > p{color:#fff;}
 
 /* custom-select */
 .pop-con .custom-select {position: relative; display:inline-block; width: 150px; height:30px; margin: 0; padding: 0; vertical-align:top;}
