@@ -418,10 +418,95 @@ function exid(){
 /* file list */
 const fileListClick = ()=>{
     const _this = event.currentTarget;
+    const _files = document.querySelectorAll(".file-list > ul > li");
     const checked = !_this.classList.contains("active");
-    if(checked){
-        _this.classList.add("active");
+    if(!window.fileClick) window.fileClick = [];
+    if(window.keyShift && window.keyControl){
+        if(window.fileClick && window.fileClick.length > 0){
+            const lastIdx = window.fileClick[window.fileClick.length - 1].getIndex();
+            const idx = _this.getIndex();
+            const sNum = (lastIdx > idx)?idx:lastIdx;
+            const eNum = (lastIdx > idx)?lastIdx:idx;
+            _files.forEach((f,i)=>{
+                if(i >= sNum && i <= eNum){
+                    f.classList.add("active");
+                }
+            })
+        }
+    }else if(window.keyShift){
+        if(window.fileClick && window.fileClick.length > 0){
+            const lastIdx = window.fileClick[window.fileClick.length - 1].getIndex();
+            const idx = _this.getIndex();
+            const sNum = (lastIdx > idx)?idx:lastIdx;
+            const eNum = (lastIdx > idx)?lastIdx:idx;
+            _files.forEach((f,i)=>{
+                if(i >= sNum && i <= eNum){
+                    f.classList.add("active");
+                }else{
+                    f.classList.remove("active");
+                }
+            })
+        }
+    }else if(window.keyControl){
+        if(checked){
+            _this.classList.add("active");
+            window.fileClick.push(_this);
+        }else{
+            removeFileKey(_this);
+            _this.classList.remove("active");
+        }
     }else{
-        _this.classList.remove("active");
+        const activeLen = document.querySelectorAll(".file-list > ul > li.active").length;
+        _files.forEach((f,i)=>{
+            if(activeLen > 1){
+                if(f === _this){
+                    f.classList.add("active");
+                    window.fileClick = [];
+                    window.fileClick.push(f);
+                }else{
+                    f.classList.remove("active");
+                }
+            }else if(f === _this){
+                if(checked){
+                    f.classList.add("active");
+                    window.fileClick.push(_this);
+                }else{
+                    removeFileKey(_this);
+                    f.classList.remove("active");
+                }
+            }else{
+                f.classList.remove("active");
+            }
+        })
     }
+}
+const removeFileKey = (el)=>{
+    if(!window.fileClick) return;
+    for(let i=0; i<window.fileClick.length; i++){
+        const _f = window.fileClick[i];
+        if(_f === el){
+            window.fileClick.splice(i,1);
+        }
+    }
+}
+const shortcutKey = ()=>{
+    const keyEv = ()=>{
+        const keyCode = event.keyCode;
+        if(event.type === "keydown"){
+            if(keyCode === 16) window.keyShift = true;
+            if(keyCode === 91) window.keyControl = true;
+        }else{
+            if(keyCode === 16) window.keyShift = false;
+            if(keyCode === 91) window.keyControl = false;
+            
+        }
+        console.log(event.type,"   keyCode  : ",keyCode)
+    }
+    window.addEventListener("keydown",keyEv)
+    window.addEventListener("keyup",keyEv)
+}
+
+
+window.onload = function(){
+    shortcutKey();
 }
