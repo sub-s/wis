@@ -324,3 +324,40 @@ li.active > .menu_wrap > ul{display:block;}
 .pop-con .table-layout-type01 .table-layout > table > tbody > tr > td:first-child{border-left-width:0;}
 .pop-con .table-layout-type01 .table-layout > table > tbody > tr > td:last-child{border-right-width:0;}
 .pop-con .table-layout-type01 .table-layout > table > tbody > tr:nth-child(1n + 5):last-child > td{border-bottom-width:0;}
+
+
+
+
+  /* 메인 추가 */
+.main-top {height:681px;padding-top:90px; background-image:url(../img/common/top-BG-big2.png);}
+.main-img {display:block;margin:0 auto; width:1578px;height:570px; background-image:url(../img/common/top.png);}
+.main-bttm {padding-top:60px; padding-bottom:78px; background-color: #F5F5F5;}
+.main-img2 {display:block;margin:0 auto; width:1578px;height:1119px;background-image:url(../img/common/bttm.png);}
+
+
+
+/* main */
+.main-inner-wrap{width:1520px; margin: 0 auto;}
+
+
+.main-top{position:relative; display:flex; align-items:flex-start;}
+.main-top .top, .main-top .both{position:relative; display:flex; justify-content:space-between; align-items:flex-start; }
+.main-top .both{margin-top:32px;}
+.main-visual-tit{flex:1;}
+.main-visual-tit > h2{font-family: 'SamsungOne'; font-style: normal; font-weight: 700; font-size: 58px; line-height: 70px; color: #FFFFFF;}
+.main-visual-tit > a{display:inline-block; margin:12px 0 0 0; padding:6px 12px 5px 12px; border:1px solid #fff; border-radius:30px; font-family: 'SamsungOne'; font-style: normal; font-weight: 400; font-size: 20px; line-height: 24px; color: #FFFFFF;}
+.main-my-box{width:356px; height: 164px; left: 0px; border-radius:10px; background:#3771F9;}
+.main-notice, .main-monthly{width:550px; height:335px;  border-radius:10px; background:#fff;}
+.main-bookmark-quicklink{width:356px; height:335px;  border-radius:10px; background:#fff;}
+
+.main-con-tit{font-family: 'SamsungOne'; font-style: normal; font-weight: 700; font-size: 42px; line-height: 50px;}
+
+[class ^= main-layout-box]{display:flex; align-items:stretch; justify-content:space-between; margin:32px 0 0 0;}
+[class ^= main-layout-box] > div{box-shadow:3.32px 9.96px 24.9px 4.15px rgba(0, 0, 0, 0.05); border-radius:10px; background:#fff;}
+
+.main-layout-box3{height:180px;}
+.main-layout-box3 > div{width:486px;}
+
+.main-layout-box1 > div{flex:1; height:344px;}
+
+.main-layout-box2 > div{width:744px; height:402px;}

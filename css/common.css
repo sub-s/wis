@@ -648,11 +648,6 @@ button.btn:disabled .icon-refresh {background: url(../img/icon/refresh02.svg) no
 
 
 
-  /* 메인 추가 */
-.main-top {display:inline-block;width:100%;height:681px;padding-top:90px; background-image:url(../img/common/top-BG-big2.png);}
-.main-img {display:block;margin:0 auto; width:1578px;height:570px; background-image:url(../img/common/top.png);}
-.main-bttm {padding-top:60px;background-color: #F5F5F5;}
-.main-img2 {display:block;margin:0 auto; width:1578px;height:1119px;background-image:url(../img/common/bttm.png);}
 
 
 /* 멀티셀럭트 말줄임 대응 */
