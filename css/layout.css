@@ -1,9 +1,6 @@
 @charset "utf-8";
-.outer_box{
-  width:100%;
-  min-width:1400px;
-  height:100vh;
-}
+.outer_box{ width:100%; min-width:1400px; height:100vh; overflow:auto;}
+.outer_box.main{min-width:1520px;}
 
 
 /* GNB */
