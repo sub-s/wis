@@ -510,3 +510,20 @@ const shortcutKey = ()=>{
 window.onload = function(){
     shortcutKey();
 }
+
+
+const bigSel = ()=>{
+    const _this = event.currentTarget;
+    const _sel = _this.closest(".select-box-big")
+    const _list = _sel.querySelector(".list");
+    const checked = _list.classList.contains("open");
+    if(checked){
+        _list.classList.remove("open");
+        _list.style.height = "0px";
+    }else{
+        _list.classList.add("open");
+        _list.style.height = _list.children[0].scrollHeight + "px";
+    }
+    console.log("_this : ",_this);
+    console.log("_list : ",_list);
+}
