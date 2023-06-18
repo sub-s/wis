@@ -505,6 +505,34 @@ const shortcutKey = ()=>{
     window.addEventListener("keydown",keyEv)
     window.addEventListener("keyup",keyEv)
 }
+const dragDonutCahrt = (el,n)=>{
+    console.log("el :" ,el)
+    el.innerHTML = ' <svg width="130" height="130" viewBox="0 0 40 40"><circle r="10" cx="20" cy="20" fill="transparent" stroke="#d6e8f4" stroke-width="20" stroke-dasharray="calc(100 * calc(2*3.14*10) / 100) calc(2*3.14*10)" transform="rotate(-90)  translate(-40)"/><circle class="donutSvgChart" r="10" cx="20" cy="20" fill="transparent" stroke="#8DC8ED" stroke-width="20" stroke-dasharray="calc(30 * calc(2*3.14*10) / 100) calc(2*3.14*10)" transform="rotate(-90)  translate(-40)"/><circle cx="20" cy="20" r="6" fill="none" stroke="#F5F5F5" stroke-width="19" /><circle cx="calc(50%)" cy="2.3px" r="1" fill="none" stroke="#8DC8ED" stroke-width="2.5" /><circle class="donutEndCircle" cx="20px" cy="20px" r="1" fill="none" stroke="#8DC8ED" stroke-width="2.5"/><text class="svgText" x="50%" y="23px" font-size="8" text-anchor="middle" width="100%">asdfasf</text></svg>'
+    const _chart = document.querySelector(".donutSvgChart");
+    const _svgTxt = document.querySelector(".svgText");
+    const max = (n >=100)?100:n;;
+    const totalTime = 3000;
+    const stepOne = 10;
+    const unit = totalTime / stepOne;
+    const pOne = max / unit;
+    let num = 0
+    if(el.timer) clearInterval(el.timer);
+    el.timer = setInterval(()=>{
+        num = (num + pOne >= max)?max:Math.ceil(num += pOne);
+        const sasharray = "calc(" + num + " * calc(2*3.14*10) / 100) calc(2*3.14*10)";
+        const _c = document.querySelector(".donutEndCircle");
+        let angle = (num - 25) * 3.6;
+        const l = Math.cos((Math.PI / 180) * angle) * 17.8;
+        const t = Math.sin((Math.PI / 180) * angle) * 17.8;
+        _c.setAttribute("cx",(l + 20) + "px")
+        _c.setAttribute("cy",(t + 20) + "px")
+        _chart.setAttribute("stroke-dasharray",sasharray);
+        _svgTxt.innerHTML = num + "%";
+        if(num >= max){
+            clearInterval(el.timer);
+        }
+    },stepOne)
+}
 
 
 window.onload = function(){

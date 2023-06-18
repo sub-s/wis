@@ -514,10 +514,9 @@
                                 </div>
                                 <div class="main-monthly-box-right">
                                     <dl class="main-roundbox-layout1">
-                                        <dt>수요/공급</dt>
-                                        <dd>
-                                            <div>
-                                            </div>
+                                        <dt style="flex:none;">수요/공급</dt>
+                                        <dd style="justify-content:center; align-items:center;">
+                                            <div id="donutChart"></div>
                                         </dd>
                                     </dl>
                                 </div>
@@ -888,7 +887,10 @@
 
         applyColor(innerBars1, '150, 206, 117');
         applyColor(innerBars2, '241, 132, 106');
-
+        
+        const per = Math.ceil(Math.random() * 100);
+        dragDonutCahrt(document.querySelector("#donutChart"),per);
+        
     </script>
 </body>
 
