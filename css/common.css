@@ -652,3 +652,10 @@ button.btn:disabled .icon-refresh {background: url(../img/icon/refresh02.svg) no
 
 /* 멀티셀럭트 말줄임 대응 */
 .condition-search .d-inline-flex{flex:1; min-width:10px;}
+
+
+/* bookmark */
+.icon-bookmark{position:relative; top:0px; display:inline-block; vertical-align:middle; padding:0; margin:0;}
+.icon-bookmark > input{position:fixed; top:-1000%; left:-1000%;}
+.icon-bookmark > input + i{display:inline-block; width:14px; height:14px; margin-right:8px; background:url(../img/icon-star_outline.svg) no-repeat center;}
+.icon-bookmark > input:checked + i{background-image:url(../img/iconp-star_pill.svg);}

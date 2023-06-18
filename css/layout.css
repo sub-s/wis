@@ -402,3 +402,6 @@ li.active > .menu_wrap > ul{display:block;}
 .main-layout-box1 > div{flex:1; height:344px;}
 
 .main-layout-box2 > div{width:744px; height:402px;}
+
+
+.tail_arr{background:url(../img/tail_arr.svg) no-repeat center right;}
