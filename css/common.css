@@ -659,3 +659,112 @@ button.btn:disabled .icon-refresh {background: url(../img/icon/refresh02.svg) no
 .icon-bookmark > input{position:fixed; top:-1000%; left:-1000%;}
 .icon-bookmark > input + i{display:inline-block; width:14px; height:14px; margin-right:8px; background:url(../img/icon-star_outline.svg) no-repeat center;}
 .icon-bookmark > input:checked + i{background-image:url(../img/iconp-star_pill.svg);}
+
+
+
+
+
+
+
+
+
+
+/* 여기부터 */
+.main-section {display: flex; justify-content: space-between; align-items: flex-start; padding: 40px; box-sizing: border-box;}
+.main-section .item {}
+.main-section .item .tit {font-size: 28px; color: var(--c-gray10);}
+.main-section .item .num {font-size: 56px; font-weight: 700; color: var(--c-gray10);}
+.main-section .item .percent {font-size: 18px; display: flex; align-items: flex-end; flex-direction: column;}
+.main-section .item .percent::before {display: block; content:''; width: 60px; height: 60px; background-image:url(../img/icon/main_icon01.svg); margin-bottom: 20px}
+.main-section .item .percent.plus {color: var(--c-blue3); }
+.main-section .item .percent.minus {color: var(--c-red); }
+.main-section:nth-of-type(2) .item .percent::before {background-image:url(../img/icon/main_icon02.svg);}
+.main-section:nth-of-type(3) .item .percent::before {background-image:url(../img/icon/main_icon03.svg);}
+
+
+.monthly-fluctuations {padding:30px 35px;}
+.monthly-fluctuations .tit { font-size: 26px; font-weight: 700; color: var(--c-gray10); margin-bottom: 60px;}
+.monthly-fluctuations .graph {height: 160px; display: flex; align-items: flex-end; justify-content: space-between;  position: relative; margin:0 30px 0;}
+.monthly-fluctuations .graph::after {display: block; content:''; height: 1px; width: 100%; background-color: var(--c-gray10); position: absolute; bottom: 0px; left:0; right:0;}
+.monthly-fluctuations .graph-labels { background-color: var(--c-gray2); width: 50px; height: 160px}
+.monthly-fluctuations .graph-labels:first-of-type {margin-left: 75px}
+.monthly-fluctuations .graph-labels:last-of-type {margin-right: 75px}
+.monthly-fluctuations .bar {background-color: var(--c-gray2); font-size: 12px; height: 100%;  position: relative;}
+.monthly-fluctuations .inner-bar {background-color: #73B3DC; font-size: 12px; position: absolute; bottom:0; left:0; right:0;}
+.monthly-fluctuations .inner-bar .num {font-size: 12px; position: absolute; top:-25px; left:0; right:0; text-align: center; font-size: 18px; font-weight: 700;}
+.monthly-fluctuations .month-label { text-align: center; font-size: 16px; color: var(--c-gray8); }
+
+
+
+
+.item-section {padding: 30px 35px;}
+.item-section .title {display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;}
+.item-section .title .tit {font-size: 26px; font-weight: 700; color: var(--c-gray10); }
+.item-section .title .date {font-size: 20px;  color: var(--c-gray9); }
+.item-section .graph-area ol {width: 565px; margin-left: 80px; display: flex; justify-content: space-between; align-items: center;}
+.item-section .graph-area ol li  {font-size: 16px;  color: var(--c-gray8); }
+
+
+.item-section .horizontal-graph{}
+.item-section .horizontal-graph .item {display: flex; align-items: center; justify-content: flex-start; margin-top: 20px}
+.item-section .horizontal-graph .item .tit {font-size: 20px; font-weight: 700; color: var(--c-gray10); width: 80px;}
+.item-section .horizontal-graph .item .graph {height: 30px; width: calc(100% - 80px); display: flex; align-items: center; justify-content: flex-start;  }
+.item-section .horizontal-graph .item .graph .inner-bar {height: 100%; background-color: rgba(150, 206, 117, 0.6);}
+.item-section .horizontal-graph .item .graph .num {font-size: 18px; font-weight: 700; color: var(--c-gray10); margin-left: 10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.circle-graph {
+  position: relative;
+  width: 200px; /* 원형 그래프의 너비 */
+  height: 200px; /* 원형 그래프의 높이 */
+  border-radius: 50%; /* 원형 그래프를 동그랗게 만듦 */
+  background-color: #ccc; /* 원형 그래프의 배경색 */
+  overflow: hidden; /* 내용이 넘칠 경우를 대비해 내용을 숨김 */
+  
+}
+
+.circle-graph-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 50%; /* 그래프를 동그랗게 만듦 */
+  /* clip: rect(0, 100px, 200px, 0); 클리핑 영역 설정 */
+  /* transform-origin: 50% 100%; 기준점을 하단 중앙으로 설정 */
+  border: 2px solid transparent; /* 그래프의 테두리 초기 설정 (투명) */
+}
+
+.circle-graph-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px; /* 숫자 텍스트의 글꼴 크기 */
+}
+
+/* 퍼센트에 따라 테두리 표시 */
+.circle-graph-progress::before {
+  content: '';
+  position: absolute;
+  top: -2px; /* 테두리 두께의 절반만큼 위로 이동 */
+  left: -2px; /* 테두리 두께의 절반만큼 왼쪽으로 이동 */
+  width: calc(100% + 4px); /* 테두리 두께의 반지름 크기로 너비 조정 */
+  height: calc(100% + 4px); /* 테두리 두께의 반지름 크기로 높이 조정 */
+  border: 2px solid #ff7f50; /* 테두리 색상 설정 */
+  border-radius: 50%; /* 테두리를 동그랗게 만듦 */
+  transform-origin: 50% 50%; /* 기준점을 중앙으로 설정 */
+  transform: rotate(90deg); /* 테두리 회전 */
+}
