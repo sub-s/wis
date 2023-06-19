@@ -14,9 +14,9 @@
 #gnb .menu-wrap input[id="icon"] + label{position: absolute; top:0; left:0; display:block; padding: 17px 15px; width:50px; height:50px; cursor:pointer; z-index: 2;} 
 #gnb .menu-wrap input[id="icon"] + label > span {display:block; width:100%; height:2px; background: var(--c-black); transition: all 0.35s; }
 #gnb .menu-wrap input[id="icon"] + label > span + span {margin-top: 6px}
-#gnb .menu-wrap input[id="icon"]:checked + label > span:nth-child(1) { transform:translateY(-50%) rotate(45deg); margin-top: 11px; background-color: var(--c-white);}
+#gnb .menu-wrap input[id="icon"]:checked + label > span:nth-child(1) { transform:translateY(-50%) rotate(45deg); margin-top: 11px;}
 #gnb .menu-wrap input[id="icon"]:checked + label > span:nth-child(2) {opacity: 0;}
-#gnb .menu-wrap input[id="icon"]:checked + label > span:nth-child(3) { transform:translateY(50%) rotate(-45deg); margin-top: -12px; background-color: var(--c-white);}
+#gnb .menu-wrap input[id="icon"]:checked + label > span:nth-child(3) { transform:translateY(50%) rotate(-45deg); margin-top: -12px;}
 
 #gnb .menu-wrap #icon + label + .side-menu {position:fixed; width:300px; height:100%; background:#333; top:0px; padding:60px 25px 25px 25px; box-sizing:border-box; left:-300px; z-index:1; transition: all 0.35s;}
 #gnb .menu-wrap #icon:checked + label + .side-menu {left:0px;}
@@ -33,10 +33,11 @@
 
 
 /* Dropdown menu styles */
-#gnb .gnb-menu .sub-menu {display: none; position: fixed; top: 50px; left: 0; right: 0; width: 100%; background-color: var(--c-white); border-top: 1px solid var(--c-gray5);  padding: 33px 0 33px; z-index: 11;}
+#gnb .gnb-menu .sub-menu {display: none; position: fixed; top: 50px; left: 0; right: 0; bottom:0; z-index: 11; width: 100%; background:rgba(0,0,0,0.5);}
 #gnb .gnb-menu:hover,
 #gnb .gnb-menu .sub-menu:hover,
-#gnb .gnb-menu li:hover .sub-menu {display: flex; justify-content: center; align-items: flex-start;}
+#gnb .gnb-menu li:hover .sub-menu {display:block;}
+#gnb .gnb-menu li:hover .sub-menu .inner-wrap{display: flex; justify-content: center; align-items: flex-start; background-color: var(--c-white); border-top: 1px solid var(--c-gray5);  padding: 33px 0 33px;}
 #gnb .gnb-menu li:hover .sub-menu .item {width: 160px;}
 #gnb .gnb-menu li:hover .sub-menu .item .tit {font-size: var(--fs-t4); font-weight: 700; color: var(--c-gray10); padding-bottom: 13px; border-bottom: 1px solid var(--c-gray5)}
 #gnb .gnb-menu li:hover .sub-menu .item .tit a {font-size: inherit; color: var(--c-gray10);}
@@ -415,3 +416,26 @@ li.active > .menu_wrap > ul{display:block;}
 .select-box-big > .list ul > li{display:flex; align-items:center; padding:0 20px; width:100%; height:30px; font-family: 'SamsungOne'; font-style: normal; font-weight: 400; font-size: 14px; color:#212121; border-bottom:1px solid #ededed;}
 .select-box-big > .list ul > li > a{display:block; color:#212121;}
 .select-box-big > .list ul > li:last-child{border-bottom-width:0;}
+
+
+/* booklink */
+.outer_box.main #booklink{min-width:1520px;}
+#booklink{position:fixed; top:50px; left:0; bottom:0; z-index:10000000; display:none; width:100%; transform:translate(-100%,0); background:rgba(0,0,0,0.5);}
+#gnb .menu-wrap #icon:checked + label + #booklink{display:block; transform:translate(0,0);}
+#booklink > .inner-wrap{position:relative; display:flex; padding:40px 0 30px 70px; border-top: 1px solid #E0E0E0; background:#fff;}
+.bookmark-left-area{width:298px;}
+.bookmark-left-area > h2{font-family: 'SamsungOne'; font-style: normal; font-weight: 400; font-size: 28px; color: #212121;}
+.menu-folder{margin-top:30px;}
+
+.bookmark-right-area{flex:1; overflow:autl;}
+.bookmark-list{display:flex;}
+.bookmark-list > li{width:200px;}
+.bookmark-list > li + li{margin-left:53px;}
+.bookmark-tit{padding:0 0 10px 0; font-family: 'SamsungOne'; font-style: normal; font-weight: 700; font-size: 18px; color:##212121; border-bottom:1px solid #E0E0E0;}
+.bookmark-tit:before{content:""; display:inline-block; width:24px; height:24px; margin:0 9px 0 0; vertical-align:middle; background:url(../img/bookmark_i_layer.svg) no-repeat center;}
+.bookmark-tit.i-tv:before{background-image:url(../img/bookmark_i_tv.svg);}
+.bookmark-tit.i-book:before{background-image:url(../img/bookmark_i_book.svg);}
+.bookmark-tit.i-rectangle:before{background-image:url(../img/bookmark_i_rectangle.svg);}
+.bookmark-tit.i-report:before{background-image:url(../img/bookmark_i_report.svg);}
+
+

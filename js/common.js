@@ -556,3 +556,62 @@ const bigSel = ()=>{
     console.log("_this : ",_this);
     console.log("_list : ",_list);
 }
+
+function menuChangedEv(){
+    const _this = event.currentTarget;
+    const _parent = _this.closest(".menuParent");
+    const checked = _parent.classList.contains("open");
+    if(checked){
+        _parent.classList.remove("open");
+    }else{
+        _parent.classList.add("open");
+    }
+    switchCheckbox();
+}
+function switchCheckbox(){
+    const _menus = document.querySelectorAll(".bookmark-right-area .menuParent");
+    const _switch = document.querySelector("#menuFold");
+    let switchChecked = true;
+    for(let i=0; i<_menus.length; i++){
+        const _m = _menus[i];
+        const openCheck = _m.classList.contains("open");
+        if(!openCheck){
+            switchChecked = false;
+            break;
+        }
+    }
+    _switch.checked = switchChecked;
+}
+
+
+function menuFoldingFn(){
+    const _this = event.currentTarget;
+    const checked = _this.checked;
+    const _menus = (checked)?document.querySelectorAll(".bookmark-right-area .menuParent:not(.open)"):document.querySelectorAll(".bookmark-right-area .menuParent.open");
+    _menus.forEach((m,i)=>{
+        m.classList.add("open");
+        const _input = m.querySelector(".menu-switch input");
+        if(checked){
+            m.classList.add("open");
+            _input.checked = false;
+        }else{
+            m.classList.remove("open");
+            _input.checked = true;
+        }
+    })
+}
+
+
+function gnbLiMouseover(){
+    const _menu = document.querySelector("#gnb #icon");
+    _menu.checked = false;
+}
+
+
+window.onload = function(){
+    window.addEventListener("scroll",function(){
+        const left = window.scrollX;
+        const _bookmark = document.querySelector("#booklink");
+        _bookmark.style.left = (Number(left) * -1) + "px";
+    })
+}
