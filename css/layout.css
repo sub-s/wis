@@ -164,8 +164,13 @@ li.active > .menu_wrap > ul{display:block;}
 
 #footer{display:flex; align-items:center; justify-content:space-between; height:24px; padding:0 20px; border-top: 1px solid #E0E0E0; background:var(--c-white);}
 #footer span{color:#616161; font-size:12px;}
-.f_icon_moniter{display:flex; align-items:center;}
+.f_icon_moniter{position:relative; display:flex; align-items:center; font-family: 'SamsungOne'; font-style: normal; font-weight: 400; font-size: 12px; color: #212121;}
 .f_icon_moniter:before{content:""; display:inline-block; width:16px; height:16px; margin-right:6px; background:url(../img/footer_img.svg) no-repeat; background-size:cover;}
+.f_icon_moniter .connect_info{position:absolute; top:-8px; right:0; display:none; padding:6px 8px; transform:translate(0,-100%);; border:1px solid #E0E0E0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04); border-radius: 4px; background:#fff;}
+.f_icon_moniter:hover .connect_info{display:block;}
+.f_icon_moniter .connect_info dl{display:flex; flex-wrap:wrap; width:165px;}
+.f_icon_moniter .connect_info dl dt{width:calc(165px - 50px); font-family: 'SamsungOne'; font-style: normal; font-weight: 400; font-size: 12px; color:#212121; letter-spacing:-1px;}
+.f_icon_moniter .connect_info dl dd{display:flex; justify-content:flex-end; width:50px; font-family: 'SamsungOne'; font-style: normal; font-weight: 700; font-size: 12px; color:#212121;}
 
 /* bookmark */
 .bookmark{position:relative; padding:0 0 0 20px; cursor:pointer;}
