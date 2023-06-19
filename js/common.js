@@ -492,12 +492,13 @@ const removeFileKey = (el)=>{
 const shortcutKey = ()=>{
     const keyEv = ()=>{
         const keyCode = event.keyCode;
+        console.log("keyCode : ",keyCode)
         if(event.type === "keydown"){
             if(keyCode === 16) window.keyShift = true;
-            if(keyCode === 91) window.keyControl = true;
+            if(keyCode === 91 || keyCode === 17) window.keyControl = true;
         }else{
             if(keyCode === 16) window.keyShift = false;
-            if(keyCode === 91) window.keyControl = false;
+            if(keyCode === 91 || keyCode === 17) window.keyControl = false;
             
         }
         console.log(event.type,"   keyCode  : ",keyCode)
