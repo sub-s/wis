@@ -327,10 +327,10 @@ li.active > .menu_wrap > ul{display:block;}
 .table-layout-type01::-webkit-scrollbar{display:none;}
 .table-layout-type01{scrollbar-width:hidden;}
 
-.search-list{height:131px; overflow:auto; border:1px solid #E0E0E0; border-width:0 1px 1px 0px;}
-.search-list{-ms-overflow-style: none;}
-.search-list::-webkit-scrollbar{display:none;}
-.search-list{scrollbar-width:hidden;}
+.pop-con .table-layout td .search-list{height:131px; overflow:auto; border:1px solid #E0E0E0; border-width:0;}
+.pop-con .table-layout td .search-list{-ms-overflow-style: none;}
+.pop-con .table-layout td .search-list::-webkit-scrollbar{display:none;}
+.pop-con .table-layout td .search-list{scrollbar-width:hidden;}
 
 
 .pop-con .table-layout-type01 .table-layout > table > tbody > tr > td:first-child{border-left-width:0;}
