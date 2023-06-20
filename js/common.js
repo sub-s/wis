@@ -607,11 +607,8 @@ function gnbLiMouseover(){
     _menu.checked = false;
 }
 
-
-window.onload = function(){
-    window.addEventListener("scroll",function(){
-        const left = window.scrollX;
-        const _bookmark = document.querySelector("#booklink");
-        _bookmark.style.left = (Number(left) * -1) + "px";
-    })
-}
+window.addEventListener("scroll",function(){
+    const left = window.scrollX;
+    const _bookmark = document.querySelector("#booklink");
+    _bookmark.style.left = (Number(left) * -1) + "px";
+})
