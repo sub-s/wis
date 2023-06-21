@@ -604,7 +604,31 @@ function menuFoldingFn(){
 
 function gnbLiMouseover(){
     const _menu = document.querySelector("#gnb #icon");
+    const _gnbDim = document.querySelector("#gnbDim");
+    _gnbDim.classList.add("open");
+    // const _this = event.currentTarget;
+    // const _li = _this.closest("li");
+    // const _children = _this.closest("ul").children;
+    // for(let i=0; i<_children.length; i++){
+    //     const _c = _children[i];
+    //     if(_c === _li){
+    //         _c.classList.add("active");
+    //     }else{
+    //         _c.classList.remove("active");
+    //     }
+    // }
     _menu.checked = false;
+}
+function gnbLiMouseout(){
+    const _gnbDim = document.querySelector("#gnbDim");
+    _gnbDim.classList.remove("open");
+    console.log("_gnbDim : ",_gnbDim)
+}
+function gnbOut(){
+    const _this = event.currentTarget;
+    const _li = _this.closest("li");
+     _li.classList.remove("active");
+
 }
 
 window.addEventListener("scroll",function(){

@@ -6,7 +6,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <style>
+	.main-top-con-area.t2.book {display:inline-block; height:130px;overflow-y:auto;}
+	.main-top-con-area.noti {flex:none;; height:240px;overflow-y:auto;}
+    </style>
     <script src="js/jquery.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
     <script src="js/jquery-ui.min.js"></script>
@@ -312,7 +315,7 @@
                 <img src="img/icon/wis_logo.svg" alt="">
                 <div class="gnb-menu">
                     <ul>
-                        <li onmouseover="gnbLiMouseover()">
+                        <li onmouseover="gnbLiMouseover()" onmouseout="gnbLiMouseout()">
                             <a href="javascript: void(0)">Wafer recycle</a>
                             <div class="sub-menu">
                                 <div class="inner-wrap">
@@ -369,7 +372,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li onmouseover="gnbLiMouseover()" onmouseout="gnbLiMouseout()">
                             <a href="javascript: void(0)">Dashboard</a>
                             <div class="sub-menu">
                                 <div class="inner-wrap">
@@ -426,7 +429,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li onmouseover="gnbLiMouseover()">
+                        <li onmouseover="gnbLiMouseover()" onmouseout="gnbLiMouseout()">
                             <a href="javascript: void(0)">Monitoring</a>
                             <div class="sub-menu">
                                 <div class="inner-wrap">
@@ -483,7 +486,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li onmouseover="gnbLiMouseover()">
+                        <li onmouseover="gnbLiMouseover()" onmouseout="gnbLiMouseout()">
                             <a href="javascript: void(0)">Parameter</a>
                             <div class="sub-menu">
                                 <div class="inner-wrap">
@@ -540,7 +543,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li onmouseover="gnbLiMouseover()">
+                        <li onmouseover="gnbLiMouseover()" onmouseout="gnbLiMouseout()">
                             <a href="javascript: void(0)">Report</a>
                             <div class="sub-menu">
                                 <div class="inner-wrap">
@@ -697,13 +700,13 @@
                         <!-- // my -->
                     </div>
                     <div class="both">
-                        <!-- 공지사랑  -->
+                        <!-- 공지사항  -->
                         <div class="main-notice">
                             <div class="main-top-tit-area">
                                 <h3>공지사항</h3>
                                 <a href="javascript:;">바로가기</a>
                             </div>
-                            <div class="main-top-con-area">
+                            <div class="main-top-con-area noti">
                                 <ul class="main-visual-list">
                                     <li>
                                         <a href="javascript:;">
@@ -800,7 +803,7 @@
                             <div class="main-top-tit-area">
                                 <h3>즐겨찾는 메뉴</h3>
                             </div>
-                            <div class="main-top-con-area t2">
+                            <div class="main-top-con-area t2 book">
                                 <ul class="main-visual-list">
                                     <li>
                                         <a href="javascript:;" class="tail_arr">
@@ -813,6 +816,11 @@
                                         </a>
                                     </li>
                                     <li>
+                                        <a href="javascript:;" class="tail_arr">
+                                            <p><label class="icon-bookmark"><input type="checkbox" disabled checked /><i></i></label>품질 Risk 체크 항목 적용 공지</p>
+                                        </a>
+                                    </li>
+<li>
                                         <a href="javascript:;" class="tail_arr">
                                             <p><label class="icon-bookmark"><input type="checkbox" disabled checked /><i></i></label>품질 Risk 체크 항목 적용 공지</p>
                                         </a>
@@ -1129,6 +1137,7 @@
                 </div>
             </div>
 		</div>
+        <div id="gnbDim"></div>
     </div>
     <script src="js/common.js"></script>
     <!-- real grid -->

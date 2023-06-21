@@ -306,11 +306,13 @@
                         </div>
                     </div>
                     <!-- // 햄버거 메뉴 -->
+
+
                 </div>
                 <img src="img/icon/wis_logo.svg" alt="">
                 <div class="gnb-menu">
                     <ul>
-                        <li onmouseover="gnbLiMouseover()">
+                        <li onmouseover="gnbLiMouseover()" onmouseout="gnbLiMouseout()">
                             <a href="javascript: void(0)">Wafer recycle</a>
                             <div class="sub-menu">
                                 <div class="inner-wrap">
@@ -367,7 +369,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li onmouseover="gnbLiMouseover()" onmouseout="gnbLiMouseout()">
                             <a href="javascript: void(0)">Dashboard</a>
                             <div class="sub-menu">
                                 <div class="inner-wrap">
@@ -424,7 +426,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li onmouseover="gnbLiMouseover()">
+                        <li onmouseover="gnbLiMouseover()" onmouseout="gnbLiMouseout()">
                             <a href="javascript: void(0)">Monitoring</a>
                             <div class="sub-menu">
                                 <div class="inner-wrap">
@@ -481,7 +483,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li onmouseover="gnbLiMouseover()">
+                        <li onmouseover="gnbLiMouseover()" onmouseout="gnbLiMouseout()">
                             <a href="javascript: void(0)">Parameter</a>
                             <div class="sub-menu">
                                 <div class="inner-wrap">
@@ -538,7 +540,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li onmouseover="gnbLiMouseover()">
+                        <li onmouseover="gnbLiMouseover()" onmouseout="gnbLiMouseout()">
                             <a href="javascript: void(0)">Report</a>
                             <div class="sub-menu">
                                 <div class="inner-wrap">
@@ -598,6 +600,7 @@
                     </ul>
                 </div>
             </div>
+
             <div class="right-item">
                 <div class="field">
                     <input type="text" class="form-control form-control-sm" id="inputPassword2" placeholder="데이터" onkeyup="inputClearBtn()">
@@ -647,6 +650,20 @@
                 </div>
                 <div class="end-box">
                     CONFIDENTIAL
+                </div>
+            </div>
+        
+            <div id="siple-pop-info">
+                <div class="inenr-wrap">
+                    <div class="l">
+                        <a href="javascritp:;">
+                            <span>공지</span>NRD 라인 시설 점검으로 인한 서비스 중단 안내
+                        </a>
+                    </div>
+                    <div class="r">
+                        <label><input type="checkbox" />오늘 하루 보지 않기</label>
+                        <button>close</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2775,6 +2792,7 @@
                 </div>
             </div>
         </div>
+        <div id="gnbDim"></div>
     </div>
     <!-- 예약 등록 pop up -->
     <div class="fixed-pop p0">
@@ -2928,7 +2946,7 @@
                 </div>
                 <!-- // 조건 검색 -->
                 <!-- 테이블 -->
-                <div class="layout-type02">
+                <div class="layout-type02" style="margin-top:15px;">
                     <div class="l">
                         <!-- top -->
                         <div class="layout-type02-top">
