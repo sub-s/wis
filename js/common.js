@@ -636,3 +636,10 @@ window.addEventListener("scroll",function(){
     const _bookmark = document.querySelector("#booklink");
     _bookmark.style.left = (Number(left) * -1) + "px";
 })
+
+
+function closedSimplePop(){
+    const _this = event.currentTarget;
+    const _pop = _this.closest("#simple-pop-info");
+    _pop.parentNode.removeChild(_pop);
+}
