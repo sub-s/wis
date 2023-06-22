@@ -784,19 +784,29 @@ html, .wis-height {
 
 .wis-login .box {width: 600px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
 
+
+.wis-login .login {border: 1px solid #E0E0E0;border-radius: 10px;padding: 20px 20px 40px;box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);}
+.wis-login .login .top {display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;}
+.wis-login .login .top .txt {display: inline-flex; margin-left: 10px; font-size: 14px; color:#212121; }
+.wis-login .login .top .text {color:#FF3B30; font-size: 12px;}
+
+.wis-login .login .top .text.b-type a {color:#212121; font-size: 12px;}
+.wis-login .login .top .text.b-type a::after {display: inline-flex; content:''; width: 16px; height: 16px; vertical-align: top; background-image:url(../img/icon/arrow_right.svg);}
+
+
 .wis-login .box .middle-item {}
 .wis-login .box .middle-item::before {display: block; content: ''; width: 50px; height: 50px; margin: 30px auto 30px; background-image:url(../img/icon/mark_Info.svg);}
 .wis-login .box .middle-item {text-align: center;}
+.wis-login .box .middle-item.b-type {}
+.wis-login .box .middle-item.b-type::before {display: none;}
+.wis-login .box .middle-item.b-type .login-text {font-size: 36px; font-weight: 700; color:#212121}
 .wis-login .box .middle-item .b-txt{font-size: 16px; font-weight: 700; color: #212121;}
 .wis-login .box .middle-item .m-txt{font-size: 14px;color: #212121; margin: 20px 0 30px}
 .wis-login .box .middle-item .m-txt span{color:#FF3B30;}
 
 
-.wis-login .login {border: 1px solid #E0E0E0;border-radius: 10px;padding: 20px 20px 40px;box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);}
-.wis-login .login .top {display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;}
-.wis-login .login .top .text {color:#FF3B30; font-size: 12px;}
+
 .wis-login .copy {color:#757575; font-size: 12px; margin-top: 20px;}
 .wis-login .login-btn {display: flex; justify-content: center; align-items: center; width: 300px; margin: 0 auto;}
 .wis-login .login-btn button {width: calc(50% - 5px); height: 36px !important; font-size: 14px; font-weight: 700;}
 
-.a {}
