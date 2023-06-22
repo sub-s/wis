@@ -723,3 +723,38 @@ button.btn:disabled .icon-refresh {background: url(../img/icon/refresh02.svg) no
 .chart:after{content:''; background: var(--c-gray2) ; position: absolute; top: 50%; left: 50%; width:110px; height:110px; border-radius: 50%; transform: translate(-50%, -50%);}
 .chart-bar{width: inherit; height: inherit; border-radius: 50%; background: conic-gradient(#8DC8ED 160deg, #d6e8f3 50deg); /* 차트 설정 */}
 .chart-bar .text {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%; font-size: 28px; font-weight: bold; color: var(--c-gray10); z-index: 1;}
+
+
+
+
+
+
+/* 로그인 */
+
+html, .wis-height {
+  height:100%;
+}
+
+.wis-login {width: 100%;height: 100%;position: relative;font-size:20px;}
+.wis-login .text {font-size: 14px;}
+.wis-login .text strong {display: block; margin-bottom:15px;}
+.wis-login .text .s-txt {margin-bottom:20px;}
+
+.wis-login .box {width: 600px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+
+.wis-login .box .middle-item {}
+.wis-login .box .middle-item::before {display: block; content: ''; width: 50px; height: 50px; margin: 30px auto 30px; background-image:url(../img/icon/mark_Info.svg);}
+.wis-login .box .middle-item {text-align: center;}
+.wis-login .box .middle-item .b-txt{font-size: 16px; font-weight: 700; color: #212121;}
+.wis-login .box .middle-item .m-txt{font-size: 14px;color: #212121; margin: 20px 0 30px}
+.wis-login .box .middle-item .m-txt span{color:#FF3B30;}
+
+
+.wis-login .login {border: 1px solid #E0E0E0;border-radius: 10px;padding: 20px 20px 40px;box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);}
+.wis-login .login .top {display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;}
+.wis-login .login .top .text {color:#FF3B30; font-size: 12px;}
+.wis-login .copy {color:#757575; font-size: 12px; margin-top: 20px;}
+.wis-login .login-btn {display: flex; justify-content: center; align-items: center; width: 300px; margin: 0 auto;}
+.wis-login .login-btn button {width: calc(50% - 5px); height: 36px !important; font-size: 14px; font-weight: 700;}
+
+.a {}
