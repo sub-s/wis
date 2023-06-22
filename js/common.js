@@ -492,18 +492,47 @@ const removeFileKey = (el)=>{
 const shortcutKey = ()=>{
     const keyEv = ()=>{
         const keyCode = event.keyCode;
+        console.log("keyCode : ",keyCode)
         if(event.type === "keydown"){
             if(keyCode === 16) window.keyShift = true;
-            if(keyCode === 91) window.keyControl = true;
+            if(keyCode === 91 || keyCode === 17) window.keyControl = true;
         }else{
             if(keyCode === 16) window.keyShift = false;
-            if(keyCode === 91) window.keyControl = false;
+            if(keyCode === 91 || keyCode === 17) window.keyControl = false;
             
         }
         console.log(event.type,"   keyCode  : ",keyCode)
     }
     window.addEventListener("keydown",keyEv)
     window.addEventListener("keyup",keyEv)
+}
+const dragDonutCahrt = (el,n)=>{
+    console.log("el :" ,el)
+    el.innerHTML = ' <svg width="130" height="130" viewBox="0 0 40 40"><circle r="10" cx="20" cy="20" fill="transparent" stroke="#d6e8f4" stroke-width="20" stroke-dasharray="calc(100 * calc(2*3.14*10) / 100) calc(2*3.14*10)" transform="rotate(-90)  translate(-40)"/><circle class="donutSvgChart" r="10" cx="20" cy="20" fill="transparent" stroke="#8DC8ED" stroke-width="20" stroke-dasharray="calc(30 * calc(2*3.14*10) / 100) calc(2*3.14*10)" transform="rotate(-90)  translate(-40)"/><circle cx="20" cy="20" r="6" fill="none" stroke="#F5F5F5" stroke-width="19" /><circle cx="calc(50%)" cy="2.3px" r="1" fill="none" stroke="#8DC8ED" stroke-width="2.5" /><circle class="donutEndCircle" cx="20px" cy="20px" r="1" fill="none" stroke="#8DC8ED" stroke-width="2.5"/><text class="svgText" x="50%" y="23px" font-size="8" text-anchor="middle" width="100%">0%</text></svg>'
+    const _chart = document.querySelector(".donutSvgChart");
+    const _svgTxt = document.querySelector(".svgText");
+    const max = (n >=100)?100:n;;
+    const totalTime = 3000;
+    const stepOne = 10;
+    const unit = totalTime / stepOne;
+    const pOne = max / unit;
+    let num = 0
+    if(el.timer) clearInterval(el.timer);
+    el.timer = setInterval(()=>{
+        num = (num + pOne >= max)?max:Math.ceil(num += pOne);
+        const sasharray = "calc(" + num + " * calc(2*3.14*10) / 100) calc(2*3.14*10)";
+        const _c = document.querySelector(".donutEndCircle");
+        let angle = (num - 25) * 3.6;
+        const l = Math.cos((Math.PI / 180) * angle) * 17.8;
+        const t = Math.sin((Math.PI / 180) * angle) * 17.8;
+        _c.setAttribute("cx",(l + 20) + "px")
+        _c.setAttribute("cy",(t + 20) + "px")
+        _chart.setAttribute("stroke-dasharray",sasharray);
+        _svgTxt.innerHTML = num + "%";
+        if(num >= max){
+            clearInterval(el.timer);
+        }
+    },stepOne)
 }
 
 
@@ -527,3 +556,83 @@ const bigSel = ()=>{
     console.log("_this : ",_this);
     console.log("_list : ",_list);
 }
+
+function menuChangedEv(){
+    const _this = event.currentTarget;
+    const _parent = _this.closest(".menuParent");
+    const checked = _parent.classList.contains("open");
+    if(checked){
+        _parent.classList.remove("open");
+    }else{
+        _parent.classList.add("open");
+    }
+    switchCheckbox();
+}
+function switchCheckbox(){
+    const _menus = document.querySelectorAll(".bookmark-right-area .menuParent");
+    const _switch = document.querySelector("#menuFold");
+    let switchChecked = true;
+    for(let i=0; i<_menus.length; i++){
+        const _m = _menus[i];
+        const openCheck = _m.classList.contains("open");
+        if(!openCheck){
+            switchChecked = false;
+            break;
+        }
+    }
+    _switch.checked = switchChecked;
+}
+
+
+function menuFoldingFn(){
+    const _this = event.currentTarget;
+    const checked = _this.checked;
+    const _menus = (checked)?document.querySelectorAll(".bookmark-right-area .menuParent:not(.open)"):document.querySelectorAll(".bookmark-right-area .menuParent.open");
+    _menus.forEach((m,i)=>{
+        m.classList.add("open");
+        const _input = m.querySelector(".menu-switch input");
+        if(checked){
+            m.classList.add("open");
+            _input.checked = false;
+        }else{
+            m.classList.remove("open");
+            _input.checked = true;
+        }
+    })
+}
+
+
+function gnbLiMouseover(){
+    const _menu = document.querySelector("#gnb #icon");
+    const _gnbDim = document.querySelector("#gnbDim");
+    _gnbDim.classList.add("open");
+    // const _this = event.currentTarget;
+    // const _li = _this.closest("li");
+    // const _children = _this.closest("ul").children;
+    // for(let i=0; i<_children.length; i++){
+    //     const _c = _children[i];
+    //     if(_c === _li){
+    //         _c.classList.add("active");
+    //     }else{
+    //         _c.classList.remove("active");
+    //     }
+    // }
+    _menu.checked = false;
+}
+function gnbLiMouseout(){
+    const _gnbDim = document.querySelector("#gnbDim");
+    _gnbDim.classList.remove("open");
+    console.log("_gnbDim : ",_gnbDim)
+}
+function gnbOut(){
+    const _this = event.currentTarget;
+    const _li = _this.closest("li");
+     _li.classList.remove("active");
+
+}
+
+window.addEventListener("scroll",function(){
+    const left = window.scrollX;
+    const _bookmark = document.querySelector("#booklink");
+    _bookmark.style.left = (Number(left) * -1) + "px";
+})

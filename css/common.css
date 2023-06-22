@@ -572,7 +572,49 @@ button.btn:disabled .icon-refresh {background: url(../img/icon/refresh02.svg) no
   } */
 
   /* input */
-  input[type = text]:disabled{color:#9E9E9E; border: 1px solid #F5F5F5; background-color:#F5F5F5; font-weight:400;}
+input[type = text]:disabled{color:#9E9E9E; border: 1px solid #F5F5F5; background-color:#F5F5F5; font-weight:400;}
+
+.menu-switch{position:relative; font-family: 'Noto Sans KR'; font-style: normal; font-weight: 400; color: #212121;}
+.menu-switch > input{position:fixed; top:-1000%; left:-1000%;}
+.menu-switch > input + i{position:relative; top:-1px; display:inline-block; width:14px; height:14px; margin:0 0 0 8px; vertical-align:middle; border:1px solid #E0E0E0; border-radius:2px;}
+.menu-switch > input + i:before,.menu-switch > input + i:after{content:""; position:absolute; top:50%; left:50%; width:7px; height:1px; border-radius:2px; transform:translate(-50%,-50%); transition:transform ease 0.15s; background:#000;}
+.menu-switch > input + i:after{transform:translate(-50%,-50%) rotate(0deg)}
+.menu-switch > input:checked + i:after{transform:translate(-50%,-50%) rotate(90deg)}
+
+.switch-input{position:relative; display:inline-block; vertical-align:middle; padding:0; margin:0; font-family: 'Noto Sans KR'; font-style: normal; font-weight: 400; color: #212121; font-size:13px;}
+.switch-input > input{position:fixed; top:-1000%; left:-1000%;}
+.switch-input > input + i{position:relative; top:-1px; display:inline-block; width:36px; height:20px; margin:0 0 0 8px; vertical-align:middle; border-radius:12px; border:1px solid #ddd; transition:background-color ease 0.3s; background:#ededed;}
+.switch-input > input + i:before{content:""; position:absolute; top:50%; left:1px; display:block; width:18px; height:18px; transform:translate(0,-50%); border-radius:100%; transition:left ease 0.3s; background:#fff;}
+.switch-input > input:checked + i{border-color:#0073E6; background-color:#0073E6;}
+.switch-input > input:checked + i:before{left:calc(100% - 19px);}
+
+.icon-bookmark{position:relative; top:-2px; display:inline-block; vertical-align:middle; padding:0; margin:0; font-family: 'Noto Sans KR'; font-style: normal; font-weight: 400; color: #212121;}
+.icon-bookmark > input{position:fixed; top:-1000%; left:-1000%;}
+.icon-bookmark > input + i{display:inline-block; width:14px; height:14px; background:url(../img/icon-star_outline.svg) no-repeat center;}
+.icon-bookmark > input:checked + i{background-image:url(../img/iconp-star_pill.svg);}
+
+
+.menuTit{margin:12px 0 0 0; font-family: 'SamsungOne'; font-style: normal; font-weight: 700; font-size: 16px; color:#212121;}
+.menuParent + .menuTit{margin-top:40px;}
+.menuTit > .icon-bookmark{top:0px; margin-right:3px;}
+.menuParent{margin-top:12px;}
+.menuParent > h4{font-family: 'Noto Sans KR'; font-style: normal; font-weight: 400; font-size: 14px; line-height: 20px;}
+.menuParent > h4:hover > label{color:#0073E6;}
+.menuParent .children_list{display:none;}
+.menuParent.open .children_list{display:block;}
+.menuParent .children_list > li{padding:0; margin:6px 0 0 0; line-height:14px; }
+.menuParent .children_list > li > a{position:relative; font-family: 'Noto Sans KR'; font-style: normal; font-weight: 400; font-size: 12px; line-height: 17px; color: #212121; text-decoration:none;}
+.menuParent .children_list > li > a:hover{text-decoration:underline;}
+.menuParent .children_list > li > .icon-bookmark{margin-right:4px;}
+.menuParent .children_list > li.point > a:after{content:""; position:absolute;  display:block; top:0px; right:-7px; width:4px; height:4px; border-radius:100%; background:#E00400;}
+/* .menuParent .icon-bookmark{display:none;} */
+.menuParent.bookmark .icon-bookmark{display:inline-block;}
+.lnbMenuList.bookmark .menuParent .icon-bookmark{display:inline-block;}
+.menuParent.depth3 .menu-switch i{display:none;}
+
+
+
+
 
   /* checkgos */
   .input-box + .input-box{margin-left:10px;}
@@ -657,7 +699,7 @@ button.btn:disabled .icon-refresh {background: url(../img/icon/refresh02.svg) no
 /* bookmark */
 .icon-bookmark{position:relative; top:0px; display:inline-block; vertical-align:middle; padding:0; margin:0;}
 .icon-bookmark > input{position:fixed; top:-1000%; left:-1000%;}
-.icon-bookmark > input + i{display:inline-block; width:14px; height:14px; margin-right:8px; background:url(../img/icon-star_outline.svg) no-repeat center;}
+.icon-bookmark > input + i{position:relative; top:1px; display:inline-block; width:14px; height:14px; margin-right:1px; background:url(../img/icon-star_outline.svg) no-repeat center;}
 .icon-bookmark > input:checked + i{background-image:url(../img/iconp-star_pill.svg);}
 
 
