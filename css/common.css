@@ -790,23 +790,38 @@ html, .wis-height {
 .wis-login .login .top .txt {display: inline-flex; margin-left: 10px; font-size: 14px; color:#212121; }
 .wis-login .login .top .text {color:#FF3B30; font-size: 12px;}
 
-.wis-login .login .top .text.b-type a {color:#212121; font-size: 12px;}
-.wis-login .login .top .text.b-type a::after {display: inline-flex; content:''; width: 16px; height: 16px; vertical-align: top; background-image:url(../img/icon/arrow_right.svg);}
-
 
 .wis-login .box .middle-item {}
 .wis-login .box .middle-item::before {display: block; content: ''; width: 50px; height: 50px; margin: 30px auto 30px; background-image:url(../img/icon/mark_Info.svg);}
 .wis-login .box .middle-item {text-align: center;}
-.wis-login .box .middle-item.b-type {}
-.wis-login .box .middle-item.b-type::before {display: none;}
-.wis-login .box .middle-item.b-type .login-text {font-size: 36px; font-weight: 700; color:#212121}
+
+
 .wis-login .box .middle-item .b-txt{font-size: 16px; font-weight: 700; color: #212121;}
 .wis-login .box .middle-item .m-txt{font-size: 14px;color: #212121; margin: 20px 0 30px}
 .wis-login .box .middle-item .m-txt span{color:#FF3B30;}
 
 
 
-.wis-login .copy {color:#757575; font-size: 12px; margin-top: 20px;}
-.wis-login .login-btn {display: flex; justify-content: center; align-items: center; width: 300px; margin: 0 auto;}
-.wis-login .login-btn button {width: calc(50% - 5px); height: 36px !important; font-size: 14px; font-weight: 700;}
 
+.wis-login .box .middle-item .input-field { width: 300px; margin: 0 auto 20px }
+.wis-login .box .middle-item .input-field li {width: 100%; margin-bottom: 10px;}
+
+.wis-login .box .middle-item .input-field li .field {width: 100%;}
+.wis-login .box .middle-item .input-field li .field input {text-align: left; height: 36px;}
+
+
+
+.wis-login .copy {color:#757575; font-size: 12px; margin-top: 20px;}
+.wis-login .login-btn {display: flex; justify-content: space-between; align-items: center; width: 300px; margin: 0 auto;}
+.wis-login .login-btn button {width: calc(100% / 2 - 5px); height: 36px !important; font-size: 14px; font-weight: 700;}
+
+
+
+.wis-login .login.b-type {padding: 20px 20px 70px;}
+.wis-login .login.b-type .top .text a {color:#212121; font-size: 12px;}
+.wis-login .login.b-type .top .text a::after {display: inline-flex; content:''; width: 16px; height: 16px; vertical-align: top; background-image:url(../img/icon/arrow_right.svg);}
+.wis-login .login.b-type .middle-item::before {display: none;}
+.wis-login .login.b-type .middle-item .login-text {font-size: 36px; font-weight: 700; color:#212121; margin: 20px 0 30px}
+.wis-login .login.b-type .login-btn button {width: 100%;}
+.wis-login .login.b-type .login-btn + .login-btn {margin-top: 20px;}
+.wis-login .login.b-type .login-btn + .login-btn button {font-size: 13px; height: 30px; font-weight: 400; letter-spacing: -1px;}
