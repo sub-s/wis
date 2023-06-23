@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wis</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="js/jquery.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
+    <script src="js/jquery-ui.min.js"></script>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-multiselect.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.esm.js"></script>
+
+    <link media="all" rel="stylesheet" href="css/jquery-ui.css">
+    <link media="all" rel="stylesheet" href="css/bootstrap.css">
+    <link media="all" rel="stylesheet" href="css/bootstrap-grid.css">
+    <link media="all" rel="stylesheet" href="css/bootstrap-utilities.css">
+    <link media="all" rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link media="all" rel="stylesheet" href="css/bootstrap-multiselect.css">
+    <link media="all" rel="stylesheet" href="css/common.css">
+    <link media="all" rel="stylesheet" href="css/layout.css">
+    <link media="all" rel="stylesheet" href='css/realgrid-style-add.css' />
+    <link media="all" rel="stylesheet" href='css/bootstrap-add.css' />
+
+
+     <!-- RealGrid -->
+    
+     <!-- <link href="realgrid.2.6.3/realgrid-style.css" rel="stylesheet" />
+    <script src="realgrid.2.6.3/realgrid-lic.js"></script>
+    <script src="realgrid.2.6.3/realgrid.2.6.3.min.js"></script>
+    <script src="realgrid.2.6.3/libs/jszip.min.js"></script> -->
+
+
+    <link href='realgrid.2.0.2/realgrid-style.css' rel='stylesheet' />
+    <script src="realgrid.2.0.2//realgrid-lis.js"></script>
+    <script src='realgrid.2.0.2/realgrid.2.0.3.min.js'></script>
+    <script src='realgrid.2.0.2/realgrid-events.js'></script>
+
+    <title>로그인</title>
+    
+</head>
+
+<body class="wis-height">
+    <div class="wis-login">
+        <div class="box">
+            <!-- <div class="text">
+                <strong>삼성전자 DS부문 WIS 시스템입니다.</strong>
+                <div class="s-txt">
+                    현 시스템은 임직원들이 사용할 수 있도록 제한되어 있습니다. 허가 없이 접근하는 것은 <br>
+                    관련법규에 의해 처벌되어 질 수 있으며, 모든 정보의 위반자는 엄중한 조치를 받게 됩니다. 
+                </div>
+            </div> -->
+            <div class="login d-type">
+                <div class="top">
+                    <div class="img">
+                        <img src="img/icon/wis_logo.svg" alt="">
+                    </div>
+                </div>
+                <div class="middle-item">
+                    <p class="login-text">개인정보 수집  및 이용약관 동의</p>
+                    <p class="login-text small">시스템 사용을 위해, 아래의 개인정보 수집 이용 약관을 읽고 동의해주시길 바랍니다.</p>
+                    <div class="conditions-item">
+                        <div class="top">
+                            <p class="tit">WIS 개인정보 수집 및 이용에 대한 안내</p>
+                            <p><label class="input-box"><input type="checkbox"><i></i>이용약관내용에 동의합니다.</label></p>
+                        </div>
+                        <div class="conditions">
+                            약관 내용입니다.
+                        </div>
+                        <div class="top">
+                            <p class="tit">제조 DSS, TPSS, 제조WP, GPM 시스템 개인정보 수집 및 이용에 대한 안내</p>
+                            <p><label class="input-box"><input type="checkbox"><i></i>이용약관내용에 동의합니다.</label></p>
+                        </div>
+                        <div class="conditions">
+                            약관 내용입니다.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="login-btn">
+                    <button type="button" class="btn btn-primary">확인</button>
+                    <button type="button" class="btn btn-outline-secondary">취소</button>
+                </div>
+
+            </div>
+            <p class="copy">Copyright 2023 SAMSUNG. All Rights Reserved.</p>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/common.js"></script>
+    <!-- real grid -->
+    <script src='js/realgrid_sample.js'></script>
+    <script>
+        // $('.fixed-pop.p6').addClass('open')
+        const _tab = window.ex = new bootstrap.Tab(document.querySelector("#nav-profile-tab"));
+        // _tab.show();
+        $(document).ready(function(){
+            $("select:not([data-live-search])[multiple]").multiselect();
+            $("[singleSelect]").multiselect();
+            $("select[multiple][data-live-search]").multiselect({
+                enableFiltering: true
+            });
+
+            // $('.fixed-pop.p3').addClass('open')
+        })
+        setTimeout(()=>{
+            $(".custom-select select").change(selChangeEv)
+        },500)
+        function selChangeEv(){
+            const _this = event.currentTarget;
+            console.log("_this : ",_this);
+            console.log("value : ",_this.value);
+        }
+    </script>
+</body>
+
+</html>

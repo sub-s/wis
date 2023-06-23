@@ -842,3 +842,21 @@ html, .wis-height {
 .wis-login .login.c-type .g-box > ul > li {font-size: 14px; font-weight: 400;color: #212121; margin-top: 15px; text-align: left; position: relative; padding-left: 13px; letter-spacing: -0.4px;}
 .wis-login .login.c-type .g-box > ul > li::before {display: block; content:''; width: 6px; height: 6px; background-color: #212121; border-radius: 50%;  position: absolute; left:0; top: 7px;}
 .wis-login .login.c-type .login-btn {}
+
+
+
+
+.wis-login .login.d-type {width: 800px;}
+.wis-login .login.d-type {padding: 20px 20px 70px;}
+.wis-login .login.d-type .top .text a {color:#212121; font-size: 12px;}
+.wis-login .login.d-type .top .text a::after {display: inline-flex; content:''; width: 16px; height: 16px; vertical-align: top; background-image:url(../img/icon/arrow_right.svg);}
+.wis-login .login.d-type .middle-item::before {display: none;}
+.wis-login .login.d-type .middle-item .login-text {font-size: 36px; font-weight: 700; color:#212121; margin: 20px 0 10px}
+.wis-login .login.d-type .middle-item .login-text.small {font-size: 16px; font-weight: 400; color:#212121; margin: 0px 0 30px}
+.wis-login .login.d-type .input-field {text-align: left; margin-top: 20px;}
+.wis-login .login.d-type .input-field label {font-size: 14px; font-weight: 700; color: #212121;}
+
+.conditions-item {width: 680px; margin: 0 auto}
+.conditions-item .top {margin-bottom: 10px !important;}
+.conditions-item .top .tit {font-size: 14px; font-weight: 700; color:#212121}
+.conditions-item .conditions {border: 1px solid #E0E0E0; border-radius: 10px; overflow: auto; width: 680px; height: 160px; margin: 0 auto 20px; padding: 15px; color: #757575; font-size: 14px; text-align: left;}
