@@ -473,13 +473,13 @@ li.active > .menu_wrap > ul{display:block;}
 /**/
 #simple-pop-info{position:absolute; left:0; right:0; top:50px; z-index:1;}
 #simple-pop-info > .inenr-wrap{display:flex; align-items:center; justify-content:space-between; height:50px; padding:0 20px 0 70px; background:#212121;}
-#simple-pop-info > .inenr-wrap > .l{display:flex; flex:1; width:1px;}
-#simple-pop-info > .inenr-wrap > .l > a{display:block; font-family: 'SamsungOne'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 19px; color:#fff; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
-#simple-pop-info > .inenr-wrap > .l > a > span{display:inline-block; width:34px; height:20px; margin:0 12px 0 0; font-family: 'SamsungOne'; font-style: normal; font-weight: 400; font-size: 14px; color:#fff; text-align:center; border-radius: 2px; background: #FF3B30;}
-#simple-pop-info > .inenr-wrap > .r{width:165px;}
+#simple-pop-info > .inenr-wrap > .l{display:flex; align-items:center; flex:1; width:1px; height:100%;}
+#simple-pop-info > .inenr-wrap > .l > a{position:relative; top:2px; display:block; height:100%; font-family: 'SamsungOne'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 46px; color:#fff; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+#simple-pop-info > .inenr-wrap > .l > a > span{position:relative; top:-1px; display:inline-block; width:34px; height:20px; margin:0 12px 0 0; font-family: 'SamsungOne'; font-style: normal; font-weight: 400; font-size: 14px; color:#fff; text-align:center; line-height:20px; border-radius: 2px; background: #FF3B30;}
+#simple-pop-info > .inenr-wrap > .r{display:flex; justify-content:space-between;width:165px;}
 #simple-pop-info > .inenr-wrap > .r > label{font-family: 'SamsungOne'; font-style: normal; font-weight: 400; font-size: 13px; color:#fff;}
 #simple-pop-info > .inenr-wrap > .r > label > input{position:relative; top:2px; margin:0 6px 0 0;}
-#simple-pop-info > .inenr-wrap > .r > button{position:relative; top:-1px; width:16px; height:16px; margin:0 0 0 24px; font-size:0; vertical-align:middle; outline:none;  border:none; background: url(../img/icon-simple-close.svg) no-repeat center;;}
+#simple-pop-info > .inenr-wrap > .r > button{position:relative; top:-1px; width:16px; height:16px; margin:0; font-size:0; vertical-align:middle; outline:none;  border:none; background: url(../img/icon-simple-close.svg) no-repeat center;;}
 
 
 /* dashboard */
@@ -509,9 +509,9 @@ li.active > .menu_wrap > ul{display:block;}
 .search-list-box ul > li{display:flex; align-items:center;}
 .search-list-box ul > li + li{margin-top:12px;}
 .search-list-box ul > li > .icon-bookmark{ margin-right:24px; font-size: 14px; color: #3771F9;}
-.search-list-box ul > li > a{font-family: 'Noto Sans KR'; font-style: normal; font-weight: 400; font-size: 14px; color: #212121;}
+.search-list-box ul > li > a{font-family: 'Noto Sans KR'; font-style: normal; font-weight: 400; font-size: 14px; color: #212121; text-decoration:underline;}
 .search-list-box ul > li > a > span{color:#3771F9;}
-
+.search-list-box .icon-bookmark > input + i{margin-right:6px;}
 
 
 

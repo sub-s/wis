@@ -841,6 +841,7 @@ html, .wis-height {
 .wis-login .login.c-type .g-box .tit {font-size: 14px; font-weight: 700; color: #212121;text-align: left;}
 .wis-login .login.c-type .g-box > ul > li {font-size: 14px; font-weight: 400;color: #212121; margin-top: 15px; text-align: left; position: relative; padding-left: 13px; letter-spacing: -0.4px;}
 .wis-login .login.c-type .g-box > ul > li::before {display: block; content:''; width: 6px; height: 6px; background-color: #212121; border-radius: 50%;  position: absolute; left:0; top: 7px;}
+.wis-login .login.c-type .g-box > ul > li + li{margin-top:7px;}
 .wis-login .login.c-type .login-btn {}
 
 
