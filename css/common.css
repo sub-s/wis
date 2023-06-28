@@ -782,7 +782,7 @@ html, .wis-height {
 .wis-login .text strong {display: block; margin-bottom:15px;}
 .wis-login .text .s-txt {margin-bottom:20px;}
 
-.wis-login .box {width: 600px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+.wis-login .box {position: absolute; top: 50%;left: 50%; transform: translate(-50%, -50%);}
 
 
 .wis-login .login {border: 1px solid #E0E0E0;border-radius: 10px;padding: 20px 20px 40px;box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);}
